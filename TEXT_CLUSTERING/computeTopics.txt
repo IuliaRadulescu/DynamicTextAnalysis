@@ -1,0 +1,1099 @@
+nohup: ignoring input
+Topics found via LDA:
+Collection Name fiveHours_03_02_00_03_07_00 ClusterId 2 topics: ['using one make fedora']
+Topics found via LDA:
+Collection Name fiveHours_03_02_00_03_07_00 ClusterId 3 topics: ['without install change connection']
+Topics found via LDA:
+Collection Name fiveHours_03_02_00_03_07_00 ClusterId 1 topics: ['outdated extension']
+Topics found via LDA:
+Collection Name fiveHours_03_02_00_03_07_00 ClusterId 0 topics: ['fedora 35 worse updating']
+Topics found via LDA:
+Collection Name fiveHours_03_07_00_03_12_00 ClusterId 2 topics: ['home user set root']
+Topics found via LDA:
+Collection Name fiveHours_03_07_00_03_12_00 ClusterId 0 topics: ['fedora 35 worse tlp']
+Topics found via LDA:
+Collection Name fiveHours_03_07_00_03_12_00 ClusterId 5 topics: ['stable linux gnome fedora']
+Topics found via LDA:
+Collection Name fiveHours_03_07_00_03_12_00 ClusterId 1 topics: ['1366x768 working window 11']
+Topics found via LDA:
+Collection Name fiveHours_03_07_00_03_12_00 ClusterId 4 topics: ['chromium version updated ungoogled']
+Topics found via LDA:
+Collection Name fiveHours_03_07_00_03_12_00 ClusterId 3 topics: ['weird issue battery life']
+Topics found via LDA:
+Collection Name fiveHours_03_12_00_03_17_00 ClusterId 1 topics: ['nvidia driver also work']
+Topics found via LDA:
+Collection Name fiveHours_03_12_00_03_17_00 ClusterId 3 topics: ['another deleted issue done']
+Topics found via LDA:
+Collection Name fiveHours_03_12_00_03_17_00 ClusterId 0 topics: ['kernel update 51414 nvidia']
+Topics found via LDA:
+Collection Name fiveHours_03_12_00_03_17_00 ClusterId 2 topics: ['battery fedora hour 35']
+Topics found via LDA:
+Collection Name fiveHours_03_17_00_03_22_00 ClusterId 0 topics: ['fedora 35 issue nvidia']
+Topics found via LDA:
+Collection Name fiveHours_03_17_00_03_22_00 ClusterId 1 topics: ['nvidia wayland gpu amd']
+Topics found via LDA:
+Collection Name fiveHours_03_22_00_04_03_00 ClusterId 0 topics: ['wayland nvidia kde x11']
+Topics found via LDA:
+Collection Name fiveHours_03_22_00_04_03_00 ClusterId 2 topics: ['stallman community inclusive campaign']
+Topics found via LDA:
+Collection Name fiveHours_03_22_00_04_03_00 ClusterId 5 topics: ['35 fedora linux zfs']
+Topics found via LDA:
+Collection Name fiveHours_03_22_00_04_03_00 ClusterId 3 topics: ['nvidia wayland edit ve']
+Topics found via LDA:
+Collection Name fiveHours_03_22_00_04_03_00 ClusterId 1 topics: ['white new alacritty bar']
+Topics found via LDA:
+Collection Name fiveHours_03_22_00_04_03_00 ClusterId 4 topics: ['upgrade dnf 35 update']
+Topics found via LDA:
+Collection Name fiveHours_04_03_00_04_08_00 ClusterId 1 topics: ['fedora 35 upgrade wayland']
+Topics found via LDA:
+Collection Name fiveHours_04_03_00_04_08_00 ClusterId 0 topics: ['stallman evidence inclusive lie']
+Topics found via LDA:
+Collection Name fiveHours_04_08_00_04_13_00 ClusterId 4 topics: ['evidence stallman support statement']
+Topics found via LDA:
+Collection Name fiveHours_04_08_00_04_13_00 ClusterId 6 topics: ['btrfs f35 fedora anyway']
+Topics found via LDA:
+Collection Name fiveHours_04_08_00_04_13_00 ClusterId 5 topics: ['openrazer run get though']
+Topics found via LDA:
+Collection Name fiveHours_04_08_00_04_13_00 ClusterId 7 topics: ['yet work unfortunately theme']
+Topics found via LDA:
+Collection Name fiveHours_04_08_00_04_13_00 ClusterId 3 topics: ['fedora 35 kde via']
+Topics found via LDA:
+Collection Name fiveHours_04_08_00_04_13_00 ClusterId 1 topics: ['linux also audio medium']
+Topics found via LDA:
+Collection Name fiveHours_04_08_00_04_13_00 ClusterId 2 topics: ['update software dnf cli']
+Topics found via LDA:
+Collection Name fiveHours_04_08_00_04_13_00 ClusterId 0 topics: ['upgrade one na told']
+Topics found via LDA:
+Collection Name fiveHours_04_13_00_04_18_00 ClusterId 1 topics: ['issue laptop f35 monitor']
+Topics found via LDA:
+Collection Name fiveHours_04_13_00_04_18_00 ClusterId 7 topics: ['intel app gpu use']
+Topics found via LDA:
+Collection Name fiveHours_04_13_00_04_18_00 ClusterId 6 topics: ['fedora year know 515']
+Topics found via LDA:
+Collection Name fiveHours_04_13_00_04_18_00 ClusterId 4 topics: ['fedora rpmfusion repository steam']
+Topics found via LDA:
+Collection Name fiveHours_04_13_00_04_18_00 ClusterId 0 topics: ['screen driver release wayland']
+Topics found via LDA:
+Collection Name fiveHours_04_13_00_04_18_00 ClusterId 3 topics: ['evidence community lie ostracized']
+Topics found via LDA:
+Collection Name fiveHours_04_13_00_04_18_00 ClusterId 5 topics: ['linux audio also using']
+Topics found via LDA:
+Collection Name fiveHours_04_13_00_04_18_00 ClusterId 2 topics: ['thank']
+Topics found via LDA:
+Collection Name fiveHours_04_18_00_04_23_00 ClusterId 1 topics: ['fedora 35 repository party']
+Topics found via LDA:
+Collection Name fiveHours_04_18_00_04_23_00 ClusterId 4 topics: ['fedora nvidia upgrade 35']
+Topics found via LDA:
+Collection Name fiveHours_04_18_00_04_23_00 ClusterId 3 topics: ['wayland game pipewire better']
+Topics found via LDA:
+Collection Name fiveHours_04_18_00_04_23_00 ClusterId 0 topics: ['fedora package ubuntu also']
+Topics found via LDA:
+Collection Name fiveHours_04_18_00_04_23_00 ClusterId 2 topics: ['make audio f35 fedora']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_04_23_00_05_04_00 ClusterId 0 topics: ['fedora linux work sure']
+Topics found via LDA:
+Collection Name fiveHours_04_23_00_05_04_00 ClusterId 1 topics: ['fedora 35 work ubuntu']
+Topics found via LDA:
+Collection Name fiveHours_05_04_00_05_09_00 ClusterId 0 topics: ['wayland fedora kde using']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_05_04_00_05_09_00 ClusterId 1 topics: ['fedora linux slack use']
+Topics found via LDA:
+Collection Name fiveHours_05_09_00_05_14_00 ClusterId 3 topics: ['bios usb update upgrade']
+Topics found via LDA:
+Collection Name fiveHours_05_09_00_05_14_00 ClusterId 0 topics: ['fedora work support pro']
+Topics found via LDA:
+Collection Name fiveHours_05_09_00_05_14_00 ClusterId 1 topics: ['fedora please one note']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_05_09_00_05_14_00 ClusterId 4 topics: ['fedora work rpm come']
+Topics found via LDA:
+Collection Name fiveHours_05_09_00_05_14_00 ClusterId 2 topics: ['snap fedora ubuntu user']
+Topics found via LDA:
+Collection Name fiveHours_05_14_00_05_19_00 ClusterId 0 topics: ['icon desktop fedora installation']
+Topics found via LDA:
+Collection Name fiveHours_05_14_00_05_19_00 ClusterId 1 topics: ['linux business fedora year']
+Topics found via LDA:
+Collection Name fiveHours_05_14_00_05_19_00 ClusterId 2 topics: ['fedora snap ubuntu flatpak']
+Topics found via LDA:
+Collection Name fiveHours_05_19_00_06_00_00 ClusterId 0 topics: ['fedora wayland wireplumber issue']
+Topics found via LDA:
+Collection Name fiveHours_05_19_00_06_00_00 ClusterId 1 topics: ['fedora linux run package']
+Topics found via LDA:
+Collection Name fiveHours_06_00_00_06_05_00 ClusterId 0 topics: ['fedora linux default slack']
+Topics found via LDA:
+Collection Name fiveHours_06_00_00_06_05_00 ClusterId 1 topics: ['snap way run spotify']
+Topics found via LDA:
+Collection Name fiveHours_06_05_00_06_10_00 ClusterId 0 topics: ['series amd 001 device']
+Topics found via LDA:
+Collection Name fiveHours_06_05_00_06_10_00 ClusterId 1 topics: ['command device lspci lsusb']
+Topics found via LDA:
+Collection Name fiveHours_06_10_00_06_15_00 ClusterId 1 topics: ['screen replacement dongle first']
+Topics found via LDA:
+Collection Name fiveHours_06_10_00_06_15_00 ClusterId 0 topics: ['icon want app love']
+Topics found via LDA:
+Collection Name fiveHours_06_15_00_06_20_00 ClusterId 0 topics: ['device 001 z36xxxz37xxx atom']
+Topics found via LDA:
+Collection Name fiveHours_06_15_00_06_20_00 ClusterId 1 topics: ['fedora upgrade wine install']
+Topics found via LDA:
+Collection Name fiveHours_06_20_00_07_01_00 ClusterId 0 topics: ['camera screen sudo try']
+Topics found via LDA:
+Collection Name fiveHours_06_20_00_07_01_00 ClusterId 1 topics: ['fedora build installing silverblue']
+Topics found via LDA:
+Collection Name fiveHours_07_01_00_07_06_00 ClusterId 0 topics: ['kernel device firmware driver']
+Topics found via LDA:
+Collection Name fiveHours_07_01_00_07_06_00 ClusterId 1 topics: ['thing willing much appreciate']
+Topics found via LDA:
+Collection Name fiveHours_07_06_00_07_11_00 ClusterId 2 topics: ['verifying steam installation f35']
+Topics found via LDA:
+Collection Name fiveHours_07_06_00_07_11_00 ClusterId 1 topics: ['fedora 35 wake wayland']
+Topics found via LDA:
+Collection Name fiveHours_07_06_00_07_11_00 ClusterId 3 topics: ['toolbx new friend developer']
+Topics found via LDA:
+Collection Name fiveHours_07_06_00_07_11_00 ClusterId 0 topics: ['polkit thing rw install']
+Topics found via LDA:
+Collection Name fiveHours_07_11_00_07_16_00 ClusterId 1 topics: ['gnome kde got feel']
+Topics found via LDA:
+Collection Name fiveHours_07_11_00_07_16_00 ClusterId 0 topics: ['fedora 35 menu look']
+Topics found via LDA:
+Collection Name fiveHours_07_16_00_07_21_00 ClusterId 0 topics: ['fedora upgrade point nvidia']
+Topics found via LDA:
+Collection Name fiveHours_07_16_00_07_21_00 ClusterId 1 topics: ['gnome kde install use']
+Topics found via LDA:
+Collection Name fiveHours_07_21_00_08_02_00 ClusterId 1 topics: ['gnome kde use fedora']
+Topics found via LDA:
+Collection Name fiveHours_07_21_00_08_02_00 ClusterId 0 topics: ['fedora issue 35 nvidia']
+Topics found via LDA:
+Collection Name fiveHours_08_02_00_08_07_00 ClusterId 1 topics: ['driver nvidia problem issue']
+Topics found via LDA:
+Collection Name fiveHours_08_02_00_08_07_00 ClusterId 0 topics: ['gnome kde wayland using']
+Topics found via LDA:
+Collection Name fiveHours_08_07_00_08_12_00 ClusterId 0 topics: ['driver kernel upgrade id']
+Topics found via LDA:
+Collection Name fiveHours_08_07_00_08_12_00 ClusterId 5 topics: ['wayland sandbox issue fix']
+Topics found via LDA:
+Collection Name fiveHours_08_07_00_08_12_00 ClusterId 4 topics: ['script fine guide everyone']
+Topics found via LDA:
+Collection Name fiveHours_08_07_00_08_12_00 ClusterId 2 topics: ['gnome kde much better']
+Topics found via LDA:
+Collection Name fiveHours_08_07_00_08_12_00 ClusterId 6 topics: ['fedora use get gnome']
+Topics found via LDA:
+Collection Name fiveHours_08_07_00_08_12_00 ClusterId 3 topics: ['gnome year wayland kde']
+Topics found via LDA:
+Collection Name fiveHours_08_07_00_08_12_00 ClusterId 1 topics: ['running vm fedora two']
+Topics found via LDA:
+Collection Name fiveHours_08_12_00_08_17_00 ClusterId 0 topics: ['fedora 35 ve nvidia']
+Topics found via LDA:
+Collection Name fiveHours_08_12_00_08_17_00 ClusterId 1 topics: ['driver kernel nvidia try']
+Topics found via LDA:
+Collection Name fiveHours_08_17_00_08_22_00 ClusterId 1 topics: ['fedora 35 work vm']
+Topics found via LDA:
+Collection Name fiveHours_08_17_00_08_22_00 ClusterId 0 topics: ['flatpak fedora package rpm']
+Topics found via LDA:
+Collection Name fiveHours_08_22_00_09_03_00 ClusterId 0 topics: ['package fedora flatpak rpm']
+Topics found via LDA:
+Collection Name fiveHours_08_22_00_09_03_00 ClusterId 1 topics: ['fedora gnome firefox even']
+Topics found via LDA:
+Collection Name fiveHours_09_03_00_09_08_00 ClusterId 0 topics: ['use fedora flatpak official']
+Topics found via LDA:
+Collection Name fiveHours_09_03_00_09_08_00 ClusterId 1 topics: ['screen share xprop original']
+Topics found via LDA:
+Collection Name fiveHours_09_03_00_09_08_00 ClusterId 3 topics: ['fedora 35 first installation']
+Topics found via LDA:
+Collection Name fiveHours_09_03_00_09_08_00 ClusterId 4 topics: ['linux package long much']
+Topics found via LDA:
+Collection Name fiveHours_09_03_00_09_08_00 ClusterId 2 topics: ['kde issue sound fedora']
+Topics found via LDA:
+Collection Name fiveHours_09_08_00_09_13_00 ClusterId 5 topics: ['work meeting web official']
+Topics found via LDA:
+Collection Name fiveHours_09_08_00_09_13_00 ClusterId 0 topics: ['issue well info failed']
+Topics found via LDA:
+Collection Name fiveHours_09_08_00_09_13_00 ClusterId 4 topics: ['need kernel share window']
+Topics found via LDA:
+Collection Name fiveHours_09_08_00_09_13_00 ClusterId 1 topics: ['work screen x11 flatpak']
+Topics found via LDA:
+Collection Name fiveHours_09_08_00_09_13_00 ClusterId 3 topics: ['font installed source tor']
+Topics found via LDA:
+Collection Name fiveHours_09_08_00_09_13_00 ClusterId 2 topics: ['linux macos used also']
+Topics found via LDA:
+Collection Name fiveHours_09_13_00_09_18_00 ClusterId 1 topics: ['wayland fedora work use']
+Topics found via LDA:
+Collection Name fiveHours_09_13_00_09_18_00 ClusterId 0 topics: ['nvidia get work using']
+Topics found via LDA:
+Collection Name fiveHours_09_18_00_09_23_00 ClusterId 1 topics: ['container docker storage persistent']
+Topics found via LDA:
+Collection Name fiveHours_09_18_00_09_23_00 ClusterId 0 topics: ['flatpaks use working video']
+Topics found via LDA:
+Collection Name fiveHours_09_23_00_10_04_00 ClusterId 0 topics: ['tor browser fedora font']
+Topics found via LDA:
+Collection Name fiveHours_09_23_00_10_04_00 ClusterId 2 topics: ['kernel nvidia kmod akmod']
+Topics found via LDA:
+Collection Name fiveHours_09_23_00_10_04_00 ClusterId 1 topics: ['firefox fine flatpak broken']
+Topics found via LDA:
+Collection Name fiveHours_10_04_00_10_09_00 ClusterId 2 topics: ['web wayland version using']
+Topics found via LDA:
+Collection Name fiveHours_10_04_00_10_09_00 ClusterId 1 topics: ['kernel laptop etc puppy']
+Topics found via LDA:
+Collection Name fiveHours_10_04_00_10_09_00 ClusterId 0 topics: ['help fedora 35 theme']
+Topics found via LDA:
+Collection Name fiveHours_10_09_00_10_14_00 ClusterId 1 topics: ['problem also fixed going']
+Topics found via LDA:
+Collection Name fiveHours_10_09_00_10_14_00 ClusterId 0 topics: ['fedora kernel 35 laptop']
+Topics found via LDA:
+Collection Name fiveHours_10_14_00_10_19_00 ClusterId 1 topics: ['fedora slow get something']
+Topics found via LDA:
+Collection Name fiveHours_10_14_00_10_19_00 ClusterId 0 topics: ['installer partition disk one']
+Topics found via LDA:
+Collection Name fiveHours_10_19_00_11_00_00 ClusterId 3 topics: ['fedora installing server install']
+Topics found via LDA:
+Collection Name fiveHours_10_19_00_11_00_00 ClusterId 1 topics: ['fedora anaconda installation using']
+Topics found via LDA:
+Collection Name fiveHours_10_19_00_11_00_00 ClusterId 5 topics: ['kernel device xorg using']
+Topics found via LDA:
+Collection Name fiveHours_10_19_00_11_00_00 ClusterId 2 topics: ['partition especially probably btrfs']
+Topics found via LDA:
+Collection Name fiveHours_10_19_00_11_00_00 ClusterId 0 topics: ['confusing installed lot 514']
+Topics found via LDA:
+Collection Name fiveHours_10_19_00_11_00_00 ClusterId 4 topics: ['fedora xiaomi phone mint']
+Topics found via LDA:
+Collection Name fiveHours_10_19_00_11_00_00 ClusterId 6 topics: ['session video stop dgpu']
+Topics found via LDA:
+Collection Name fiveHours_10_19_00_11_00_00 ClusterId 7 topics: ['post something really moment']
+Topics found via LDA:
+Collection Name fiveHours_11_00_00_11_05_00 ClusterId 1 topics: ['gnome install fedora server']
+Topics found via LDA:
+Collection Name fiveHours_11_00_00_11_05_00 ClusterId 0 topics: ['installer partition disk way']
+Topics found via LDA:
+Collection Name fiveHours_11_05_00_11_10_00 ClusterId 0 topics: ['partition disk re installer']
+Topics found via LDA:
+Collection Name fiveHours_11_05_00_11_10_00 ClusterId 1 topics: ['name fedora podman yes']
+Topics found via LDA:
+Collection Name fiveHours_11_10_00_11_15_00 ClusterId 1 topics: ['time xorg fedora comment']
+Topics found via LDA:
+Collection Name fiveHours_11_10_00_11_15_00 ClusterId 0 topics: ['name wll ba tool']
+Topics found via LDA:
+Collection Name fiveHours_11_15_00_11_20_00 ClusterId 0 topics: ['fedora 35 sound work']
+Topics found via LDA:
+Collection Name fiveHours_11_15_00_11_20_00 ClusterId 2 topics: ['name toolbox toolbx app']
+Topics found via LDA:
+Collection Name fiveHours_11_15_00_11_20_00 ClusterId 1 topics: ['power name mode saving']
+Topics found via LDA:
+Collection Name fiveHours_11_20_00_12_01_00 ClusterId 1 topics: ['fedora partition 35 thing']
+Topics found via LDA:
+Collection Name fiveHours_11_20_00_12_01_00 ClusterId 0 topics: ['tlp power battery fedora']
+Topics found via LDA:
+Collection Name fiveHours_12_01_00_12_06_00 ClusterId 0 topics: ['tlp power battery fedora']
+Topics found via LDA:
+Collection Name fiveHours_12_01_00_12_06_00 ClusterId 1 topics: ['gnome extension install really']
+Topics found via LDA:
+Collection Name fiveHours_12_06_00_12_11_00 ClusterId 1 topics: ['power cpu tlp thing']
+Topics found via LDA:
+Collection Name fiveHours_12_06_00_12_11_00 ClusterId 0 topics: ['fedora window gnome thing']
+Topics found via LDA:
+Collection Name fiveHours_12_11_00_12_16_00 ClusterId 0 topics: ['window user time linux']
+Topics found via LDA:
+Collection Name fiveHours_12_11_00_12_16_00 ClusterId 2 topics: ['gnome qemu also box']
+Topics found via LDA:
+Collection Name fiveHours_12_11_00_12_16_00 ClusterId 1 topics: ['power cpu mode around']
+Topics found via LDA:
+Collection Name fiveHours_12_16_00_12_21_00 ClusterId 1 topics: ['gnome search software spotify']
+Topics found via LDA:
+Collection Name fiveHours_12_16_00_12_21_00 ClusterId 0 topics: ['window fedora linux user']
+Topics found via LDA:
+Collection Name fiveHours_12_21_00_13_02_00 ClusterId 2 topics: ['spotify music flathub software']
+Topics found via LDA:
+Collection Name fiveHours_12_21_00_13_02_00 ClusterId 1 topics: ['spotify kb thanks software']
+Topics found via LDA:
+Collection Name fiveHours_12_21_00_13_02_00 ClusterId 0 topics: ['gnome extension use work']
+Topics found via LDA:
+Collection Name fiveHours_13_02_00_13_07_00 ClusterId 1 topics: ['update snap screen rdrand']
+Topics found via LDA:
+Collection Name fiveHours_13_02_00_13_07_00 ClusterId 0 topics: ['snap install user installing']
+Topics found via LDA:
+Collection Name fiveHours_13_07_00_13_12_00 ClusterId 4 topics: ['battery mode f35 ppd']
+Topics found via LDA:
+Collection Name fiveHours_13_07_00_13_12_00 ClusterId 6 topics: ['card nvidia graphic hybrid']
+Topics found via LDA:
+Collection Name fiveHours_13_07_00_13_12_00 ClusterId 1 topics: ['fedora seems gnome far']
+Topics found via LDA:
+Collection Name fiveHours_13_07_00_13_12_00 ClusterId 5 topics: ['power working used check']
+Topics found via LDA:
+Collection Name fiveHours_13_07_00_13_12_00 ClusterId 2 topics: ['mode use nvidia hybrid']
+Topics found via LDA:
+Collection Name fiveHours_13_07_00_13_12_00 ClusterId 3 topics: ['using know thanks result']
+Topics found via LDA:
+Collection Name fiveHours_13_07_00_13_12_00 ClusterId 0 topics: ['hour since laptop browsing']
+Topics found via LDA:
+Collection Name fiveHours_13_07_00_13_12_00 ClusterId 7 topics: ['system shame rtx razer']
+Topics found via LDA:
+Collection Name fiveHours_13_12_00_13_17_00 ClusterId 1 topics: ['rhel fedora work wo']
+Topics found via LDA:
+Collection Name fiveHours_13_12_00_13_17_00 ClusterId 2 topics: ['mode fedora nvidia issue']
+Topics found via LDA:
+Collection Name fiveHours_13_12_00_13_17_00 ClusterId 0 topics: ['2110 need every laptop']
+Topics found via LDA:
+Collection Name fiveHours_13_17_00_13_22_00 ClusterId 2 topics: ['steam ostree system immutable']
+Topics found via LDA:
+Collection Name fiveHours_13_17_00_13_22_00 ClusterId 3 topics: ['way jre11 35 appimage']
+Topics found via LDA:
+Collection Name fiveHours_13_17_00_13_22_00 ClusterId 0 topics: ['pretty source fedora know']
+Topics found via LDA:
+Collection Name fiveHours_13_17_00_13_22_00 ClusterId 1 topics: ['linux fedora arch desktop']
+Topics found via LDA:
+Collection Name fiveHours_13_22_00_14_03_00 ClusterId 1 topics: ['arch silverblue fedora image']
+Topics found via LDA:
+Collection Name fiveHours_13_22_00_14_03_00 ClusterId 0 topics: ['screen fedora x11 thing']
+Topics found via LDA:
+Collection Name fiveHours_14_03_00_14_08_00 ClusterId 2 topics: ['f33 upgrade working look']
+Topics found via LDA:
+Collection Name fiveHours_14_03_00_14_08_00 ClusterId 1 topics: ['overlay license work ostree']
+Topics found via LDA:
+Collection Name fiveHours_14_03_00_14_08_00 ClusterId 0 topics: ['note app joplin never']
+Topics found via LDA:
+Collection Name fiveHours_14_08_00_14_13_00 ClusterId 0 topics: ['know note web fedora']
+Topics found via LDA:
+Collection Name fiveHours_14_08_00_14_13_00 ClusterId 1 topics: ['arch week syncthing 41']
+Topics found via LDA:
+Collection Name fiveHours_14_13_00_14_18_00 ClusterId 1 topics: ['app flatpak note fedora']
+Topics found via LDA:
+Collection Name fiveHours_14_13_00_14_18_00 ClusterId 0 topics: ['fedora 35 app boot']
+Topics found via LDA:
+Collection Name fiveHours_14_18_00_14_23_00 ClusterId 0 topics: ['issue wireplumber work 34']
+Topics found via LDA:
+Collection Name fiveHours_14_18_00_14_23_00 ClusterId 1 topics: ['awesome note work want']
+Topics found via LDA:
+Collection Name fiveHours_14_23_00_15_04_00 ClusterId 1 topics: ['linux fedora window ssds']
+Topics found via LDA:
+Collection Name fiveHours_14_23_00_15_04_00 ClusterId 0 topics: ['issue fedora 35 work']
+Topics found via LDA:
+Collection Name fiveHours_15_04_00_15_09_00 ClusterId 0 topics: ['timeshift btrfs issue use']
+Topics found via LDA:
+Collection Name fiveHours_15_04_00_15_09_00 ClusterId 1 topics: ['window data happened making']
+Topics found via LDA:
+Collection Name fiveHours_15_04_00_15_09_00 ClusterId 7 topics: ['fedora 35 upgrade command']
+Topics found via LDA:
+Collection Name fiveHours_15_04_00_15_09_00 ClusterId 3 topics: ['work unplug 34 35']
+Topics found via LDA:
+Collection Name fiveHours_15_04_00_15_09_00 ClusterId 2 topics: ['dnf swap working sound']
+Topics found via LDA:
+Collection Name fiveHours_15_04_00_15_09_00 ClusterId 5 topics: ['service user youtube experience']
+Topics found via LDA:
+Collection Name fiveHours_15_04_00_15_09_00 ClusterId 6 topics: ['ubuntu new stable fedora']
+Topics found via LDA:
+Collection Name fiveHours_15_04_00_15_09_00 ClusterId 4 topics: ['zero dell gen fedora']
+Topics found via LDA:
+Collection Name fiveHours_15_09_00_15_14_00 ClusterId 1 topics: ['ubuntu fedora use well']
+Topics found via LDA:
+Collection Name fiveHours_15_09_00_15_14_00 ClusterId 0 topics: ['share work ca zoom']
+Topics found via LDA:
+Collection Name fiveHours_15_09_00_15_14_00 ClusterId 2 topics: ['fedora ssd use 35']
+Topics found via LDA:
+Collection Name fiveHours_15_14_00_15_19_00 ClusterId 4 topics: ['tried wifi hotspot error']
+Topics found via LDA:
+Collection Name fiveHours_15_14_00_15_19_00 ClusterId 2 topics: ['use fedora install want']
+Topics found via LDA:
+Collection Name fiveHours_15_14_00_15_19_00 ClusterId 0 topics: ['fedora battery get 35']
+Topics found via LDA:
+Collection Name fiveHours_15_14_00_15_19_00 ClusterId 3 topics: ['still good one chart']
+Topics found via LDA:
+Collection Name fiveHours_15_14_00_15_19_00 ClusterId 1 topics: ['memory swap wear ssds']
+Topics found via LDA:
+Collection Name fiveHours_15_19_00_16_00_00 ClusterId 0 topics: ['ubuntu see patch fedora']
+Topics found via LDA:
+Collection Name fiveHours_15_19_00_16_00_00 ClusterId 1 topics: ['fedora use kind new']
+Topics found via LDA:
+Collection Name fiveHours_16_00_00_16_05_00 ClusterId 1 topics: ['issue window fedora work']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_16_00_00_16_05_00 ClusterId 0 topics: ['fedora gnome beginner ubuntu']
+Topics found via LDA:
+Collection Name fiveHours_16_05_00_16_10_00 ClusterId 1 topics: ['gnome fedora latest debian']
+Topics found via LDA:
+Collection Name fiveHours_16_05_00_16_10_00 ClusterId 0 topics: ['fedora package use using']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 4 topics: ['ram great fedora need']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 1 topics: ['gnome dark adwaita theme']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 2 topics: ['although flatpak well issue']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 9 topics: ['think distro try verions']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 0 topics: ['trust ppa package ppas']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 8 topics: ['fedora well curious guide']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 6 topics: ['linux ve much beginner']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 5 topics: ['software working actually morning']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 3 topics: ['though always control wasteful']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 10 topics: ['issue work portability common']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 7 topics: ['nvidia turning load list']
+Topics found via LDA:
+Collection Name fiveHours_16_10_00_16_15_00 ClusterId 11 topics: ['two scrolling natural finger']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_16_15_00_16_20_00 ClusterId 4 topics: ['fedora beginner especially seem']
+Topics found via LDA:
+Collection Name fiveHours_16_15_00_16_20_00 ClusterId 0 topics: ['dnf update apt package']
+Topics found via LDA:
+Collection Name fiveHours_16_15_00_16_20_00 ClusterId 1 topics: ['fedora rpm line using']
+Topics found via LDA:
+Collection Name fiveHours_16_15_00_16_20_00 ClusterId 3 topics: ['box fedora get yeah']
+Topics found via LDA:
+Collection Name fiveHours_16_15_00_16_20_00 ClusterId 5 topics: ['way undo testing test']
+Topics found via LDA:
+Collection Name fiveHours_16_15_00_16_20_00 ClusterId 2 topics: ['wifi video ve tablet']
+Topics found via LDA:
+Collection Name fiveHours_16_15_00_16_20_00 ClusterId 6 topics: ['dark gtk setting theme']
+Topics found via LDA:
+Collection Name fiveHours_16_20_00_17_01_00 ClusterId 0 topics: ['fedora ram gnome using']
+Topics found via LDA:
+Collection Name fiveHours_16_20_00_17_01_00 ClusterId 1 topics: ['snap package fedora update']
+Topics found via LDA:
+Collection Name fiveHours_17_01_00_17_06_00 ClusterId 0 topics: ['install fedora dnf dev']
+Topics found via LDA:
+Collection Name fiveHours_17_01_00_17_06_00 ClusterId 3 topics: ['nvidia patch wayland fine']
+Topics found via LDA:
+Collection Name fiveHours_17_01_00_17_06_00 ClusterId 2 topics: ['window linux use programmer']
+Topics found via LDA:
+Collection Name fiveHours_17_01_00_17_06_00 ClusterId 1 topics: ['fedora 35 f35 enough']
+Topics found via LDA:
+Collection Name fiveHours_17_06_00_17_11_00 ClusterId 1 topics: ['went drive one program']
+Topics found via LDA:
+Collection Name fiveHours_17_06_00_17_11_00 ClusterId 2 topics: ['ram fedora usage x200b']
+Topics found via LDA:
+Collection Name fiveHours_17_06_00_17_11_00 ClusterId 4 topics: ['linux ssh using 37']
+Topics found via LDA:
+Collection Name fiveHours_17_06_00_17_11_00 ClusterId 0 topics: ['webpage way 41 5232']
+Topics found via LDA:
+Collection Name fiveHours_17_06_00_17_11_00 ClusterId 3 topics: ['use fedora machine work']
+Topics found via LDA:
+Collection Name fiveHours_17_11_00_17_16_00 ClusterId 0 topics: ['wifi 35 working restarting']
+Topics found via LDA:
+Collection Name fiveHours_17_11_00_17_16_00 ClusterId 2 topics: ['zero yes blame community']
+Topics found via LDA:
+Collection Name fiveHours_17_11_00_17_16_00 ClusterId 3 topics: ['fedora arm support 32']
+Topics found via LDA:
+Collection Name fiveHours_17_11_00_17_16_00 ClusterId 1 topics: ['time wrong utterly student']
+Topics found via LDA:
+Collection Name fiveHours_17_11_00_17_16_00 ClusterId 4 topics: ['patch copr 523 merge']
+Topics found via LDA:
+Collection Name fiveHours_17_11_00_17_16_00 ClusterId 5 topics: ['fedora update slack rpm']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 8 topics: ['world welcome open mistake']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 6 topics: ['laptop work fedora zero']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 3 topics: ['dell compatible go alot']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 4 topics: ['keyboard right mouse use']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 5 topics: ['support linux architecture think']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 1 topics: ['detail get comment release']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 0 topics: ['xps13 need backup btrfs']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 9 topics: ['distro one question fedora']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 2 topics: ['fedora install dnf linux']
+Topics found via LDA:
+Collection Name fiveHours_17_16_00_17_21_00 ClusterId 7 topics: ['yeah codecs youtube available']
+Topics found via LDA:
+Collection Name fiveHours_17_21_00_18_02_00 ClusterId 1 topics: ['fedora end laptop 37']
+Topics found via LDA:
+Collection Name fiveHours_17_21_00_18_02_00 ClusterId 0 topics: ['wayland electron work nvidia']
+Topics found via LDA:
+Collection Name fiveHours_17_21_00_18_02_00 ClusterId 3 topics: ['fedora laptop work linux']
+Topics found via LDA:
+Collection Name fiveHours_17_21_00_18_02_00 ClusterId 2 topics: ['desktop file keyboard update']
+Topics found via LDA:
+Collection Name fiveHours_18_02_00_18_07_00 ClusterId 0 topics: ['desktop file fedora problem']
+Topics found via LDA:
+Collection Name fiveHours_18_02_00_18_07_00 ClusterId 1 topics: ['fedora gnome distro wayland']
+Topics found via LDA:
+Collection Name fiveHours_18_07_00_18_12_00 ClusterId 1 topics: ['fedora running using xwayland']
+Topics found via LDA:
+Collection Name fiveHours_18_07_00_18_12_00 ClusterId 0 topics: ['fedora nvidia wayland work']
+Topics found via LDA:
+Collection Name fiveHours_18_12_00_18_17_00 ClusterId 5 topics: ['year install box check']
+Topics found via LDA:
+Collection Name fiveHours_18_12_00_18_17_00 ClusterId 0 topics: ['fedora welcome variance 35']
+Topics found via LDA:
+Collection Name fiveHours_18_12_00_18_17_00 ClusterId 6 topics: ['kde install iso wayland']
+Topics found via LDA:
+Collection Name fiveHours_18_12_00_18_17_00 ClusterId 4 topics: ['work graphic lenovo thinkpad']
+Topics found via LDA:
+Collection Name fiveHours_18_12_00_18_17_00 ClusterId 2 topics: ['fedora year linux plasma']
+Topics found via LDA:
+Collection Name fiveHours_18_12_00_18_17_00 ClusterId 3 topics: ['34 remember misplaced name']
+Topics found via LDA:
+Collection Name fiveHours_18_12_00_18_17_00 ClusterId 1 topics: ['gnome de know polished']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 0 topics: ['audio version zenbook issue']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 11 topics: ['prompt white normal change']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 9 topics: ['running xwayland without understood']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 3 topics: ['igpu choppy screen display']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 12 topics: ['using though admin based']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 10 topics: ['userinstalled uninstall bro copy']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 5 topics: ['website gnome yeah clue']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 1 topics: ['toolbox install written iso']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 16 topics: ['want function vivobook asus']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 2 topics: ['downloads always try stuff']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 13 topics: ['kde iso good install']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 14 topics: ['extension shell dock dash']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 6 topics: ['laptop fedora workstation working']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 4 topics: ['fedora gnome distros 40']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 7 topics: ['witch support find linux']
+Topics found via LDA:
+Collection Name fiveHours_18_17_00_18_22_00 ClusterId 8 topics: ['good year expansion keep']
+Topics found via LDA:
+Collection Name fiveHours_18_22_00_19_03_00 ClusterId 1 topics: ['gnome fedora manjaro kde']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_18_22_00_19_03_00 ClusterId 0 topics: ['fedora nvidia user new']
+Topics found via LDA:
+Collection Name fiveHours_19_03_00_19_08_00 ClusterId 1 topics: ['fedora user new nvidia']
+Topics found via LDA:
+Collection Name fiveHours_19_03_00_19_08_00 ClusterId 0 topics: ['ve fedora linux hat']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 8 topics: ['ram vivobook old ssd']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 13 topics: ['title remove remap keyboard']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 3 topics: ['fedora 35 kde unable']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 11 topics: ['think xps memory need']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 1 topics: ['post put one lol']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 6 topics: ['something hdd tutorial log']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 4 topics: ['people linux read using']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 5 topics: ['laptop audio wallpaper feature']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 0 topics: ['without ve update time']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 9 topics: ['fedora bad nvidia user']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 10 topics: ['gnome manjaro arch release']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 7 topics: ['still redhat hat summit']
+Topics found via LDA:
+Collection Name fiveHours_19_08_00_19_13_00 ClusterId 2 topics: ['theme gnome yeah deep']
+Topics found via LDA:
+Collection Name fiveHours_19_13_00_19_18_00 ClusterId 6 topics: ['occurred number comment hdd']
+Topics found via LDA:
+Collection Name fiveHours_19_13_00_19_18_00 ClusterId 3 topics: ['go release fedora user']
+Topics found via LDA:
+Collection Name fiveHours_19_13_00_19_18_00 ClusterId 5 topics: ['one fedora old band']
+Topics found via LDA:
+Collection Name fiveHours_19_13_00_19_18_00 ClusterId 0 topics: ['gnome bug read someone']
+Topics found via LDA:
+Collection Name fiveHours_19_13_00_19_18_00 ClusterId 4 topics: ['laptop ssd ram chance']
+Topics found via LDA:
+Collection Name fiveHours_19_13_00_19_18_00 ClusterId 1 topics: ['issue time update something']
+Topics found via LDA:
+Collection Name fiveHours_19_13_00_19_18_00 ClusterId 2 topics: ['redhat hat still summit']
+Topics found via LDA:
+Collection Name fiveHours_19_18_00_19_23_00 ClusterId 0 topics: ['hat red fedora one']
+Topics found via LDA:
+Collection Name fiveHours_19_18_00_19_23_00 ClusterId 1 topics: ['gnome fedora nvidia install']
+Topics found via LDA:
+Collection Name fiveHours_19_23_00_20_04_00 ClusterId 0 topics: ['fedora file btrfs issue']
+Topics found via LDA:
+Collection Name fiveHours_19_23_00_20_04_00 ClusterId 3 topics: ['theme use fish bold']
+Topics found via LDA:
+Collection Name fiveHours_19_23_00_20_04_00 ClusterId 1 topics: ['young wont via unable']
+Topics found via LDA:
+Collection Name fiveHours_19_23_00_20_04_00 ClusterId 2 topics: ['driver popos nvidia want']
+Topics found via LDA:
+Collection Name fiveHours_19_23_00_20_04_00 ClusterId 4 topics: ['hat fedora thought based']
+Topics found via LDA:
+Collection Name fiveHours_20_04_00_20_09_00 ClusterId 0 topics: ['repos party third fedora']
+Topics found via LDA:
+Collection Name fiveHours_20_04_00_20_09_00 ClusterId 1 topics: ['fedora know also based']
+Topics found via LDA:
+Collection Name fiveHours_20_04_00_20_09_00 ClusterId 3 topics: ['arch file ecryptfs database']
+Topics found via LDA:
+Collection Name fiveHours_20_04_00_20_09_00 ClusterId 2 topics: ['make software menu use']
+Topics found via LDA:
+Collection Name fiveHours_20_09_00_20_14_00 ClusterId 1 topics: ['install gnome set fedora']
+Topics found via LDA:
+Collection Name fiveHours_20_09_00_20_14_00 ClusterId 0 topics: ['driver help nvidia nouveau']
+Topics found via LDA:
+Collection Name fiveHours_20_14_00_20_19_00 ClusterId 1 topics: ['fedora issue 35 problem']
+Topics found via LDA:
+Collection Name fiveHours_20_14_00_20_19_00 ClusterId 0 topics: ['try fedora work even']
+Topics found via LDA:
+Collection Name fiveHours_20_14_00_20_19_00 ClusterId 3 topics: ['fedora add install repos']
+Topics found via LDA:
+Collection Name fiveHours_20_14_00_20_19_00 ClusterId 2 topics: ['hat free red developer']
+Topics found via LDA:
+Collection Name fiveHours_20_19_00_21_00_00 ClusterId 1 topics: ['install fedora software gnome']
+Topics found via LDA:
+Collection Name fiveHours_20_19_00_21_00_00 ClusterId 0 topics: ['issue wayland one gnome']
+Topics found via LDA:
+Collection Name fiveHours_21_00_00_21_05_00 ClusterId 0 topics: ['install fedora package software']
+Topics found via LDA:
+Collection Name fiveHours_21_00_00_21_05_00 ClusterId 1 topics: ['fedora work rhel laptop']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_21_05_00_21_10_00 ClusterId 0 topics: ['fedora software repos opensuse']
+Topics found via LDA:
+Collection Name fiveHours_21_05_00_21_10_00 ClusterId 1 topics: ['fedora issue kernel 35']
+Topics found via LDA:
+Collection Name fiveHours_21_10_00_21_15_00 ClusterId 0 topics: ['repo repos version tiny']
+Topics found via LDA:
+Collection Name fiveHours_21_10_00_21_15_00 ClusterId 2 topics: ['stability user stream centos']
+Topics found via LDA:
+Collection Name fiveHours_21_10_00_21_15_00 ClusterId 1 topics: ['help better worked driver']
+Topics found via LDA:
+Collection Name fiveHours_21_15_00_21_20_00 ClusterId 2 topics: ['even driver amd ryzen']
+Topics found via LDA:
+Collection Name fiveHours_21_15_00_21_20_00 ClusterId 0 topics: ['packman codecs risky never']
+Topics found via LDA:
+Collection Name fiveHours_21_15_00_21_20_00 ClusterId 1 topics: ['gnome extension shell crash']
+Topics found via LDA:
+Collection Name fiveHours_21_20_00_22_01_00 ClusterId 1 topics: ['fedora getting install git']
+Topics found via LDA:
+Collection Name fiveHours_21_20_00_22_01_00 ClusterId 0 topics: ['linux idle window laptop']
+Topics found via LDA:
+Collection Name fiveHours_22_01_00_22_06_00 ClusterId 0 topics: ['firmware party third proprietary']
+Topics found via LDA:
+Collection Name fiveHours_22_01_00_22_06_00 ClusterId 5 topics: ['issue fedora may opensuse']
+Topics found via LDA:
+Collection Name fiveHours_22_01_00_22_06_00 ClusterId 4 topics: ['fedora repos package opensuse']
+Topics found via LDA:
+Collection Name fiveHours_22_01_00_22_06_00 ClusterId 1 topics: ['fedora working xps dell']
+Topics found via LDA:
+Collection Name fiveHours_22_01_00_22_06_00 ClusterId 2 topics: ['shell pop window gnome']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_22_01_00_22_06_00 ClusterId 3 topics: ['backup use command gui']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 0 topics: ['good really fedora thing']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 8 topics: ['city game oxygen confirmed']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 4 topics: ['nvidia vulkan driver dnf']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 2 topics: ['fedora 35 audio 34']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 1 topics: ['yes fedora workstation 4gb']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 5 topics: ['awesome gnome setting dejadup']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 10 topics: ['fine rebooted yes gtx']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 7 topics: ['gaming worst might distro']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 9 topics: ['mangohud info nvidia frame']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 6 topics: ['manjaro wayland system running']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 11 topics: ['4gb fine run gnome']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 3 topics: ['disk gb ssd writes']
+Topics found via LDA:
+Collection Name fiveHours_22_06_00_22_11_00 ClusterId 12 topics: ['nvidia system run mangohud']
+Topics found via LDA:
+Collection Name fiveHours_22_11_00_22_16_00 ClusterId 0 topics: ['fedora nvidia force install']
+Topics found via LDA:
+Collection Name fiveHours_22_11_00_22_16_00 ClusterId 1 topics: ['gnome fedora 35 much']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 11 topics: ['codium fedora 35 command']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 13 topics: ['gaming repos staff yeah']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 3 topics: ['fedora 35 still single']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 1 topics: ['fedora workstation think 4gb']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 0 topics: ['experience fedora ubuntu gaming']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 4 topics: ['nvidia install problem vulkan']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 9 topics: ['adapter pci 2731 crit']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 10 topics: ['fedora work better distro']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 2 topics: ['fedora way best distro']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 5 topics: ['understand bot convert unit']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 7 topics: ['spin installing get fedora']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 6 topics: ['force difference dependency fedora']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 14 topics: ['game command ve protondb']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 8 topics: ['disk data talking written']
+Topics found via LDA:
+Collection Name fiveHours_22_16_00_22_21_00 ClusterId 12 topics: ['work use xfce laggy']
+Topics found via LDA:
+Collection Name fiveHours_22_21_00_23_02_00 ClusterId 0 topics: ['fedora install flathub package']
+Topics found via LDA:
+Collection Name fiveHours_22_21_00_23_02_00 ClusterId 1 topics: ['fedora laptop arch package']
+Topics found via LDA:
+Collection Name fiveHours_23_02_00_23_07_00 ClusterId 0 topics: ['fedora package arch newer']
+Topics found via LDA:
+Collection Name fiveHours_23_02_00_23_07_00 ClusterId 1 topics: ['fedora 35 nvidia vulkan']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 0 topics: ['thanks ur luck alright']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 6 topics: ['distro thing stuff fun']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 1 topics: ['fedora workstation gaming 515']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 7 topics: ['issue 35 useful also']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 5 topics: ['linux fedora year rhel']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 8 topics: ['distro keep instruction word']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 9 topics: ['codium container installed dependency']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 11 topics: ['515 amd bit issue']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 10 topics: ['upstream implementation server fedora']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 2 topics: ['well sure reason pretty']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 13 topics: ['installed re work great']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 14 topics: ['word linux al2 amazon']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 16 topics: ['variant spelling remove menu']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 3 topics: ['yeah still see one']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 4 topics: ['virtually installing appstreams cluster']
+Topics found via LDA:
+Collection Name fiveHours_23_07_00_23_12_00 ClusterId 12 topics: ['bug try someone reproduce']
+Topics found via LDA:
+Collection Name fiveHours_23_12_00_23_17_00 ClusterId 0 topics: ['distro wrong machine linux']
+Topics found via LDA:
+Collection Name fiveHours_23_12_00_23_17_00 ClusterId 5 topics: ['flatpak container codium toolbox']
+Topics found via LDA:
+Collection Name fiveHours_23_12_00_23_17_00 ClusterId 4 topics: ['used ubuntu support still']
+Topics found via LDA:
+Collection Name fiveHours_23_12_00_23_17_00 ClusterId 1 topics: ['fedora company amazon project']
+Topics found via LDA:
+Collection Name fiveHours_23_12_00_23_17_00 ClusterId 6 topics: ['kernel fedora build get']
+Topics found via LDA:
+Collection Name fiveHours_23_12_00_23_17_00 ClusterId 2 topics: ['think gaming best comment']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_23_12_00_23_17_00 ClusterId 7 topics: ['distro fun thing cool']
+Topics found via LDA:
+Collection Name fiveHours_23_12_00_23_17_00 ClusterId 3 topics: ['see time wrote effort']
+Topics found via LDA:
+Collection Name fiveHours_23_17_00_23_22_00 ClusterId 1 topics: ['linux fedora based amazon']
+Topics found via LDA:
+Collection Name fiveHours_23_17_00_23_22_00 ClusterId 0 topics: ['fedora 35 help message']
+Topics found via LDA:
+Collection Name fiveHours_23_22_00_24_03_00 ClusterId 4 topics: ['4gb machine issue animation']
+Topics found via LDA:
+Collection Name fiveHours_23_22_00_24_03_00 ClusterId 2 topics: ['fedora software thing work']
+Topics found via LDA:
+Collection Name fiveHours_23_22_00_24_03_00 ClusterId 1 topics: ['fedora flathub repo full']
+Topics found via LDA:
+Collection Name fiveHours_23_22_00_24_03_00 ClusterId 3 topics: ['swap ram partition limited']
+Topics found via LDA:
+Collection Name fiveHours_23_22_00_24_03_00 ClusterId 0 topics: ['server provider vpn different']
+Topics found via LDA:
+Collection Name fiveHours_23_22_00_24_03_00 ClusterId 5 topics: ['fedora 35 linux us']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 10 topics: ['one wrap working get']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 4 topics: ['science without thanks invented']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 11 topics: ['way want enterprise get']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 2 topics: ['distro want need newer']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 1 topics: ['rhel change centos used']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 3 topics: ['use fedora workstation life']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 7 topics: ['people wan na go']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 9 topics: ['window wayland topic tiling']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 12 topics: ['fedora want package may']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 16 topics: ['gnome sway xfce bit']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 5 topics: ['nvidia yeah hope wayland']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 6 topics: ['zypperopensuse vendor almost already']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 13 topics: ['think benchmark xfce install']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 8 topics: ['setting use vpn walk']
+Topics found via LDA:
+Collection Name fiveHours_24_03_00_24_08_00 ClusterId 15 topics: ['silverblue system workstation make']
+Topics found via LDA:
+Collection Name fiveHours_24_08_00_24_13_00 ClusterId 0 topics: ['power button laptop force']
+Topics found via LDA:
+Collection Name fiveHours_24_08_00_24_13_00 ClusterId 9 topics: ['yeah work shot shit']
+Topics found via LDA:
+Collection Name fiveHours_24_08_00_24_13_00 ClusterId 1 topics: ['distro need sure want']
+Topics found via LDA:
+Collection Name fiveHours_24_08_00_24_13_00 ClusterId 4 topics: ['issue plasma worth lot']
+Topics found via LDA:
+Collection Name fiveHours_24_08_00_24_13_00 ClusterId 6 topics: ['silverblue use workstation ll']
+Topics found via LDA:
+Collection Name fiveHours_24_08_00_24_13_00 ClusterId 7 topics: ['fedora workstation fuck another']
+Topics found via LDA:
+Collection Name fiveHours_24_08_00_24_13_00 ClusterId 8 topics: ['wayland igpu egl amd']
+Topics found via LDA:
+Collection Name fiveHours_24_08_00_24_13_00 ClusterId 5 topics: ['though match install fedora']
+Topics found via LDA:
+Collection Name fiveHours_24_08_00_24_13_00 ClusterId 2 topics: ['rhel use distro student']
+Topics found via LDA:
+Collection Name fiveHours_24_13_00_24_18_00 ClusterId 1 topics: ['fedora de 35 life']
+Topics found via LDA:
+Collection Name fiveHours_24_13_00_24_18_00 ClusterId 0 topics: ['want container distro work']
+Topics found via LDA:
+Collection Name fiveHours_24_18_00_24_23_00 ClusterId 1 topics: ['fedora setting work battery']
+Topics found via LDA:
+Collection Name fiveHours_24_18_00_24_23_00 ClusterId 0 topics: ['fedora rhel debian work']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 6 topics: ['unity dock know use']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 12 topics: ['gnome look desktop option']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 10 topics: ['fedora use workstation installing']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 8 topics: ['nvidia level x11 issue']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 4 topics: ['fedora gnome 34 workstation']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 9 topics: ['work flatpaks etc make']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 3 topics: ['unity mint might look']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 7 topics: ['flatseal portal permission user']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 1 topics: ['manjaro work urban doesnt']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 11 topics: ['selinux talking kernel selinux0']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 2 topics: ['power computer use efficiency']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 14 topics: ['use something gnome year']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 15 topics: ['distros fedora x11 bleeding']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 0 topics: ['unity tweak using tool']
+Topics found via LDA:
+Collection Name fiveHours_24_23_00_25_04_00 ClusterId 13 topics: ['unity basically effort rough']
+Topics found via LDA:
+Collection Name fiveHours_25_04_00_25_09_00 ClusterId 0 topics: ['flatseal best use battery']
+Topics found via LDA:
+Collection Name fiveHours_25_04_00_25_09_00 ClusterId 1 topics: ['systemd system yes due']
+Topics found via LDA:
+Collection Name fiveHours_25_09_00_25_14_00 ClusterId 1 topics: ['gnome de fedora lot']
+Topics found via LDA:
+Collection Name fiveHours_25_09_00_25_14_00 ClusterId 2 topics: ['access user flatseal file']
+Topics found via LDA:
+Collection Name fiveHours_25_09_00_25_14_00 ClusterId 0 topics: ['fedora repos rpmfusion repo']
+Topics found via LDA:
+Collection Name fiveHours_25_14_00_25_19_00 ClusterId 2 topics: ['user file app permission']
+Topics found via LDA:
+Collection Name fiveHours_25_14_00_25_19_00 ClusterId 1 topics: ['repo fedora repos add']
+Topics found via LDA:
+Collection Name fiveHours_25_14_00_25_19_00 ClusterId 0 topics: ['cow btrfs home snapshot']
+Topics found via LDA:
+Collection Name fiveHours_25_19_00_26_00_00 ClusterId 1 topics: ['fedora one home file']
+Topics found via LDA:
+Collection Name fiveHours_25_19_00_26_00_00 ClusterId 0 topics: ['snapshot home cow file']
+Topics found via LDA:
+Collection Name fiveHours_26_00_00_26_05_00 ClusterId 0 topics: ['cow block post file']
+Topics found via LDA:
+Collection Name fiveHours_26_00_00_26_05_00 ClusterId 1 topics: ['file user program access']
+Topics found via LDA:
+Collection Name fiveHours_26_05_00_26_10_00 ClusterId 4 topics: ['two high agreeing checking']
+Topics found via LDA:
+Collection Name fiveHours_26_05_00_26_10_00 ClusterId 2 topics: ['post half already people']
+Topics found via LDA:
+Collection Name fiveHours_26_05_00_26_10_00 ClusterId 6 topics: ['one installing fedora drive']
+Topics found via LDA:
+Collection Name fiveHours_26_05_00_26_10_00 ClusterId 0 topics: ['good post working metadrag']
+Topics found via LDA:
+Collection Name fiveHours_26_05_00_26_10_00 ClusterId 1 topics: ['opensuse yeah use underated']
+Topics found via LDA:
+Collection Name fiveHours_26_05_00_26_10_00 ClusterId 5 topics: ['compressed already btrfs well']
+Topics found via LDA:
+Collection Name fiveHours_26_05_00_26_10_00 ClusterId 3 topics: ['fedora software opensuse thing']
+Topics found via LDA:
+Collection Name fiveHours_26_10_00_26_15_00 ClusterId 1 topics: ['fedora support linux arch']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_26_10_00_26_15_00 ClusterId 0 topics: ['user file flatseal app']
+Topics found via LDA:
+Collection Name fiveHours_26_15_00_26_20_00 ClusterId 0 topics: ['user app permission system']
+Topics found via LDA:
+Collection Name fiveHours_26_15_00_26_20_00 ClusterId 1 topics: ['fedora upstream 35 use']
+Topics found via LDA:
+Collection Name fiveHours_26_20_00_27_01_00 ClusterId 0 topics: ['update rolling yes get']
+Topics found via LDA:
+Collection Name fiveHours_26_20_00_27_01_00 ClusterId 7 topics: ['switch properly install gpus']
+Topics found via LDA:
+Collection Name fiveHours_26_20_00_27_01_00 ClusterId 8 topics: ['update fedora package care']
+Topics found via LDA:
+Collection Name fiveHours_26_20_00_27_01_00 ClusterId 2 topics: ['daily wip update fedora']
+Topics found via LDA:
+Collection Name fiveHours_26_20_00_27_01_00 ClusterId 6 topics: ['linux fedora workstation update']
+Topics found via LDA:
+Collection Name fiveHours_26_20_00_27_01_00 ClusterId 4 topics: ['permission user flatpak even']
+Topics found via LDA:
+Collection Name fiveHours_26_20_00_27_01_00 ClusterId 5 topics: ['one software see built']
+Topics found via LDA:
+Collection Name fiveHours_26_20_00_27_01_00 ClusterId 1 topics: ['update type specific question']
+Topics found via LDA:
+Collection Name fiveHours_27_01_00_27_06_00 ClusterId 3 topics: ['linux fedora amazon release']
+Topics found via LDA:
+Collection Name fiveHours_27_01_00_27_06_00 ClusterId 2 topics: ['kernel update old install']
+Topics found via LDA:
+Collection Name fiveHours_27_01_00_27_06_00 ClusterId 6 topics: ['upstream amazon contribute ll']
+Topics found via LDA:
+Collection Name fiveHours_27_01_00_27_06_00 ClusterId 0 topics: ['fedora update dnf upgrade']
+Topics found via LDA:
+Collection Name fiveHours_27_01_00_27_06_00 ClusterId 4 topics: ['release fedora version update']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_27_01_00_27_06_00 ClusterId 5 topics: ['file permission user application']
+Topics found via LDA:
+Collection Name fiveHours_27_06_00_27_11_00 ClusterId 3 topics: ['fedora welcome work distro']
+Topics found via LDA:
+Collection Name fiveHours_27_06_00_27_11_00 ClusterId 2 topics: ['version fedora package release']
+Topics found via LDA:
+Collection Name fiveHours_27_06_00_27_11_00 ClusterId 1 topics: ['aws customer rhel fedora']
+Topics found via LDA:
+Collection Name fiveHours_27_06_00_27_11_00 ClusterId 0 topics: ['daily update fedora release']
+Topics found via LDA:
+Collection Name fiveHours_27_06_00_27_11_00 ClusterId 4 topics: ['kernel fedora new release']
+Topics found via LDA:
+Collection Name fiveHours_27_11_00_27_16_00 ClusterId 5 topics: ['fedora plasma tried yet']
+Topics found via LDA:
+Collection Name fiveHours_27_11_00_27_16_00 ClusterId 6 topics: ['update sudo updated fedora']
+Topics found via LDA:
+Collection Name fiveHours_27_11_00_27_16_00 ClusterId 2 topics: ['software repos finding even']
+Topics found via LDA:
+Collection Name fiveHours_27_11_00_27_16_00 ClusterId 3 topics: ['fedora silverblue workstation upgrading']
+Topics found via LDA:
+Collection Name fiveHours_27_11_00_27_16_00 ClusterId 4 topics: ['rhel centos aws linux']
+Topics found via LDA:
+Collection Name fiveHours_27_11_00_27_16_00 ClusterId 1 topics: ['fedora welcome yearly mess']
+Topics found via LDA:
+Collection Name fiveHours_27_11_00_27_16_00 ClusterId 0 topics: ['file user permission application']
+Topics found via LDA:
+Collection Name fiveHours_27_16_00_27_21_00 ClusterId 4 topics: ['day security time week']
+Topics found via LDA:
+Collection Name fiveHours_27_16_00_27_21_00 ClusterId 0 topics: ['fedora im leap year']
+Topics found via LDA:
+Collection Name fiveHours_27_16_00_27_21_00 ClusterId 5 topics: ['rhel centos linux aws']
+Topics found via LDA:
+Collection Name fiveHours_27_16_00_27_21_00 ClusterId 3 topics: ['welcome working distro hopping']
+Topics found via LDA:
+Collection Name fiveHours_27_16_00_27_21_00 ClusterId 2 topics: ['default use plasma x11']
+Topics found via LDA:
+Collection Name fiveHours_27_16_00_27_21_00 ClusterId 1 topics: ['dnf upgrade update kernel']
+Topics found via LDA:
+Collection Name fiveHours_27_21_00_28_02_00 ClusterId 1 topics: ['kde fedora opensuse gnome']
+Topics found via LDA:
+Collection Name fiveHours_27_21_00_28_02_00 ClusterId 0 topics: ['kernel linux 515 time']
+Topics found via LDA:
+Collection Name fiveHours_28_02_00_28_07_00 ClusterId 2 topics: ['permission user linux design']
+Topics found via LDA:
+Collection Name fiveHours_28_02_00_28_07_00 ClusterId 1 topics: ['gnome fedora kde want']
+Topics found via LDA:
+Collection Name fiveHours_28_02_00_28_07_00 ClusterId 0 topics: ['kernel need adapter update']
+Topics found via LDA:
+Collection Name fiveHours_28_07_00_28_12_00 ClusterId 0 topics: ['try thank reach home']
+Topics found via LDA:
+Collection Name fiveHours_28_07_00_28_12_00 ClusterId 2 topics: ['window linux know something']
+Topics found via LDA:
+Collection Name fiveHours_28_07_00_28_12_00 ClusterId 1 topics: ['dnf dependency update pacman']
+Topics found via LDA:
+Collection Name fiveHours_28_07_00_28_12_00 ClusterId 4 topics: ['kernel step need github']
+Topics found via LDA:
+Collection Name fiveHours_28_07_00_28_12_00 ClusterId 5 topics: ['rhel linux aws centos']
+Topics found via LDA:
+Collection Name fiveHours_28_07_00_28_12_00 ClusterId 3 topics: ['theme plasma kde fedora']
+Topics found via LDA:
+Collection Name fiveHours_28_12_00_28_17_00 ClusterId 0 topics: ['permission make file sudo']
+Topics found via LDA:
+Collection Name fiveHours_28_12_00_28_17_00 ClusterId 1 topics: ['kernel driver linux one']
+Topics found via LDA:
+Collection Name fiveHours_28_17_00_28_22_00 ClusterId 0 topics: ['kernel try fedora package']
+Topics found via LDA:
+Collection Name fiveHours_28_17_00_28_22_00 ClusterId 4 topics: ['update kernel forever fedora']
+Topics found via LDA:
+Collection Name fiveHours_28_17_00_28_22_00 ClusterId 3 topics: ['default release upgrade change']
+Topics found via LDA:
+Collection Name fiveHours_28_17_00_28_22_00 ClusterId 1 topics: ['intel issue amd laptop']
+Topics found via LDA:
+Collection Name fiveHours_28_17_00_28_22_00 ClusterId 2 topics: ['software fedora thing opensuse']
+Topics found via LDA:
+Collection Name fiveHours_28_22_00_29_03_00 ClusterId 2 topics: ['kernel fedora lid laptop']
+Topics found via LDA:
+Collection Name fiveHours_28_22_00_29_03_00 ClusterId 3 topics: ['ram swap zram gib']
+Topics found via LDA:
+Collection Name fiveHours_28_22_00_29_03_00 ClusterId 4 topics: ['issue gnome update go']
+Topics found via LDA:
+Collection Name fiveHours_28_22_00_29_03_00 ClusterId 1 topics: ['hibernation power feature sleep']
+Topics found via LDA:
+Collection Name fiveHours_28_22_00_29_03_00 ClusterId 0 topics: ['disk change fedora boot']
+Topics found via LDA:
+Collection Name fiveHours_29_03_00_29_08_00 ClusterId 1 topics: ['swap zram ram fedora']
+Topics found via LDA:
+Collection Name fiveHours_29_03_00_29_08_00 ClusterId 0 topics: ['hibernation power fedora battery']
+Topics found via LDA:
+Collection Name fiveHours_29_03_00_29_08_00 ClusterId 3 topics: ['btrfs backup file swap']
+Topics found via LDA:
+Collection Name fiveHours_29_03_00_29_08_00 ClusterId 2 topics: ['fedora f35 interesting support']
+Topics found via LDA:
+Collection Name fiveHours_29_08_00_29_13_00 ClusterId 1 topics: ['system fedora swap zram']
+Topics found via LDA:
+THE IN WORDS
+Collection Name fiveHours_29_08_00_29_13_00 ClusterId 0 topics: ['fedora also software opensuse']
+Topics found via LDA:
+Collection Name fiveHours_29_13_00_29_18_00 ClusterId 0 topics: ['fedora package distribution popular']
+Topics found via LDA:
+Collection Name fiveHours_29_13_00_29_18_00 ClusterId 2 topics: ['swap fedora zram ram']
+Topics found via LDA:
+Collection Name fiveHours_29_13_00_29_18_00 ClusterId 1 topics: ['hibernation power system window']
+Topics found via LDA:
+Collection Name fiveHours_29_18_00_29_23_00 ClusterId 1 topics: ['fedora good stable people']
+Topics found via LDA:
+Collection Name fiveHours_29_18_00_29_23_00 ClusterId 0 topics: ['fedora time btrfs package']
+Topics found via LDA:
+Collection Name fiveHours_29_23_00_30_04_00 ClusterId 1 topics: ['page swap fedora file']
+Topics found via LDA:
+Collection Name fiveHours_29_23_00_30_04_00 ClusterId 0 topics: ['fedora edge probably default']

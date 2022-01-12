@@ -202,7 +202,6 @@ class MongoDBClient:
 def getAllCollections(prefix='fiveHours'):
 
     allCollections = db.list_collection_names()
-
     allCollections = list(filter(lambda x: prefix in x, allCollections))
 
     return sorted(allCollections)
