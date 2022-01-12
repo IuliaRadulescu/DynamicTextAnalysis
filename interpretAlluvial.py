@@ -154,7 +154,7 @@ def generateDynamicAndPlot(fedoraFile, datasetType = 'simple'):
 
     print('STARTED PLOTTING IMAGE FOR', outputFileName)
 
-    plotAlluvial.feedSankeyJsonClassic(filteredAlluvialData, outputFileName)
+    plotAlluvial.generateSankeyJson(filteredAlluvialData, outputFileName)
 
 generateDynamicAndPlot('simpleText.json')
 computeStats('simpleText.json')

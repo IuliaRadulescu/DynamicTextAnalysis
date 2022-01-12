@@ -1,0 +1,261 @@
+nohup: ignoring input
+Finished reading all snapshots from mongo!
+Finished reading comments from mongo! fiveHours_03_02_00_03_07_00
+Finished reading comments from mongo! fiveHours_03_07_00_03_12_00
+We have 10 fronts
+Finished reading comments from mongo! fiveHours_03_12_00_03_17_00
+We have 13 fronts
+Finished reading comments from mongo! fiveHours_03_17_00_03_22_00
+We have 15 fronts
+Finished reading comments from mongo! fiveHours_03_22_00_04_03_00
+We have 21 fronts
+Finished reading comments from mongo! fiveHours_04_03_00_04_08_00
+We have 23 fronts
+Finished reading comments from mongo! fiveHours_04_08_00_04_13_00
+We have 31 fronts
+Finished reading comments from mongo! fiveHours_04_13_00_04_18_00
+We have 37 fronts
+Finished reading comments from mongo! fiveHours_04_18_00_04_23_00
+We have 39 fronts
+Finished reading comments from mongo! fiveHours_04_23_00_05_04_00
+We have 41 fronts
+Finished reading comments from mongo! fiveHours_05_04_00_05_09_00
+We have 43 fronts
+Finished reading comments from mongo! fiveHours_05_09_00_05_14_00
+We have 48 fronts
+Finished reading comments from mongo! fiveHours_05_14_00_05_19_00
+We have 51 fronts
+Finished reading comments from mongo! fiveHours_05_19_00_06_00_00
+We have 53 fronts
+Finished reading comments from mongo! fiveHours_06_00_00_06_05_00
+We have 55 fronts
+Finished reading comments from mongo! fiveHours_06_05_00_06_10_00
+We have 56 fronts
+Finished reading comments from mongo! fiveHours_06_10_00_06_15_00
+We have 58 fronts
+Finished reading comments from mongo! fiveHours_06_15_00_06_20_00
+We have 57 fronts
+Finished reading comments from mongo! fiveHours_06_20_00_07_01_00
+We have 57 fronts
+Finished reading comments from mongo! fiveHours_07_01_00_07_06_00
+We have 59 fronts
+Finished reading comments from mongo! fiveHours_07_06_00_07_11_00
+We have 61 fronts
+Finished reading comments from mongo! fiveHours_07_11_00_07_16_00
+We have 63 fronts
+Finished reading comments from mongo! fiveHours_07_16_00_07_21_00
+We have 65 fronts
+Finished reading comments from mongo! fiveHours_07_21_00_08_02_00
+We have 67 fronts
+Finished reading comments from mongo! fiveHours_08_02_00_08_07_00
+We have 69 fronts
+Finished reading comments from mongo! fiveHours_08_07_00_08_12_00
+We have 75 fronts
+Finished reading comments from mongo! fiveHours_08_12_00_08_17_00
+We have 77 fronts
+Finished reading comments from mongo! fiveHours_08_17_00_08_22_00
+We have 79 fronts
+Finished reading comments from mongo! fiveHours_08_22_00_09_03_00
+We have 81 fronts
+Finished reading comments from mongo! fiveHours_09_03_00_09_08_00
+We have 85 fronts
+Finished reading comments from mongo! fiveHours_09_08_00_09_13_00
+We have 88 fronts
+Finished reading comments from mongo! fiveHours_09_13_00_09_18_00
+We have 90 fronts
+Finished reading comments from mongo! fiveHours_09_18_00_09_23_00
+We have 92 fronts
+Finished reading comments from mongo! fiveHours_09_23_00_10_04_00
+We have 95 fronts
+Finished reading comments from mongo! fiveHours_10_04_00_10_09_00
+We have 98 fronts
+Finished reading comments from mongo! fiveHours_10_09_00_10_14_00
+We have 100 fronts
+Finished reading comments from mongo! fiveHours_10_14_00_10_19_00
+We have 101 fronts
+Finished reading comments from mongo! fiveHours_10_19_00_11_00_00
+We have 108 fronts
+Finished reading comments from mongo! fiveHours_11_00_00_11_05_00
+We have 110 fronts
+Finished reading comments from mongo! fiveHours_11_05_00_11_10_00
+We have 110 fronts
+Finished reading comments from mongo! fiveHours_11_10_00_11_15_00
+We have 111 fronts
+Finished reading comments from mongo! fiveHours_11_15_00_11_20_00
+We have 113 fronts
+Finished reading comments from mongo! fiveHours_11_20_00_12_01_00
+We have 115 fronts
+Finished reading comments from mongo! fiveHours_12_01_00_12_06_00
+We have 116 fronts
+Finished reading comments from mongo! fiveHours_12_06_00_12_11_00
+We have 117 fronts
+Finished reading comments from mongo! fiveHours_12_11_00_12_16_00
+We have 119 fronts
+Finished reading comments from mongo! fiveHours_12_16_00_12_21_00
+We have 121 fronts
+Finished reading comments from mongo! fiveHours_12_21_00_13_02_00
+We have 124 fronts
+Finished reading comments from mongo! fiveHours_13_02_00_13_07_00
+We have 126 fronts
+Finished reading comments from mongo! fiveHours_13_07_00_13_12_00
+We have 134 fronts
+Finished reading comments from mongo! fiveHours_13_12_00_13_17_00
+We have 134 fronts
+Finished reading comments from mongo! fiveHours_13_17_00_13_22_00
+We have 137 fronts
+Finished reading comments from mongo! fiveHours_13_22_00_14_03_00
+We have 139 fronts
+Finished reading comments from mongo! fiveHours_14_03_00_14_08_00
+We have 140 fronts
+Finished reading comments from mongo! fiveHours_14_08_00_14_13_00
+We have 142 fronts
+Finished reading comments from mongo! fiveHours_14_13_00_14_18_00
+We have 143 fronts
+Finished reading comments from mongo! fiveHours_14_18_00_14_23_00
+We have 145 fronts
+Finished reading comments from mongo! fiveHours_14_23_00_15_04_00
+We have 147 fronts
+Finished reading comments from mongo! fiveHours_15_04_00_15_09_00
+We have 155 fronts
+Finished reading comments from mongo! fiveHours_15_09_00_15_14_00
+We have 158 fronts
+Finished reading comments from mongo! fiveHours_15_14_00_15_19_00
+We have 161 fronts
+Finished reading comments from mongo! fiveHours_15_19_00_16_00_00
+We have 162 fronts
+Finished reading comments from mongo! fiveHours_16_00_00_16_05_00
+We have 164 fronts
+Finished reading comments from mongo! fiveHours_16_05_00_16_10_00
+We have 166 fronts
+Finished reading comments from mongo! fiveHours_16_10_00_16_15_00
+We have 176 fronts
+Finished reading comments from mongo! fiveHours_16_15_00_16_20_00
+We have 180 fronts
+Finished reading comments from mongo! fiveHours_16_20_00_17_01_00
+We have 182 fronts
+Finished reading comments from mongo! fiveHours_17_01_00_17_06_00
+We have 186 fronts
+Finished reading comments from mongo! fiveHours_17_06_00_17_11_00
+We have 189 fronts
+Finished reading comments from mongo! fiveHours_17_11_00_17_16_00
+We have 192 fronts
+Finished reading comments from mongo! fiveHours_17_16_00_17_21_00
+We have 202 fronts
+Finished reading comments from mongo! fiveHours_17_21_00_18_02_00
+We have 200 fronts
+Finished reading comments from mongo! fiveHours_18_02_00_18_07_00
+We have 202 fronts
+Finished reading comments from mongo! fiveHours_18_07_00_18_12_00
+We have 202 fronts
+Finished reading comments from mongo! fiveHours_18_12_00_18_17_00
+We have 208 fronts
+Finished reading comments from mongo! fiveHours_18_17_00_18_22_00
+We have 220 fronts
+Finished reading comments from mongo! fiveHours_18_22_00_19_03_00
+We have 222 fronts
+Finished reading comments from mongo! fiveHours_19_03_00_19_08_00
+We have 224 fronts
+Finished reading comments from mongo! fiveHours_19_08_00_19_13_00
+We have 233 fronts
+Finished reading comments from mongo! fiveHours_19_13_00_19_18_00
+We have 236 fronts
+Finished reading comments from mongo! fiveHours_19_18_00_19_23_00
+We have 237 fronts
+Finished reading comments from mongo! fiveHours_19_23_00_20_04_00
+We have 242 fronts
+Finished reading comments from mongo! fiveHours_20_04_00_20_09_00
+We have 244 fronts
+Finished reading comments from mongo! fiveHours_20_09_00_20_14_00
+We have 244 fronts
+Finished reading comments from mongo! fiveHours_20_14_00_20_19_00
+We have 246 fronts
+Finished reading comments from mongo! fiveHours_20_19_00_21_00_00
+We have 248 fronts
+Finished reading comments from mongo! fiveHours_21_00_00_21_05_00
+We have 250 fronts
+Finished reading comments from mongo! fiveHours_21_05_00_21_10_00
+We have 252 fronts
+Finished reading comments from mongo! fiveHours_21_10_00_21_15_00
+We have 254 fronts
+Finished reading comments from mongo! fiveHours_21_15_00_21_20_00
+We have 257 fronts
+Finished reading comments from mongo! fiveHours_21_20_00_22_01_00
+We have 258 fronts
+Finished reading comments from mongo! fiveHours_22_01_00_22_06_00
+We have 261 fronts
+Finished reading comments from mongo! fiveHours_22_06_00_22_11_00
+We have 267 fronts
+Finished reading comments from mongo! fiveHours_22_11_00_22_16_00
+We have 268 fronts
+Finished reading comments from mongo! fiveHours_22_16_00_22_21_00
+We have 277 fronts
+Finished reading comments from mongo! fiveHours_22_21_00_23_02_00
+We have 279 fronts
+Finished reading comments from mongo! fiveHours_23_02_00_23_07_00
+We have 280 fronts
+Finished reading comments from mongo! fiveHours_23_07_00_23_12_00
+We have 290 fronts
+Finished reading comments from mongo! fiveHours_23_12_00_23_17_00
+We have 296 fronts
+Finished reading comments from mongo! fiveHours_23_17_00_23_22_00
+We have 298 fronts
+Finished reading comments from mongo! fiveHours_23_22_00_24_03_00
+We have 303 fronts
+Finished reading comments from mongo! fiveHours_24_03_00_24_08_00
+We have 314 fronts
+Finished reading comments from mongo! fiveHours_24_08_00_24_13_00
+We have 321 fronts
+Finished reading comments from mongo! fiveHours_24_13_00_24_18_00
+We have 323 fronts
+Finished reading comments from mongo! fiveHours_24_18_00_24_23_00
+We have 324 fronts
+Finished reading comments from mongo! fiveHours_24_23_00_25_04_00
+We have 334 fronts
+Finished reading comments from mongo! fiveHours_25_04_00_25_09_00
+We have 335 fronts
+Finished reading comments from mongo! fiveHours_25_09_00_25_14_00
+We have 334 fronts
+Finished reading comments from mongo! fiveHours_25_14_00_25_19_00
+We have 333 fronts
+Finished reading comments from mongo! fiveHours_25_19_00_26_00_00
+We have 334 fronts
+Finished reading comments from mongo! fiveHours_26_00_00_26_05_00
+We have 335 fronts
+Finished reading comments from mongo! fiveHours_26_05_00_26_10_00
+We have 339 fronts
+Finished reading comments from mongo! fiveHours_26_10_00_26_15_00
+We have 337 fronts
+Finished reading comments from mongo! fiveHours_26_15_00_26_20_00
+We have 338 fronts
+Finished reading comments from mongo! fiveHours_26_20_00_27_01_00
+We have 341 fronts
+Finished reading comments from mongo! fiveHours_27_01_00_27_06_00
+We have 347 fronts
+Finished reading comments from mongo! fiveHours_27_06_00_27_11_00
+We have 345 fronts
+Finished reading comments from mongo! fiveHours_27_11_00_27_16_00
+We have 350 fronts
+Finished reading comments from mongo! fiveHours_27_16_00_27_21_00
+We have 351 fronts
+Finished reading comments from mongo! fiveHours_27_21_00_28_02_00
+We have 353 fronts
+Finished reading comments from mongo! fiveHours_28_02_00_28_07_00
+We have 356 fronts
+Finished reading comments from mongo! fiveHours_28_07_00_28_12_00
+We have 360 fronts
+Finished reading comments from mongo! fiveHours_28_12_00_28_17_00
+We have 362 fronts
+Finished reading comments from mongo! fiveHours_28_17_00_28_22_00
+We have 365 fronts
+Finished reading comments from mongo! fiveHours_28_22_00_29_03_00
+We have 368 fronts
+Finished reading comments from mongo! fiveHours_29_03_00_29_08_00
+We have 372 fronts
+Finished reading comments from mongo! fiveHours_29_08_00_29_13_00
+We have 373 fronts
+Finished reading comments from mongo! fiveHours_29_13_00_29_18_00
+We have 375 fronts
+Finished reading comments from mongo! fiveHours_29_18_00_29_23_00
+We have 377 fronts
+Finished reading comments from mongo! fiveHours_29_23_00_30_04_00
+We have 378 fronts
