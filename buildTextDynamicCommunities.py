@@ -1,29 +1,36 @@
-import pymongo
+import json
+from os import walk
 import numpy as np
 from numpy import dot
 from numpy.linalg import norm
 import argparse
-import json
 
-def doComputation(dbName, optimalSim, outputFileName):
+class JsonFilesDriver:
+
+    def __init__(self, jsonFolderName):
+        self.jsonFolderName = jsonFolderName
+
+    def readJson(self, jsonFileName):
+        jsonFile = open(self.jsonFolderName + '/' + jsonFileName)
+        jsonData = json.load(jsonFile)
+        jsonFile.close()
+
+        return jsonData
+
+    def getAllJsonFileNames(self):
+        fileNames = next(walk(self.jsonFolderName), (None, None, []))[2]
+        return sorted(fileNames)
+
+def doComputation(optimalSim, outputFileName):
 
     '''
     @returns: a list of sorted strings representing the database collections
     '''
-    def getAllCollections(prefix):
+    def getAllCollections():
 
-        dbClient = pymongo.MongoClient('localhost', 27017)
-        db = dbClient[dbName]
+        jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
 
-        allCollections = db.list_collection_names()
-
-        allCollections = list(filter(lambda x: prefix in x, allCollections))
-
-        dbClient.close()
-
-        print('Finished reading all snapshots from mongo!')
-
-        return sorted(allCollections)
+        return jsonFilesDriver.getAllJsonFileNames()
 
     def getCommunitiesForSnapshot(collectionName, timeStep):
 
@@ -31,12 +38,8 @@ def doComputation(dbName, optimalSim, outputFileName):
             length, dim = arr.shape
             return np.array([np.sum(arr[:, i])/length for i in range(dim)])
 
-        dbClient = pymongo.MongoClient('localhost', 27017)
-        db = dbClient[dbName]
-
-        allComments = list(db[collectionName].find())
-
-        dbClient.close()
+        jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
+        allComments = jsonFilesDriver.readJson(collectionName)
 
         print('Finished reading comments from mongo!', collectionName)
 
@@ -143,7 +146,7 @@ def doComputation(dbName, optimalSim, outputFileName):
 
         return (frontId2CommunityId, fronts)
 
-    allSnapshots = getAllCollections('fiveHours')
+    allSnapshots = getAllCollections()
 
     '''
     communitiesTimestepMapping[communityId_0_1] = [communityId_1_0, communityId_1_1, ...] 
@@ -177,7 +180,7 @@ def doComputation(dbName, optimalSim, outputFileName):
         # map communities from dynamicCommunities list (t-1) to the ones in snapshot (t)
         for communityIdA in snapshotCommunities:
 
-            centroidsTupleA = list(set(snapshotCommunities[communityIdA]))
+            centroidsTupleA = list(snapshotCommunities[communityIdA])
             
             bestFrontIds = []
 
@@ -223,14 +226,12 @@ def doComputation(dbName, optimalSim, outputFileName):
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('-db', '--db', type=str, help='The database to read from')
 parser.add_argument('-sim', '--sim', type=float, help='The minimum similarity to match communities')
 parser.add_argument('-o', '--o', type=str, help='The json output file')
 
 args = parser.parse_args()
 
-dbName = args.db
 optimalSim = args.sim
 outputFileName = args.o
 
-doComputation(dbName, optimalSim, outputFileName)
+doComputation(optimalSim, outputFileName)

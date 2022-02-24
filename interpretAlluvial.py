@@ -156,5 +156,5 @@ def generateDynamicAndPlot(fedoraFile, datasetType = 'simple'):
 
     plotAlluvial.generateSankeyJson(filteredAlluvialData, outputFileName)
 
-generateDynamicAndPlot('simpleText.json')
-computeStats('simpleText.json')
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_70.json', 'TOPIC_EVOLUTION_70')
+computeStats('OUTPUT_TOPIC_EVOLUTION_70.json')

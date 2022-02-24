@@ -1,10 +1,26 @@
-import pymongo
-import plotly.graph_objects as go
 import random
 import os
 import json
+from os import walk
+import plotly.graph_objects as go
 
 # https://plotly.com/python/sankey-diagram/
+
+class JsonFilesDriver:
+
+    def __init__(self, jsonFolderName):
+        self.jsonFolderName = jsonFolderName
+
+    def readJson(self, jsonFileName):
+        jsonFile = open(self.jsonFolderName + '/' + jsonFileName)
+        jsonData = json.load(jsonFile)
+        jsonFile.close()
+
+        return jsonData
+
+    def getAllJsonFileNames(self):
+        fileNames = next(walk(self.jsonFolderName), (None, None, []))[2]
+        return sorted(fileNames)
 
 def parseAlluvialData(alluvialData):
 
@@ -32,17 +48,12 @@ def parseAlluvialData(alluvialData):
 
 def getTopicsLabels(labels):
 
-  def getAllCollections(prefix='fiveHours'):
+  jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
 
-    allCollections = db.list_collection_names()
-    allCollections = list(filter(lambda x: prefix in x, allCollections))
-
-    return sorted(allCollections)
+  def getAllCollections():
+      return jsonFilesDriver.getAllJsonFileNames()
 
   topicLabels = []
-
-  dbClient = pymongo.MongoClient('localhost', 27017)
-  db = dbClient.communityDetectionFedora
 
   allCollectionsSorted = getAllCollections()
 
@@ -53,9 +64,14 @@ def getTopicsLabels(labels):
 
     collectionName = allCollectionsSorted[timeStep]
 
-    topicWordsForLabel = list(db[collectionName].find({'clusterIdSpectral': clusterIdSpectral}, {'topicWords': 1, '_id': 0}))[0]
+    jsonData = jsonFilesDriver.readJson(collectionName)
+    topicWordsForLabel = []
 
-    topicLabels.append(topicWordsForLabel['topicWords'] if 'topicWords' in topicWordsForLabel else '')
+    for elem in jsonData:
+      if (elem['clusterIdSpectral'] == clusterIdSpectral):
+        topicWordsForLabel.append(elem['topicWords'])
+
+    topicLabels.append(topicWordsForLabel)
   
   return topicLabels
 
