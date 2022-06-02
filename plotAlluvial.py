@@ -68,7 +68,7 @@ def getTopicsLabels(labels):
     topicWordsForLabel = []
 
     for elem in jsonData:
-      if (elem['clusterIdSpectral'] == clusterIdSpectral):
+      if (elem['clusterIdSpectral'] == clusterIdSpectral and 'topicWords' in elem):
         topicWordsForLabel.append(elem['topicWords'])
 
     topicLabels.append(topicWordsForLabel)

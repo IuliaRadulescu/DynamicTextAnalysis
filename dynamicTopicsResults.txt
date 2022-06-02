@@ -1,0 +1,32 @@
+STARTED DYNAMIC COMMUNITY GENERATION
+Longest dynamic has length 260
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_50.json
+GENERATING STATS FOR HYBRID
+--> width
+Min width 1 Max width 13 Mean width 1.5906215921483098
+--> depth
+Min depth 2 Max depth 260 Mean depth 32.40136054421769
+STARTED DYNAMIC COMMUNITY GENERATION
+Longest dynamic has length 193
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_70.json
+GENERATING STATS FOR HYBRID
+--> width
+Min width 1 Max width 6 Mean width 1.105205678922461
+--> depth
+Min depth 2 Max depth 193 Mean depth 9.54655870445344
+STARTED DYNAMIC COMMUNITY GENERATION
+Longest dynamic has length 118
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_80.json
+GENERATING STATS FOR HYBRID
+--> width
+Min width 1 Max width 4 Mean width 1.0215650030807146
+--> depth
+Min depth 2 Max depth 118 Mean depth 4.571428571428571
+STARTED DYNAMIC COMMUNITY GENERATION
+Longest dynamic has length 108
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_90.json
+GENERATING STATS FOR HYBRID
+--> width
+Min width 1 Max width 1 Mean width 1.0
+--> depth
+Min depth 2 Max depth 108 Mean depth 5.08235294117647

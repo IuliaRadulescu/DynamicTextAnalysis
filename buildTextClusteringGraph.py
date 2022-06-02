@@ -1,10 +1,26 @@
 import igraph
-import pymongo
+import json
+from os import walk
 from collections import defaultdict
 from igraph import Graph, VertexClustering
 from igraph import plot
 from abc import ABC, abstractclassmethod, abstractmethod
 import re
+
+class JsonFilesDriver:
+
+    def __init__(self, jsonFolderName):
+        self.jsonFolderName = jsonFolderName
+
+    def readJson(self, jsonFileName):
+        jsonFile = open(self.jsonFolderName + '/' + jsonFileName)
+        jsonData = json.load(jsonFile)
+        jsonFile.close()
+        return jsonData
+
+    def getAllJsonFileNames(self):
+        fileNames = next(walk(self.jsonFolderName), (None, None, []))[2]
+        return sorted(fileNames)
 
 class CommunityGraphBuilder(ABC):
 
@@ -76,65 +92,18 @@ class BuildCommentsGraphGraph(CommunityGraphBuilder):
 
         clusters = VertexClustering(self.g, self.g.vs[self.attributeField])
 
-        print('MODULARITY', clusters.modularity)
         plot(clusters)
 
-class MongoDBClient:
+def getCommentsGraph(comments, justNodesWithEdges = False):
 
-    __instance = None
-
-    def __init__(self):
-
-        if MongoDBClient.__instance != None:
-            raise Exception('The MongoDBClient is a singleton')
-        else:
-            MongoDBClient.__instance = self
-
-    @staticmethod
-    def getInstance():
-        
-        if MongoDBClient.__instance == None:
-            MongoDBClient()
-
-        return MongoDBClient.__instance
-
-'''
-Get all dbs in dataset
-prefix - the collections must have a specific prefix
-startWithCollection - start from a specified collection, alphabetically
-'''
-def getAllCollections(prefix, startWithCollection = False):
-
-    def filterCollections(c, prefix, startWithCollection):
-        startWithPrefix = prefix in c
-
-        if (startWithCollection == False):
-            return startWithPrefix
-        
-        return startWithPrefix and (c > startWithCollection)
-
-    allCollections = db.list_collection_names()
-
-    prefix = 'fiveHours'
-    allCollections = list(filter(lambda collection: filterCollections(collection, prefix, startWithCollection), allCollections))
-
-    return sorted(allCollections)
-
-def getCommentsGraph(collectionName, justNodesWithEdges = False):
-
-    allComments = list(db[collectionName].find())
-
-    commentsGraph = BuildCommentsGraphGraph(allComments)
+    commentsGraph = BuildCommentsGraphGraph(comments)
     commentsGraph.buildCommunityGraph(justNodesWithEdges)
-
     return commentsGraph
 
-def plotCollectionGraph(collectionName, attributeField):
+def plotCollectionGraph(comments, attributeField):
 
-    community = getCommentsGraph(collectionName, False)
+    community = getCommentsGraph(comments, False)
     community.plotGraph(attributeField)
 
-dbClient = pymongo.MongoClient('localhost', 27017)
-db = dbClient.communityDetectionFedora
-
-plotCollectionGraph('fiveHours_28_17_00_28_22_00', 'clusterIdSpectral')
+jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
+plotCollectionGraph(jsonFilesDriver.readJson('twelveHours_11_22_14_00_11_23_02_00.json'), 'clusterIdSpectral')

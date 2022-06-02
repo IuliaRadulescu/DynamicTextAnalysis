@@ -1,15 +1,17 @@
-import pymongo
-from datetime import datetime
+import os
+import json
+from os import walk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import LatentDirichletAllocation as LDA
 import numpy as np
 import re
 import string
-import matplotlib.pyplot as plt
 from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
+import spacy
 from nltk.corpus import stopwords
 from stop_words import get_stop_words
+
+nlp = spacy.load('en_core_web_sm')
 
 '''
 text preprocessing pipeline - for a single unit of text corpus (a single document)
@@ -19,6 +21,30 @@ class TextPreprocessor:
     @staticmethod
     def removeLinks(textDocument):
         return re.sub(r'(https?://[^\s]+)', '', textDocument)
+
+    @staticmethod
+    def removeEmojis(textDocument):
+        emoj = re.compile("["
+        u"\U0001F600-\U0001F64F"  # emoticons
+        u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+        u"\U0001F680-\U0001F6FF"  # transport & map symbols
+        u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+        u"\U00002500-\U00002BEF"  # chinese char
+        u"\U00002702-\U000027B0"
+        u"\U00002702-\U000027B0"
+        u"\U000024C2-\U0001F251"
+        u"\U0001f926-\U0001f937"
+        u"\U00010000-\U0010ffff"
+        u"\u2640-\u2642" 
+        u"\u2600-\u2B55"
+        u"\u200d"
+        u"\u23cf"
+        u"\u23e9"
+        u"\u231a"
+        u"\ufe0f"  # dingbats
+        u"\u3030"
+                      "]+", re.UNICODE)
+        return re.sub(emoj, '', textDocument)
 
     @staticmethod
     def removeRedditReferences(textDocument):
@@ -32,7 +58,7 @@ class TextPreprocessor:
         # remove special chars
         specials = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '.',
            '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', 
-           '`', '{', '|', '}', '~', '»', '«', '“', '”']
+           '`', '{', '|', '}', '~', '»', '«', '“', '”', '\n']
         pattern = re.compile("[" + re.escape("".join(specials)) + "]")
         return re.sub(pattern, '', textDocument)
 
@@ -41,12 +67,11 @@ class TextPreprocessor:
         finalStop = list(get_stop_words('english')) # About 900 stopwords
         nltkWords = stopwords.words('english') # About 150 stopwords
         finalStop.extend(nltkWords)
-        finalStop.extend(['like', 'the', 'this'])
+        finalStop.extend(['the', 'this'])
         finalStop = list(set(finalStop))
 
         # filter stop words and one letter words/chars except i
-        tokenizedDocumentsNoStop = list(filter(lambda token: (token not in finalStop) and (len(token) > 1 and token != 'i'), tokenizedDocument))
-        return list(filter(lambda token: len(token) > 0, tokenizedDocumentsNoStop))
+        return list(filter(lambda token: (token not in finalStop), tokenizedDocument))
 
     @staticmethod
     def doLemmatization(tokenizedDocument):
@@ -54,18 +79,22 @@ class TextPreprocessor:
         return [lemmatizer.lemmatize(token) for token in tokenizedDocument]
 
     @staticmethod
-    def doProcessing(textDocument):
+    def doProcessing(textDocument, allowStopWords = False):
         # reddit specific preprocessing
         textDocument = TextPreprocessor.removeLinks(textDocument)
+        textDocument = TextPreprocessor.removeEmojis(textDocument)
         textDocument = TextPreprocessor.removeRedditReferences(textDocument)
         textDocument = TextPreprocessor.removePunctuation(textDocument)
 
-        # tokenize
-        tokenizedDocument = word_tokenize(textDocument.lower())
+        # tokenize and lemmatize
+        processedDocument = nlp(textDocument)
+        tokenizedLemmatizedDocument = [token.lemma_ for token in processedDocument]
 
         # generic preprocessing
-        tokenizedDocumentsNoStop = TextPreprocessor.stopWordRemoval(tokenizedDocument)
-        return TextPreprocessor.doLemmatization(tokenizedDocumentsNoStop)
+        if (allowStopWords == False):
+            tokenizedLemmatizedDocument = TextPreprocessor.stopWordRemoval(tokenizedLemmatizedDocument)
+
+        return tokenizedLemmatizedDocument
 
 class TopicExtractor:
 
@@ -82,8 +111,6 @@ class TopicExtractor:
     # Helper function
     def prettyPrintTopics(self, model, count_vectorizer, n_top_words, printResults = False):
         words = count_vectorizer.get_feature_names()
-        if 'the' in words:
-            print('THE IN WORDS')
         topics = []
         for topic_idx, topic in enumerate(model.components_):
             wordsInTopic = ' '.join([words[i]
@@ -107,45 +134,45 @@ class TopicExtractor:
 
         return topics
 
-class MongoDBClient:
+class JsonFilesDriver:
 
-    __instance = None
+    def __init__(self, jsonFolderName):
+        self.jsonFolderName = jsonFolderName
 
-    def __init__(self):
+    def readJson(self, jsonFileName):
+        jsonFile = open(self.jsonFolderName + '/' + jsonFileName)
+        jsonData = json.load(jsonFile)
+        jsonFile.close()
+        return jsonData
 
-        if MongoDBClient.__instance != None:
-            raise Exception('The MongoDBClient is a singleton')
-        else:
-            MongoDBClient.__instance = self
+    def writeJson(self, jsonFileName, data):
+        jsonFile = open(self.jsonFolderName + '/' + jsonFileName, 'w')
+        jsonData = json.dumps(data)
+        jsonFile.write(jsonData)
+        jsonFile.close()
 
-        self.dbClient = pymongo.MongoClient('localhost', 27017)
+    def getAllJsonFileNames(self):
+        fileNames = next(walk(self.jsonFolderName), (None, None, []))[2]
+        return sorted(fileNames)
 
-    @staticmethod
-    def getInstance():
-        
-        if MongoDBClient.__instance == None:
-            MongoDBClient()
+    def updateByClusterId(self, jsonFileName, clusterId, topicWords):
+        jsonData = self.readJson(jsonFileName)
 
-        return MongoDBClient.__instance
+        for jsonRecordId in range(len(jsonData)):
+            element = jsonData[jsonRecordId]
+            if (element['clusterIdSpectral'] != clusterId):
+                continue
+            jsonData[jsonRecordId]['topicWords'] = topicWords
 
-def getAllCollections(prefix='fiveHours'):
-
-    allCollections = db.list_collection_names()
-    allCollections = list(filter(lambda x: prefix in x, allCollections))
-
-    return sorted(allCollections)
-
-dbClient = pymongo.MongoClient('localhost', 27017)
-db = dbClient.communityDetectionFedora
-dbClient.close()
-
-allCollections = getAllCollections()
+        self.writeJson(jsonFileName, jsonData)
+            
+jsonFilesDriver = JsonFilesDriver('./UTILS/FEDORA_FILES')
+allCollections = jsonFilesDriver.getAllJsonFileNames()
 
 for collectionName in allCollections:
-    dbClient = pymongo.MongoClient('localhost', 27017)
 
     clusters2Comments = {}
-    collectionRecords = list(db[collectionName].find())
+    collectionRecords = jsonFilesDriver.readJson(collectionName)
 
     for collectionRecord in collectionRecords:
         if collectionRecord['clusterIdSpectral'] not in clusters2Comments:
@@ -156,22 +183,20 @@ for collectionName in allCollections:
             clusters2Comments[collectionRecord['clusterIdSpectral']].append(collectionRecord['body'])
 
     for clusterId in clusters2Comments:
+
         preprocessedList = [TextPreprocessor.doProcessing(comment) for comment in clusters2Comments[clusterId]]
         preprocessed = [item for sublist in preprocessedList for item in sublist]
+        
+        if (len(preprocessed) == 0 or len(preprocessed) == 1): # if text is empty due to preprocessing, allow stop words
+            preprocessedList = [TextPreprocessor.doProcessing(comment, True) for comment in clusters2Comments[clusterId]]
+            preprocessed = [item for sublist in preprocessedList for item in sublist]
+
+        if (len(preprocessed) == 0 or len(preprocessed) == 1): # if text is still empty, it means it contains only links and emojis
+            preprocessed = ['link', 'emoji']
+
         topicExtractor = TopicExtractor(preprocessed)
         topicWords = topicExtractor.getTopics(1, 5)
 
-        db = dbClient.communityDetectionFedora
-
-        db[collectionName].update_many(
-            {
-            'clusterIdSpectral': clusterId
-            },{
-                '$set': {
-                    'topicWords': topicWords
-                }
-            })
+        jsonFilesDriver.updateByClusterId(collectionName, clusterId, topicWords)
 
         print('Collection Name', collectionName, 'ClusterId', clusterId, 'topics:', topicWords)
-
-    dbClient.close()

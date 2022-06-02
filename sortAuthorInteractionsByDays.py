@@ -1,7 +1,6 @@
 import pymongo
 import math
-from datetime import date
-from datetime import datetime
+from datetime import date, timedelta, datetime
 from random_object_id import generate
 
 def createTimeIntervals(startTimestamp, endTimestamp, intervalInSeconds):
@@ -30,9 +29,12 @@ def convertTimestampIntervalToReadableInterval(timestampInterval):
     day1Padded0 = str(datetimeObj1.day) if int(datetimeObj1.day) > 9 else str(datetimeObj1.day).zfill(2)
     day2Padded0 = str(datetimeObj2.day) if int(datetimeObj2.day) > 9 else str(datetimeObj2.day).zfill(2)
 
-    humanReadableInterval  = 'fiveHours_' \
-        + day1Padded0 + '_' + str(datetimeObj1.strftime('%H')) + '_' + str(datetimeObj1.strftime('%M')) + '_' \
-        + day2Padded0 + '_' + str(datetimeObj2.strftime('%H')) + '_' + str(datetimeObj2.strftime('%M'))
+    month1Padded0 = str(datetimeObj1.month) if int(datetimeObj1.month) > 9 else str(datetimeObj1.month).zfill(2)
+    month2Padded0 = str(datetimeObj2.month) if int(datetimeObj2.month) > 9 else str(datetimeObj2.month).zfill(2)
+
+    humanReadableInterval  = 'twelveHours_' \
+        + month1Padded0 + '_' + day1Padded0 + '_' + str(datetimeObj1.strftime('%H')) + '_' + str(datetimeObj1.strftime('%M')) + '_' \
+        + month2Padded0 + '_' + day2Padded0 + '_' + str(datetimeObj2.strftime('%H')) + '_' + str(datetimeObj2.strftime('%M'))
 
     return humanReadableInterval
 
@@ -40,16 +42,15 @@ def computeTimestamps(daysList):
     timestampList = []
 
     for day in daysList:
-        transformedDateUTC = date(day[0], day[1], day[2])
-        timestampStart = (transformedDateUTC.toordinal() - date(1970, 1, 1).toordinal()) * 24*60*60
-        timestampEnd = (transformedDateUTC.toordinal() - date(1970, 1, 1).toordinal()) * 24*60*60 + 23*60*60 + 59*60 + 59
+        timestampStart = (day.toordinal() - date(1970, 1, 1).toordinal()) * 24*60*60
+        timestampEnd = (day.toordinal() - date(1970, 1, 1).toordinal()) * 24*60*60 + 23*60*60 + 59*60 + 59
         timestampList.append((timestampStart, timestampEnd))
 
     return timestampList
 
-intervalHeads = computeTimestamps([(2021, 11, 3), (2021, 11, 30)])        
+intervalHeads = computeTimestamps([date(2021, 1, 1), date(2021, 12, 31)])        
  
-intervalInSeconds = 60 * 60 * 5 # seconds (60) * minutes * hours
+intervalInSeconds = 60 * 60 * 12 # seconds (60) * minutes * hours
 startTimestamp = intervalHeads[0][0] # first day, start timestamp
 endTimestamp = intervalHeads[1][0] # second day, start timestamp
 

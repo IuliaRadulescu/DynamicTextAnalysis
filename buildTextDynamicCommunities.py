@@ -32,143 +32,71 @@ def doComputation(optimalSim, outputFileName):
 
         return jsonFilesDriver.getAllJsonFileNames()
 
-    def getCommunitiesForSnapshot(collectionName, timeStep):
-
-        def centeroidnp(arr):
-            length, dim = arr.shape
-            return np.array([np.sum(arr[:, i])/length for i in range(dim)])
+    '''
+    @returns: a dictionary, mapping each clusterId with its centroid
+    '''
+    def getDiscussionClustersForSnapshot(collectionName, timeStep):
 
         jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
         allComments = jsonFilesDriver.readJson(collectionName)
 
-        print('Finished reading comments from mongo!', collectionName)
+        print('Finished reading comments for time step!', collectionName)
 
-        comment2Attributes = {}
+        discussionClustersDict = {}
 
         for comment in allComments:
-            comment2Attributes[comment['redditId']] = {
-                    'clusterIdSpectral': comment['clusterIdSpectral'],
-                    'centroid': comment['centroid']
-                }
-                
-        timeStepDict = {}
+            discussionClusterKey = str(comment['clusterIdSpectral']) + '_' + str(timeStep)
+            
+            if discussionClusterKey in discussionClustersDict:
+                continue
+            
+            discussionClustersDict[discussionClusterKey] = comment['centroid']
 
-        for redditId in comment2Attributes:
-            dictKey = str(comment2Attributes[redditId]['clusterIdSpectral']) + '_' + str(timeStep)
-
-            if dictKey not in timeStepDict:
-                timeStepDict[dictKey] = [comment2Attributes[redditId]['centroid']]
-            else:
-                if (comment2Attributes[redditId]['centroid'] not in timeStepDict[dictKey]):
-                    timeStepDict[dictKey].append(comment2Attributes[redditId]['centroid'])
-
-        for dictKey in timeStepDict:
-            timeStepDict[dictKey] = tuple(centeroidnp(np.array(timeStepDict[dictKey])))
-
-        return timeStepDict
+        return discussionClustersDict
 
     '''
     frontsEvents = {1: {}, 2: []}
     '''
-    def updateFronts(fronts, frontEvents, frontId2CommunityId):
+    def updateFronts(fronts, frontEvents):
 
-        # remove things which should be removed if necessary
+        # remove the fronts that were matched with a cluster - they must be replaced by the matched cluster
+        keysOfFrontsToRemove = frontEvents[1].keys()
 
-        indicesToRemove = frontEvents[1].keys()
+        for keyToRemove in keysOfFrontsToRemove:
+            fronts.pop(keyToRemove, None)
 
-        if (len(indicesToRemove) > 0):
-
-            # !!! frontId2CommunityId needs to be updated; handle replacements and deletions
-
-            # sort the indices to remove
-            indicesToRemove = sorted(indicesToRemove)
-
-            oldIdxToNewIdx = dict(zip(range(indicesToRemove[0]), range(indicesToRemove[0])))
-
-            if (len(indicesToRemove) > 1):
-                
-                idIdx = 0
-                step = 1
-
-                while idIdx < (len(indicesToRemove) - 1):
-
-                    currentIdxToRemove = indicesToRemove[idIdx]
-                    nextIdxToRemove = indicesToRemove[idIdx + 1]
-                    
-                    oldIdxToNewIdx[currentIdxToRemove] = -1
-                    oldIdxToNewIdx[nextIdxToRemove] = -1
-
-                    k = currentIdxToRemove + 1
-
-                    while k < nextIdxToRemove:
-                        oldIdxToNewIdx[k] = k - step
-                        k += 1
-
-                    idIdx += 1
-                    step += 1
-            
-            else:
-                oldIdxToNewIdx[indicesToRemove[0]] = -1
-
-                idIdx = 0
-                step = 1
-
-            # for the rest of the indices just decrement
-            for idx in range(indicesToRemove[idIdx] + 1, len(frontId2CommunityId.keys())):
-                oldIdxToNewIdx[idx] = idx - step
-
-            for idxToRemove in indicesToRemove:
-                if (oldIdxToNewIdx[idxToRemove] != -1):
-                    print('WRONG!')
-
-            newFrontId2CommunityId = {}
-
-            for frontId in frontId2CommunityId:
-                if (frontId in oldIdxToNewIdx) and (oldIdxToNewIdx[frontId] != -1):
-                    newFrontId2CommunityId[oldIdxToNewIdx[frontId]] = frontId2CommunityId[frontId]
-
-            frontId2CommunityId = newFrontId2CommunityId
-
-            # !!! remove the fronts with specific indices; take care, this changes the fronts list indices
-            fronts = [fronts[frontId] for frontId in range(len(fronts)) if frontId not in indicesToRemove]
-
-            # add replacements
-            for frontId in frontEvents[1]:
-                for item in frontEvents[1][frontId]:
-                    if item[1] not in fronts:
-                        fronts += [item[1]]
-                        frontId2CommunityId[len(fronts)-1] = item[0]
+        # add the replacements
+        for itemKey in frontEvents[1]:
+            for item in frontEvents[1][itemKey]:
+                if item[0] not in fronts:
+                    fronts[item[0]] = item[1]
         
+        # add the new created fronts
         for item in frontEvents[2]:
-            if item[1] not in fronts:
-                fronts += [item[1]]
-                frontId2CommunityId[len(fronts)-1] = item[0]
+            fronts[item[0]] = item[1]
 
-        return (frontId2CommunityId, fronts)
+        return fronts
 
     allSnapshots = getAllCollections()
 
     '''
-    communitiesTimestepMapping[communityId_0_1] = [communityId_1_0, communityId_1_1, ...] 
+    discussionClustersMatches[clusterId_0_1] = [clusterId_1_0, clusterId_1_1, ...] 
     '''
-    communitiesTimestepMapping = {}
+    discussionClustersMatches = {}
     fronts = []
-    '''
-    maps each front with its associated community at the associated specific timestep
-    '''
-    frontId2CommunityId = {}
-    timeStep = 0
 
-    snapshotCommunities0 = getCommunitiesForSnapshot(allSnapshots[0], 0)
+    snapshotDiscussionClusters0 = getDiscussionClustersForSnapshot(allSnapshots[0], 0)
 
     # the initial communities are the initial fronts
-    communitiesTimestepMapping = dict(zip(snapshotCommunities0.keys(), [[] for i in range(len(snapshotCommunities0))]))
-    fronts = [item[1] for item in snapshotCommunities0.items()]
-    frontId2CommunityId = dict(zip(range(len(fronts)), [communityId for communityId in snapshotCommunities0.keys()]))
+    # discussionClustersMatches is a mapping between clusterId_timeStep and empty list []
+    discussionClustersMatches = dict(zip(snapshotDiscussionClusters0.keys(), [[] for i in range(len(snapshotDiscussionClusters0))]))
+
+    # the fronts are expressed by the discussion clusters dictionary of the initial snapshot
+    fronts = snapshotDiscussionClusters0
 
     for timeStep in range(1, len(allSnapshots)):
 
-        snapshotCommunities = getCommunitiesForSnapshot(allSnapshots[timeStep], timeStep)
+        snapshotClusters = getDiscussionClustersForSnapshot(allSnapshots[timeStep], timeStep)
 
         '''
         frontsEvents[frontEvent][frontId] = [front1, front2, ...]
@@ -178,51 +106,46 @@ def doComputation(optimalSim, outputFileName):
         frontEvents = {1: {}, 2: []}
 
         # map communities from dynamicCommunities list (t-1) to the ones in snapshot (t)
-        for communityIdA in snapshotCommunities:
+        for clusterKeySnapshot in snapshotClusters:
 
-            centroidsTupleA = list(snapshotCommunities[communityIdA])
+            clusterCentroidSnapshot = snapshotClusters[clusterKeySnapshot]
             
-            bestFrontIds = []
+            bestFrontKeys = []
 
-            for frontId in range(len(fronts)):
+            for frontKey in fronts:
 
-                centroidsTupleB = fronts[frontId] # (centroid_1, centroid_2, ..., centroid_n) - a front is actually a static community
-                centroidSimilarity = dot(centroidsTupleA, centroidsTupleB)/(norm(centroidsTupleA)*norm(centroidsTupleB))
+                centroidFront = fronts[frontKey]
+                
+                centroidSimilarity = dot(clusterCentroidSnapshot, centroidFront)/(norm(clusterCentroidSnapshot)*norm(centroidFront))
                 
                 if (centroidSimilarity > optimalSim):
-                    # print('SIM IS BIGGER', avgSimilarity)
-                    bestFrontIds.append(frontId)
+                    bestFrontKeys.append(frontKey)
             
-            # print('BEST FRONTS', bestFrontIds)
-            if (len(bestFrontIds) > 0):
-                for bestFrontId in bestFrontIds:
+            # print('BEST FRONTS', bestFrontKeys)
+            if (len(bestFrontKeys) > 0):
+                for bestFrontKey in bestFrontKeys:
                     # front transformation event
-                    if (bestFrontId not in frontEvents[1]):
-                        frontEvents[1][bestFrontId] = []
-                    frontEvents[1][bestFrontId].append((communityIdA, centroidsTupleA))
-                    if bestFrontId in frontId2CommunityId:
-                        bestFrontCommunityId = frontId2CommunityId[bestFrontId]
-                        communitiesTimestepMapping[bestFrontCommunityId].append(communityIdA)
+                    if (bestFrontKey not in frontEvents[1]):
+                        frontEvents[1][bestFrontKey] = []
+                    frontEvents[1][bestFrontKey].append((clusterKeySnapshot, clusterCentroidSnapshot))
+
+                    if (bestFrontKey not in discussionClustersMatches):
+                        discussionClustersMatches[bestFrontKey] = []
+                    discussionClustersMatches[bestFrontKey].append(clusterKeySnapshot)
+                        
             else:
                 # front addition event
-                frontEvents[2].append((communityIdA, centroidsTupleA))
-
-        # update mappings
-        for key in snapshotCommunities.keys():
-            communitiesTimestepMapping[key] = []
-
-        (frontId2CommunityId, fronts) = updateFronts(fronts, frontEvents, frontId2CommunityId)
+                frontEvents[2].append((clusterKeySnapshot, clusterCentroidSnapshot))
+        
+        # compute the new fronts
+        # compute the new front to dynamic topic associations
+        fronts = updateFronts(fronts, frontEvents)
 
         print('We have', len(fronts), 'fronts')
 
-    finalMappings = {}
-
-    for communityId in communitiesTimestepMapping:
-        if (len(communitiesTimestepMapping[communityId]) > 0):
-            finalMappings[communityId] = communitiesTimestepMapping[communityId]
-        
     with open(outputFileName, 'w') as outfile:
-        json.dump(finalMappings, outfile)
+        json.dump(discussionClustersMatches, outfile)
+        
 
 parser = argparse.ArgumentParser()
 

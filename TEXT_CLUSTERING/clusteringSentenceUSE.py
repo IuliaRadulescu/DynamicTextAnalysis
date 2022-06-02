@@ -69,7 +69,7 @@ class TextPreprocessor:
         tokenizedDocumentsNoStop = TextPreprocessor.stopWordRemoval(tokenizedDocument)
         tokenizedLemmas = TextPreprocessor.doLemmatization(tokenizedDocumentsNoStop)
         return ' '.join(tokenizedLemmas)
-    
+
 class Clusterer:
 
     def __init__(self, fileName, preprocessedDataset, fileJsonData, commentEmbeddingsForFile):
@@ -84,29 +84,37 @@ class Clusterer:
         length, dim = cluster.shape
         return np.array([np.sum(cluster[:, i])/length for i in range(dim)])
 
+    def getSpectralClusteringLabels(self, noClusters):
+        spectralClustering = SpectralClustering(n_clusters=noClusters, assign_labels='discretize', random_state=0)
+        spectralClustering.fit(self.commentEmbeddingsForFile)
+        return spectralClustering.labels_
+
+    '''
+    @return: clusterIds2FileJsonDataRecordIds, clusterIds2Centroids
+    clusterIds2FileJsonDataRecordIds: mapping between each cluster id and its json files indexes
+    clusterIds2Centroids: mapping between each cluster id and its centroids
+    '''
     def doClustering(self):
 
         allEmbeddingsLen = len(self.commentEmbeddingsForFile)
 
         # if just one comment, no need to perform clustering
         if (allEmbeddingsLen == 1):
-            return [[0], self.commentEmbeddingsForFile[0]]
+            return [{0: [0]}, {0: self.computeCentroid(self.commentEmbeddingsForFile)}]
 
-        maxSilhouette = -1
-        maxNoClusters = min(3, (allEmbeddingsLen - 1))
+        # worst case values
+        maxSilhouette = -2
+        maxNoClusters = 1
+        bestLabels = [0] * allEmbeddingsLen
 
-        bestLabels = None
+        for noClusters in range(min(2, (allEmbeddingsLen-1)), min(20, allEmbeddingsLen)):
 
-        for noClusters in range(min(2, (allEmbeddingsLen - 1)), min(20, allEmbeddingsLen)):
+            labels = self.getSpectralClusteringLabels(noClusters)
             
-            spectralClustering = SpectralClustering(n_clusters=noClusters, assign_labels='discretize', random_state=0)
-            spectralClustering.fit(self.commentEmbeddingsForFile)
-            labels = spectralClustering.labels_
-
-            if (len(list(set(labels))) <= 1):
+            if (len(list(set(labels))) <= 1):    
                 continue
 
-            sscore = silhouette_score(self.commentEmbeddingsForFile, spectralClustering.labels_)
+            sscore = silhouette_score(self.commentEmbeddingsForFile, labels)
 
             if (sscore > maxSilhouette):
                 maxSilhouette = sscore
