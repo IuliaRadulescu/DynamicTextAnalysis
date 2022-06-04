@@ -1,122 +1,51 @@
 import numpy as np
+import math
 import alluvialDataRetriever
 import plotAlluvial
 from collections import deque
 
-def filterAlluvialData(alluvialData, communitiesToMonitor):
+'''
+@returns: list of dictionaries (the list of all topic flows)
+'''
+def identifyDynamicTopicFlows(alluvialData):
 
-    print('STARTED FILTERING ===')
+    dynamicTopicFlows = [] # list of dynamic topic flows dictionaries
+    fullyParsedDiscussionsById = [] # discussions that are fully included in one or more topic flows; alluvialData keys whose all values belong to a topic dynamic topic flow; there's no use to start a new topic flow from them
 
-    filteredAlluvial = {}
-    alreadyParsedGlobal = []
+    for discussionId in alluvialData:
 
-    for community in communitiesToMonitor:
-
-        if (community not in alluvialData) or (community in alreadyParsedGlobal):
+        if discussionId in fullyParsedDiscussionsById or alluvialData[discussionId] == []:
             continue
 
-        alreadyParsedGlobal.append(community)
+        dynamicTopicFlow = {}
+        dynamicTopicFlow[discussionId] = alluvialData[discussionId]
 
-        communitiesDeduplicated = list(set(alluvialData[community]))
+        if discussionId not in fullyParsedDiscussionsById:
+            fullyParsedDiscussionsById.append(discussionId)
 
-        if community not in filteredAlluvial:
-            filteredAlluvial[community] = communitiesDeduplicated
+        discussionIdsStack = []
+        discussionIdsStack.extend(alluvialData[discussionId])
 
-        communitiesQueue = deque()
-        communitiesQueue.extend(communitiesDeduplicated)
+        while (len(discussionIdsStack) > 0):
 
-        alreadyParsed = []
+            stackDiscussionId = discussionIdsStack.pop()
 
-        while len(communitiesQueue) > 0:
-
-            communityInQueue = communitiesQueue.popleft()
-
-            if (communityInQueue not in alluvialData) or (communityInQueue in alreadyParsedGlobal):
+            if (stackDiscussionId not in alluvialData or stackDiscussionId in fullyParsedDiscussionsById) or alluvialData[stackDiscussionId] == []:
                 continue
 
-            alreadyParsedGlobal.append(communityInQueue)
+            dynamicTopicFlow[stackDiscussionId] = alluvialData[stackDiscussionId]
+            discussionIdsStack.extend(alluvialData[stackDiscussionId])
             
-            # filter duplicates
-            communitiesToAddSet = set(alluvialData[communityInQueue])
+            if stackDiscussionId not in fullyParsedDiscussionsById:
+                fullyParsedDiscussionsById.append(stackDiscussionId)
 
-            if communityInQueue not in filteredAlluvial:
-                filteredAlluvial[communityInQueue] = list(communitiesToAddSet)
+        dynamicTopicFlows.append(dynamicTopicFlow)
 
-            # check to see if any of the communities to add were previosly in the queue
-            setDifferenceAddVsAlreadyParsed = communitiesToAddSet - set(alreadyParsed)
-            listDifferenceAddVsAlredyParsed = list(setDifferenceAddVsAlreadyParsed)
-
-            if len(listDifferenceAddVsAlredyParsed) == 0:
-                continue
-
-            alreadyParsed.extend(listDifferenceAddVsAlredyParsed)
-            alreadyParsed = list(set(alreadyParsed))
-
-            alreadyParsedGlobal.extend(listDifferenceAddVsAlredyParsed)
-            alreadyParsedGlobal = list(set(alreadyParsedGlobal))
-            
-            communitiesQueue.extend(listDifferenceAddVsAlredyParsed)
-            communitiesQueue = deque(set(communitiesQueue))
-
-    return filteredAlluvial
-
-def determineDynamicCommunitiesDFS(alluvialData):
-
-    # determine leafs
-
-    nonLeaves = list(set(alluvialData.keys()))
-
-    alreadyParsedGlobal = set()
-
-    stack = []
-    dynamicCommunities = []
-
-    for communityId in alluvialData:
-
-        if (communityId not in alluvialData) or (communityId in alreadyParsedGlobal):
-            continue
-
-        stack.append((communityId, [communityId]))
-
-        while len(stack) > 0:
-
-            (communityId, path) = stack.pop()
-
-            if (communityId not in alreadyParsedGlobal) and (communityId not in nonLeaves):
-                dynamicCommunities.append(path)
-
-            if (communityId not in alluvialData) or (communityId in alreadyParsedGlobal):
-                continue
-            
-            alreadyParsedGlobal.add(communityId)
-            adjacentCommunities = alluvialData[communityId]
-
-            for adjCommunity in adjacentCommunities:
-                stack.append((adjCommunity, path + [adjCommunity]))
-
-    return dynamicCommunities
-
-def filterAlluvialDataDFS(alluvialData, communitiesToMonitor, maxWidth = None):
-
-    filteredAlluvial = {}
-
-    for communityId in communitiesToMonitor:
-        if (communityId in alluvialData):
-
-            allNeighs = alluvialData[communityId]
-
-            if maxWidth == None:
-                filteredAlluvial[communityId] = allNeighs
-            else:
-                justMaxWidth = allNeighs[0:maxWidth]
-                mandatory = list(set(communitiesToMonitor) & set(allNeighs))
-                filteredAlluvial[communityId] = list(set(justMaxWidth) - set(mandatory)) + mandatory
-
-    return filteredAlluvial    
+    return dynamicTopicFlows    
 
 def computeStats(fedoraFile):
 
-    print('GENERATING STATS FOR HYBRID')
+    print('GENERATING STATS...')
 
     alluvialData = alluvialDataRetriever.getAlluvialData(fedoraFile)
 
@@ -128,10 +57,10 @@ def computeStats(fedoraFile):
     print('Min width', minCommunityWidth, 'Max width', maxCommunityWidth, 'Mean width', meanCommunityWidth)
 
     print('--> depth')
-    lenDynamicCommunities = [len(dynamicCommunity) for dynamicCommunity in determineDynamicCommunitiesDFS(alluvialData)]
-    minCommunityDepth = min(lenDynamicCommunities)
-    maxCommunityDepth = max(lenDynamicCommunities)
-    meanCommunityDepth = np.mean(lenDynamicCommunities)
+    lenDynamicTopicFlows = [len(dynamicCommunity) for dynamicCommunity in identifyDynamicTopicFlows(alluvialData)]
+    minCommunityDepth = min(lenDynamicTopicFlows)
+    maxCommunityDepth = max(lenDynamicTopicFlows)
+    meanCommunityDepth = np.mean(lenDynamicTopicFlows)
     print('Min depth', minCommunityDepth, 'Max depth', maxCommunityDepth, 'Mean depth', meanCommunityDepth)
 
 def generateDynamicAndPlot(fedoraFile, datasetType = 'simple'):
@@ -139,22 +68,21 @@ def generateDynamicAndPlot(fedoraFile, datasetType = 'simple'):
     alluvialData = alluvialDataRetriever.getAlluvialData(fedoraFile)
     outputFileName = datasetType + '.json'
 
-    print('STARTED DYNAMIC COMMUNITY GENERATION')
+    print('STARTED DYNAMIC TOPIC FLOW GENERATION...')
 
-    dynamicCommunities = determineDynamicCommunitiesDFS(alluvialData)
+    dynamicTopicFlows = identifyDynamicTopicFlows(alluvialData)
 
-    # sort dynamicCommunities by lentgh of dynamic communities
-    dynamicCommunities.sort(key=len)
+    print('FOUND', len(dynamicTopicFlows), 'TOPIC FLOWS')
 
-    longestDynamicItems = dynamicCommunities[len(dynamicCommunities) - 1]
+    # sort dynamicTopicFlows by lentgh of dynamic communities
+    dynamicTopicFlows.sort(key=len)
 
-    print('Longest dynamic has length', len(longestDynamicItems))
+    longestDynamicTopic = dynamicTopicFlows[len(dynamicTopicFlows) - 1]
 
-    filteredAlluvialData = filterAlluvialDataDFS(alluvialData, longestDynamicItems, maxWidth=100)
+    print('Longest dynamic has length', len(longestDynamicTopic))
 
     print('STARTED PLOTTING IMAGE FOR', outputFileName)
-
-    plotAlluvial.generateSankeyJson(filteredAlluvialData, outputFileName)
+    plotAlluvial.generateSankeyJson(longestDynamicTopic, outputFileName)
 
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_50.json', 'TOPIC_EVOLUTION_50')
 computeStats('OUTPUT_TOPIC_EVOLUTION_50.json')

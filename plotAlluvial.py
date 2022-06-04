@@ -65,16 +65,13 @@ def getTopicsLabels(labels):
     collectionName = allCollectionsSorted[timeStep]
 
     jsonData = jsonFilesDriver.readJson(collectionName)
-    topicWordsForLabel = []
 
     for elem in jsonData:
       if (elem['clusterIdSpectral'] == clusterIdSpectral and 'topicWords' in elem):
-        topicWordsForLabel.append(elem['topicWords'])
+        topicLabels.append(elem['topicWords'])
+        break
 
-    topicLabels.append(topicWordsForLabel)
-  
   return topicLabels
-
 
 def generateSankeyJson(alluvialData, outputFileName):
 
