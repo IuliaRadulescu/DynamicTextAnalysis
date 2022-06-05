@@ -3,6 +3,52 @@ import math
 import alluvialDataRetriever
 import plotAlluvial
 from collections import deque
+import argparse
+from datetime import date, timezone, datetime
+
+'''
+@returns reversed dictionary
+reverses values with keys
+'''
+def reverseDictionary(dictionaryToReverse):
+
+    reversedDictionary = {}
+
+    for key in dictionaryToReverse:
+        for value in dictionaryToReverse[key]:
+            if value not in reversedDictionary:
+                reversedDictionary[value] = [key]
+            else:
+                # if key has already been mapped to the value, don't add it twice
+                if key in reversedDictionary[value]:
+                    continue
+                # else, append it (a key may be matched with more than one value)
+                reversedDictionary[value].append(key)
+
+    return reversedDictionary
+
+'''
+handles the case where the discussionId is not a key in alluvialData, but part of the matches list
+[key] = [discussionId, some_value, some_other_value] -> then [key] must be returned - there may be several such keys
+
+@returns: list of keys that were matched with the discussionId
+'''
+def searchForDiscussionIdInMatches(discussionId, alluvialDataReversed, fullyParsedDiscussionsById):
+
+    if (discussionId in alluvialDataReversed):
+        matchingKeys = list(set(alluvialDataReversed[discussionId]).difference(set(fullyParsedDiscussionsById)))
+
+    return matchingKeys
+
+def checkForKeyMatches(discussionIds, alluvialDataReversed, fullyParsedDiscussionsById, dynamicTopicFlow):
+    # check if discussionIdMatch should be matched with other keys
+    for discussionIdMatch in discussionIds:
+        matchingKeys = searchForDiscussionIdInMatches(discussionIdMatch, alluvialDataReversed, fullyParsedDiscussionsById)
+        for matchingKey in matchingKeys:
+            if matchingKey not in dynamicTopicFlow:
+                dynamicTopicFlow[matchingKey] = [discussionIdMatch]
+            elif discussionIdMatch not in dynamicTopicFlow[matchingKey]:
+                dynamicTopicFlow[matchingKey].append(discussionIdMatch)
 
 '''
 @returns: list of dictionaries (the list of all topic flows)
@@ -11,6 +57,8 @@ def identifyDynamicTopicFlows(alluvialData):
 
     dynamicTopicFlows = [] # list of dynamic topic flows dictionaries
     fullyParsedDiscussionsById = [] # discussions that are fully included in one or more topic flows; alluvialData keys whose all values belong to a topic dynamic topic flow; there's no use to start a new topic flow from them
+    
+    alluvialDataReversed = reverseDictionary(alluvialData) # reverse alluvial data for easy matching
 
     for discussionId in alluvialData:
 
@@ -23,6 +71,8 @@ def identifyDynamicTopicFlows(alluvialData):
         if discussionId not in fullyParsedDiscussionsById:
             fullyParsedDiscussionsById.append(discussionId)
 
+        checkForKeyMatches(alluvialData[discussionId], alluvialDataReversed, fullyParsedDiscussionsById, dynamicTopicFlow)
+                    
         discussionIdsStack = []
         discussionIdsStack.extend(alluvialData[discussionId])
 
@@ -39,34 +89,56 @@ def identifyDynamicTopicFlows(alluvialData):
             if stackDiscussionId not in fullyParsedDiscussionsById:
                 fullyParsedDiscussionsById.append(stackDiscussionId)
 
+            checkForKeyMatches(alluvialData[stackDiscussionId], alluvialDataReversed, fullyParsedDiscussionsById, dynamicTopicFlow)
+
         dynamicTopicFlows.append(dynamicTopicFlow)
 
     return dynamicTopicFlows    
 
-def computeStats(fedoraFile):
+def computeStats(fedoraFile, startTimeInterval, endTimeInterval):
 
     print('GENERATING STATS...')
 
     alluvialData = alluvialDataRetriever.getAlluvialData(fedoraFile)
 
+    # filter only desired intervals
+    filteredAlluvialData = {}
+    for key in alluvialData:
+        timeInterval = int(key.split('_')[1])
+        if timeInterval < startTimeInterval or timeInterval > endTimeInterval:
+            continue
+        filteredAlluvialData[key] = alluvialData[key]
+
+    alluvialData = filteredAlluvialData
+
     print('--> width')
-    communityWidths = [len(list(set(alluvialData[key]))) for key in alluvialData]
-    minCommunityWidth = min(communityWidths)
-    maxCommunityWidth = max(communityWidths)
-    meanCommunityWidth = np.mean(communityWidths)
-    print('Min width', minCommunityWidth, 'Max width', maxCommunityWidth, 'Mean width', meanCommunityWidth)
+    dynamicTopicFlowsWidths = [sum([len(dynamicTopicFlow[key]) for key in dynamicTopicFlow]) for dynamicTopicFlow in identifyDynamicTopicFlows(alluvialData)]
+    minTopicFlowWidth = min(dynamicTopicFlowsWidths)
+    maxTopicFlowWidth = max(dynamicTopicFlowsWidths)
+    meanTopicFlowWidth = np.mean(dynamicTopicFlowsWidths)
+    print('Min width', minTopicFlowWidth, 'Max width', maxTopicFlowWidth, 'Mean width', meanTopicFlowWidth)
 
     print('--> depth')
-    lenDynamicTopicFlows = [len(dynamicCommunity) for dynamicCommunity in identifyDynamicTopicFlows(alluvialData)]
-    minCommunityDepth = min(lenDynamicTopicFlows)
-    maxCommunityDepth = max(lenDynamicTopicFlows)
-    meanCommunityDepth = np.mean(lenDynamicTopicFlows)
-    print('Min depth', minCommunityDepth, 'Max depth', maxCommunityDepth, 'Mean depth', meanCommunityDepth)
+    lenDynamicTopicFlows = [len(dynamicTopicFlow) for dynamicTopicFlow in identifyDynamicTopicFlows(alluvialData)]
+    minTopicFlowDepth = min(lenDynamicTopicFlows)
+    maxTopicFlowDepth = max(lenDynamicTopicFlows)
+    meanTopicFlowDepth = np.mean(lenDynamicTopicFlows)
+    print('Min depth', minTopicFlowDepth, 'Max depth', maxTopicFlowDepth, 'Mean depth', meanTopicFlowDepth)
 
-def generateDynamicAndPlot(fedoraFile, datasetType = 'simple'):
+def generateDynamicAndPlot(fedoraFile, datasetType, startTimeInterval, endTimeInterval):
 
     alluvialData = alluvialDataRetriever.getAlluvialData(fedoraFile)
     outputFileName = datasetType + '.json'
+
+    # filter only desired intervals
+    filteredAlluvialData = {}
+    for key in alluvialData:
+        timeInterval = int(key.split('_')[1])
+        if timeInterval < startTimeInterval or timeInterval > endTimeInterval:
+            continue
+        filteredAlluvialData[key] = alluvialData[key]
+
+    alluvialData = filteredAlluvialData
 
     print('STARTED DYNAMIC TOPIC FLOW GENERATION...')
 
@@ -77,18 +149,46 @@ def generateDynamicAndPlot(fedoraFile, datasetType = 'simple'):
     # sort dynamicTopicFlows by lentgh of dynamic communities
     dynamicTopicFlows.sort(key=len)
 
-    longestDynamicTopic = dynamicTopicFlows[len(dynamicTopicFlows) - 1]
+    longestDynamicTopic = dynamicTopicFlows[len(dynamicTopicFlows)-1]
 
     print('Longest dynamic has length', len(longestDynamicTopic))
 
     print('STARTED PLOTTING IMAGE FOR', outputFileName)
     plotAlluvial.generateSankeyJson(longestDynamicTopic, outputFileName)
 
-generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_50.json', 'TOPIC_EVOLUTION_50')
-computeStats('OUTPUT_TOPIC_EVOLUTION_50.json')
+parser = argparse.ArgumentParser()
 
-generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_70.json', 'TOPIC_EVOLUTION_70')
-computeStats('OUTPUT_TOPIC_EVOLUTION_70.json')
+parser.add_argument('-s', '--s', type=str, help='The start date as string, for example 2021-01-01') # for example 2021-01-01
+parser.add_argument('-e', '--e', type=str, help='The end date as string, for example 2021-12-31') # for example 2021-12-31
 
-generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_80.json', 'TOPIC_EVOLUTION_80')
-computeStats('OUTPUT_TOPIC_EVOLUTION_80.json')
+args = parser.parse_args()
+
+start = args.s
+end = args.e
+
+startTimestamp = int(datetime.strptime(start, "%Y-%m-%d").replace(tzinfo=timezone.utc).timestamp())
+endTimestamp = int(datetime.strptime(end, "%Y-%m-%d").replace(tzinfo=timezone.utc).timestamp())
+initialTimestamp = (date(2021, 1, 1).toordinal() - date(1970, 1, 1).toordinal()) * 24*60*60
+
+intervalInSeconds = 60 * 60 * 12 # seconds (60) * minutes * hours
+
+startTimeInterval = round((startTimestamp - initialTimestamp) / intervalInSeconds)
+endTimeInterval = round((endTimestamp - initialTimestamp) / intervalInSeconds)
+
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_50.json', 'TOPIC_EVOLUTION_50', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_50.json', startTimeInterval, endTimeInterval)
+
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_70.json', 'TOPIC_EVOLUTION_70', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_70.json', startTimeInterval, endTimeInterval)
+
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_80.json', 'TOPIC_EVOLUTION_80', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_80.json', startTimeInterval, endTimeInterval)
+
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_85.json', 'TOPIC_EVOLUTION_85', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_85.json', startTimeInterval, endTimeInterval)
+
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_90.json', 'TOPIC_EVOLUTION_90', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_90.json', startTimeInterval, endTimeInterval)
+
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_95.json', 'TOPIC_EVOLUTION_95', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_95.json', startTimeInterval, endTimeInterval)

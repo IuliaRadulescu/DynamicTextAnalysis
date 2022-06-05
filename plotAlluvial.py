@@ -46,16 +46,9 @@ def parseAlluvialData(alluvialData):
   
   return (labels, source, target, value)
 
-def getTopicsLabels(labels):
-
-  jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
-
-  def getAllCollections():
-      return jsonFilesDriver.getAllJsonFileNames()
+def getTopicsLabels(labels, allCollectionsSorted, jsonFilesDriver):
 
   topicLabels = []
-
-  allCollectionsSorted = getAllCollections()
 
   for label in labels:
     labelParts = label.split('_')
@@ -67,8 +60,11 @@ def getTopicsLabels(labels):
     jsonData = jsonFilesDriver.readJson(collectionName)
 
     for elem in jsonData:
-      if (elem['clusterIdSpectral'] == clusterIdSpectral and 'topicWords' in elem):
-        topicLabels.append(elem['topicWords'])
+      if (elem['clusterIdSpectral'] == clusterIdSpectral):
+        if ('topicWords' in elem):
+          topicLabels.append(elem['topicWords'])
+        else:
+          topicLabels.append(['missing'])
         break
 
   return topicLabels
@@ -84,12 +80,15 @@ def generateSankeyJson(alluvialData, outputFileName):
 
   color = generateRandomColorList(len(source))
 
+  jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
+  allCollectionsSorted = jsonFilesDriver.getAllJsonFileNames()
+
   data = [dict(
             type = 'sankey',
             arrangement = 'freeform',
             orientation = 'v',
             node = dict(
-                label = getTopicsLabels(labels),
+                label = getTopicsLabels(labels, allCollectionsSorted, jsonFilesDriver),
                 pad = 10,
                 color = color
             ),
