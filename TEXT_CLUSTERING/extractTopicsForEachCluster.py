@@ -6,7 +6,6 @@ from sklearn.decomposition import LatentDirichletAllocation as LDA
 import numpy as np
 import re
 import string
-from nltk.tokenize import word_tokenize
 import spacy
 from nltk.corpus import stopwords
 from stop_words import get_stop_words
@@ -74,12 +73,7 @@ class TextPreprocessor:
         return list(filter(lambda token: (token not in finalStop), tokenizedDocument))
 
     @staticmethod
-    def doLemmatization(tokenizedDocument):
-        lemmatizer = WordNetLemmatizer()
-        return [lemmatizer.lemmatize(token) for token in tokenizedDocument]
-
-    @staticmethod
-    def doProcessing(textDocument, allowStopWords = False):
+    def doProcessing(textDocument):
         # reddit specific preprocessing
         textDocument = TextPreprocessor.removeLinks(textDocument)
         textDocument = TextPreprocessor.removeEmojis(textDocument)
@@ -88,13 +82,20 @@ class TextPreprocessor:
 
         # tokenize and lemmatize
         processedDocument = nlp(textDocument)
-        tokenizedLemmatizedDocument = [token.lemma_ for token in processedDocument]
+        tokenizedLemmatized = [token.lemma_ for token in processedDocument]
 
         # generic preprocessing
-        if (allowStopWords == False):
-            tokenizedLemmatizedDocument = TextPreprocessor.stopWordRemoval(tokenizedLemmatizedDocument)
+        tokenizedLemmatized = TextPreprocessor.stopWordRemoval(tokenizedLemmatized)
 
-        return tokenizedLemmatizedDocument
+        # too few words or no words, allow stop words
+        if (len(tokenizedLemmatized) < 2):
+            tokenizedLemmatized = [token.lemma_ for token in processedDocument]
+
+        # still few or no words? maybe there are just links or emojis
+        if (len(tokenizedLemmatized) < 2):
+            tokenizedLemmatized = ['link', 'emoji']
+
+        return tokenizedLemmatized
 
 class TopicExtractor:
 
@@ -187,13 +188,6 @@ for collectionName in allCollections:
         preprocessedList = [TextPreprocessor.doProcessing(comment) for comment in clusters2Comments[clusterId]]
         preprocessed = [item for sublist in preprocessedList for item in sublist]
         
-        if (len(preprocessed) == 0 or len(preprocessed) == 1): # if text is empty due to preprocessing, allow stop words
-            preprocessedList = [TextPreprocessor.doProcessing(comment, True) for comment in clusters2Comments[clusterId]]
-            preprocessed = [item for sublist in preprocessedList for item in sublist]
-
-        if (len(preprocessed) == 0 or len(preprocessed) == 1): # if text is still empty, it means it contains only links and emojis
-            preprocessed = ['link', 'emoji']
-
         topicExtractor = TopicExtractor(preprocessed)
         topicWords = topicExtractor.getTopics(1, 5)
 

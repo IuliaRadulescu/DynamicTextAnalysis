@@ -8,10 +8,11 @@ import tensorflow_hub as hub
 from sklearn.cluster import SpectralClustering
 from sklearn.metrics import silhouette_score
 import nltk
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
+import spacy
 from nltk.corpus import stopwords
 from stop_words import get_stop_words
+
+nlp = spacy.load('en_core_web_sm')
 
 '''
 text preprocessing pipeline - for a single unit of text corpus (a single document)
@@ -21,6 +22,30 @@ class TextPreprocessor:
     @staticmethod
     def removeLinks(textDocument):
         return re.sub(r'(https?://[^\s]+)', '', textDocument)
+
+    @staticmethod
+    def removeEmojis(textDocument):
+        emoj = re.compile("["
+        u"\U0001F600-\U0001F64F"  # emoticons
+        u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+        u"\U0001F680-\U0001F6FF"  # transport & map symbols
+        u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+        u"\U00002500-\U00002BEF"  # chinese char
+        u"\U00002702-\U000027B0"
+        u"\U00002702-\U000027B0"
+        u"\U000024C2-\U0001F251"
+        u"\U0001f926-\U0001f937"
+        u"\U00010000-\U0010ffff"
+        u"\u2640-\u2642" 
+        u"\u2600-\u2B55"
+        u"\u200d"
+        u"\u23cf"
+        u"\u23e9"
+        u"\u231a"
+        u"\ufe0f"  # dingbats
+        u"\u3030"
+                      "]+", re.UNICODE)
+        return re.sub(emoj, '', textDocument)
 
     @staticmethod
     def removeRedditReferences(textDocument):
@@ -34,7 +59,7 @@ class TextPreprocessor:
         # remove special chars
         specials = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '.',
            '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', 
-           '`', '{', '|', '}', '~', '»', '«', '“', '”']
+           '`', '{', '|', '}', '~', '»', '«', '“', '”', '\n']
         pattern = re.compile("[" + re.escape("".join(specials)) + "]")
         return re.sub(pattern, '', textDocument)
 
@@ -43,32 +68,36 @@ class TextPreprocessor:
         finalStop = list(get_stop_words('english')) # About 900 stopwords
         nltkWords = stopwords.words('english') # About 150 stopwords
         finalStop.extend(nltkWords)
-        finalStop.extend(['like', 'the', 'this'])
+        finalStop.extend(['the', 'this'])
         finalStop = list(set(finalStop))
 
         # filter stop words and one letter words/chars except i
-        tokenizedDocumentsNoStop = list(filter(lambda token: (token not in finalStop) and (len(token) > 1 and token != 'i'), tokenizedDocument))
-        return list(filter(lambda token: len(token) > 0, tokenizedDocumentsNoStop))
-
-    @staticmethod
-    def doLemmatization(tokenizedDocument):
-        lemmatizer = WordNetLemmatizer()
-        return [lemmatizer.lemmatize(token) for token in tokenizedDocument]
+        return list(filter(lambda token: (token not in finalStop), tokenizedDocument))
 
     @staticmethod
     def doProcessing(textDocument):
         # reddit specific preprocessing
         textDocument = TextPreprocessor.removeLinks(textDocument)
+        textDocument = TextPreprocessor.removeEmojis(textDocument)
         textDocument = TextPreprocessor.removeRedditReferences(textDocument)
         textDocument = TextPreprocessor.removePunctuation(textDocument)
 
-        # tokenize
-        tokenizedDocument = word_tokenize(textDocument.lower())
+        # tokenize and lemmatize
+        processedDocument = nlp(textDocument)
+        tokenizedLemmatized = [token.lemma_ for token in processedDocument]
 
         # generic preprocessing
-        tokenizedDocumentsNoStop = TextPreprocessor.stopWordRemoval(tokenizedDocument)
-        tokenizedLemmas = TextPreprocessor.doLemmatization(tokenizedDocumentsNoStop)
-        return ' '.join(tokenizedLemmas)
+        tokenizedLemmatized = TextPreprocessor.stopWordRemoval(tokenizedLemmatized)
+
+        # too few words or no words, allow stop words
+        if (len(tokenizedLemmatized) < 2):
+            tokenizedLemmatized = [token.lemma_ for token in processedDocument]
+
+        # still few or no words? maybe there are just links or emojis
+        if (len(tokenizedLemmatized) < 2):
+            tokenizedLemmatized = ['link', 'emoji']
+
+        return ' '.join(tokenizedLemmatized)
 
 class Clusterer:
 
@@ -191,8 +220,9 @@ for fileName in fileNames:
 
     jsonFileRecords = jsonFilesDriver.readJson(fileName)
     dataset = [x['body'] for x in jsonFileRecords]
-    preprocessedDataset = [TextPreprocessor.doProcessing(document) for document in dataset]
 
+    preprocessedDataset = [TextPreprocessor.doProcessing(comment) for comment in dataset]
+    
     allComments += [comment for comment in preprocessedDataset]
 
     fileNames2PreprocessedRecords[fileName] = preprocessedDataset
