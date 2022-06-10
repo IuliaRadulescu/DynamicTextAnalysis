@@ -111,18 +111,34 @@ def computeStats(fedoraFile, startTimeInterval, endTimeInterval):
 
     alluvialData = filteredAlluvialData
 
+    dynamicTopicFlows = identifyDynamicTopicFlows(alluvialData)
+
     print('--> width')
-    dynamicTopicFlowsWidths = [sum([len(dynamicTopicFlow[key]) for key in dynamicTopicFlow]) for dynamicTopicFlow in identifyDynamicTopicFlows(alluvialData)]
+    # the list of maximum matches in each topic flow
+    # a topic flow is a dictionary, where each key is match with the list of its values
+    # thus, we retrieve the number of elements in each list; then we calculate the maximum number of elements; this is the width of one topic flow
+    dynamicTopicFlowsWidths = [max([len(dictValuesList) for _, dictValuesList in list(dynamicTopicFlow.items())]) for dynamicTopicFlow in dynamicTopicFlows]
     minTopicFlowWidth = min(dynamicTopicFlowsWidths)
     maxTopicFlowWidth = max(dynamicTopicFlowsWidths)
     meanTopicFlowWidth = np.mean(dynamicTopicFlowsWidths)
     print('Min width', minTopicFlowWidth, 'Max width', maxTopicFlowWidth, 'Mean width', meanTopicFlowWidth)
 
     print('--> depth')
-    lenDynamicTopicFlows = [len(dynamicTopicFlow) for dynamicTopicFlow in identifyDynamicTopicFlows(alluvialData)]
-    minTopicFlowDepth = min(lenDynamicTopicFlows)
-    maxTopicFlowDepth = max(lenDynamicTopicFlows)
-    meanTopicFlowDepth = np.mean(lenDynamicTopicFlows)
+    # the number of distinct time intervals a DTF spans on
+    # we extract all the time intervals, put them in a set and the set's length is a dynamic topic flow's depth/ length
+    timeIntervalsNr = []
+    for dynamicTopicFlow in dynamicTopicFlows:
+        dynamicTopicFlowValues = [] 
+        dynamicTopicFlowKeys = []
+        dynamicTopicFlowValues += [value for values in list(dynamicTopicFlow.values()) for value in values]
+        dynamicTopicFlowKeys = list(dynamicTopicFlow.keys())
+        allTopicIds = list(set(dynamicTopicFlowKeys + dynamicTopicFlowValues))
+        allTimeIntervalIds = list(set([topicId.split('_')[1] for topicId in allTopicIds]))
+        timeIntervalsNr.append(len(allTimeIntervalIds))
+
+    minTopicFlowDepth = min(timeIntervalsNr)
+    maxTopicFlowDepth = max(timeIntervalsNr)
+    meanTopicFlowDepth = np.mean(timeIntervalsNr)
     print('Min depth', minTopicFlowDepth, 'Max depth', maxTopicFlowDepth, 'Mean depth', meanTopicFlowDepth)
 
 def generateDynamicAndPlot(fedoraFile, datasetType, startTimeInterval, endTimeInterval):
