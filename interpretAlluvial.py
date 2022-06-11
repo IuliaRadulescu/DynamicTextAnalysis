@@ -117,10 +117,11 @@ def computeStats(fedoraFile, startTimeInterval, endTimeInterval):
     # the list of maximum matches in each topic flow
     # a topic flow is a dictionary, where each key is match with the list of its values
     # thus, we retrieve the number of elements in each list; then we calculate the maximum number of elements; this is the width of one topic flow
-    dynamicTopicFlowsWidths = [max([len(dictValuesList) for _, dictValuesList in list(dynamicTopicFlow.items())]) for dynamicTopicFlow in dynamicTopicFlows]
-    minTopicFlowWidth = min(dynamicTopicFlowsWidths)
-    maxTopicFlowWidth = max(dynamicTopicFlowsWidths)
-    meanTopicFlowWidth = np.mean(dynamicTopicFlowsWidths)
+    dynamicTopicFlowWidths = [len([value for values in list(dynamicTopicFlow.values()) for value in values]) for dynamicTopicFlow in dynamicTopicFlows]
+
+    minTopicFlowWidth = min(dynamicTopicFlowWidths)
+    maxTopicFlowWidth = max(dynamicTopicFlowWidths)
+    meanTopicFlowWidth = np.mean(dynamicTopicFlowWidths)
     print('Min width', minTopicFlowWidth, 'Max width', maxTopicFlowWidth, 'Mean width', meanTopicFlowWidth)
 
     print('--> depth')
@@ -194,17 +195,32 @@ endTimeInterval = round((endTimestamp - initialTimestamp) / intervalInSeconds)
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_50.json', 'TOPIC_EVOLUTION_50', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_50.json', startTimeInterval, endTimeInterval)
 
+print()
+print()
+
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_70.json', 'TOPIC_EVOLUTION_70', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_70.json', startTimeInterval, endTimeInterval)
+
+print()
+print()
 
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_80.json', 'TOPIC_EVOLUTION_80', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_80.json', startTimeInterval, endTimeInterval)
 
+print()
+print()
+
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_85.json', 'TOPIC_EVOLUTION_85', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_85.json', startTimeInterval, endTimeInterval)
 
+print()
+print()
+
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_90.json', 'TOPIC_EVOLUTION_90', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_90.json', startTimeInterval, endTimeInterval)
+
+print()
+print()
 
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_95.json', 'TOPIC_EVOLUTION_95', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_95.json', startTimeInterval, endTimeInterval)
