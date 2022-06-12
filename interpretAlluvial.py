@@ -2,6 +2,7 @@ import numpy as np
 import math
 import alluvialDataRetriever
 import plotAlluvial
+import evaluateCoherence
 from collections import deque
 import argparse
 from datetime import date, timezone, datetime
@@ -183,6 +184,10 @@ def generateDynamicAndPlot(fedoraFile, datasetType, startTimeInterval, endTimeIn
         print(topicsString)
         print()
 
+    print('STARTED GENERATING TOPIC COHERENCE')
+    evaluateCoherence.computeCoherence(longestDynamicTopic)
+
+
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-s', '--s', type=str, help='The start date as string, for example 2021-01-01') # for example 2021-01-01
@@ -223,14 +228,14 @@ print()
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_85.json', 'TOPIC_EVOLUTION_85', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_85.json', startTimeInterval, endTimeInterval)
 
-print()
-print()
+# print()
+# print()
 
-generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_90.json', 'TOPIC_EVOLUTION_90', startTimeInterval, endTimeInterval)
-computeStats('OUTPUT_TOPIC_EVOLUTION_90.json', startTimeInterval, endTimeInterval)
+# generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_90.json', 'TOPIC_EVOLUTION_90', startTimeInterval, endTimeInterval)
+# computeStats('OUTPUT_TOPIC_EVOLUTION_90.json', startTimeInterval, endTimeInterval)
 
-print()
-print()
+# print()
+# print()
 
-generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_95.json', 'TOPIC_EVOLUTION_95', startTimeInterval, endTimeInterval)
-computeStats('OUTPUT_TOPIC_EVOLUTION_95.json', startTimeInterval, endTimeInterval)
+# generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_95.json', 'TOPIC_EVOLUTION_95', startTimeInterval, endTimeInterval)
+# computeStats('OUTPUT_TOPIC_EVOLUTION_95.json', startTimeInterval, endTimeInterval)
