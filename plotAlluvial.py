@@ -97,8 +97,6 @@ def getPaths(key, alluvialData, alreadyParsed, paths, path):
 
 def getTopicPaths(alluvialData):
 
-    print(alluvialData)
-
     paths = []
     alreadyParsed = []
 
@@ -109,8 +107,6 @@ def getTopicPaths(alluvialData):
     allCollectionsSorted = jsonFilesDriver.getAllJsonFileNames()
 
     topicPaths = []
-
-    print(paths)
 
     for path in paths:
       topicPaths.append(getTopicsLabels(path, allCollectionsSorted, jsonFilesDriver))
