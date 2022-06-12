@@ -81,7 +81,12 @@ def getPaths(key, alluvialData, alreadyParsed, paths, path):
 
     alreadyParsed.append(key)
 
+    # re-enable matches for a valid key, so they will form a new path
     for match in alluvialData[key]:
+        if (match in alreadyParsed):
+            alreadyParsed.remove(match)
+
+    for match in alluvialData[key]:        
         path.append(match)
         getPaths(match, alluvialData, alreadyParsed, paths, path)
 
@@ -92,13 +97,25 @@ def getPaths(key, alluvialData, alreadyParsed, paths, path):
 
 def getTopicPaths(alluvialData):
 
+    print(alluvialData)
+
     paths = []
     alreadyParsed = []
 
     for key in alluvialData:
         getPaths(key, alluvialData, alreadyParsed, paths, [key])
 
-    return paths
+    jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
+    allCollectionsSorted = jsonFilesDriver.getAllJsonFileNames()
+
+    topicPaths = []
+
+    print(paths)
+
+    for path in paths:
+      topicPaths.append(getTopicsLabels(path, allCollectionsSorted, jsonFilesDriver))
+
+    return topicPaths
 
 def generateSankeyJson(alluvialData, outputFileName):
 
