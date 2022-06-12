@@ -175,7 +175,13 @@ def generateDynamicAndPlot(fedoraFile, datasetType, startTimeInterval, endTimeIn
 
     print('STARTED GENERATING TOPIC PATHS')
     topicPaths = plotAlluvial.getTopicPaths(longestDynamicTopic)
-    print(topicPaths)
+
+    for topicPath in topicPaths:
+        
+        topicsString = ' -> '.join([topic[0] for topic in topicPath])
+
+        print(topicsString)
+        print()
 
 parser = argparse.ArgumentParser()
 
