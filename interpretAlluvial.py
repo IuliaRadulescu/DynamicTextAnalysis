@@ -173,6 +173,10 @@ def generateDynamicAndPlot(fedoraFile, datasetType, startTimeInterval, endTimeIn
     print('STARTED PLOTTING IMAGE FOR', outputFileName)
     plotAlluvial.generateSankeyJson(longestDynamicTopic, outputFileName)
 
+    print('STARTED GENERATING TOPIC PATHS')
+    topicPaths = plotAlluvial.getTopicPaths(longestDynamicTopic)
+    print(topicPaths)
+
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-s', '--s', type=str, help='The start date as string, for example 2021-01-01') # for example 2021-01-01

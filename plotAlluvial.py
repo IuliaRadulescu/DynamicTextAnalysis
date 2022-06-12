@@ -69,6 +69,37 @@ def getTopicsLabels(labels, allCollectionsSorted, jsonFilesDriver):
 
   return topicLabels
 
+def getPaths(key, alluvialData, alreadyParsed, paths, path):
+
+    if (key not in alluvialData):
+        paths.append([*path])
+        path.remove(key)
+        return
+
+    if (key in alreadyParsed):
+        return
+
+    alreadyParsed.append(key)
+
+    for match in alluvialData[key]:
+        path.append(match)
+        getPaths(match, alluvialData, alreadyParsed, paths, path)
+
+    for match in alluvialData[key]:
+        if match in path:
+            path.remove(match)
+    path.remove(key)
+
+def getTopicPaths(alluvialData):
+
+    paths = []
+    alreadyParsed = []
+
+    for key in alluvialData:
+        getPaths(key, alluvialData, alreadyParsed, paths, [key])
+
+    return paths
+
 def generateSankeyJson(alluvialData, outputFileName):
 
   (labels, source, target, value) = parseAlluvialData(alluvialData)
