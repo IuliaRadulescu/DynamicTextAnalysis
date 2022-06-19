@@ -117,7 +117,7 @@ def computeStats(fedoraFile, startTimeInterval, endTimeInterval):
     print('--> width')
     # the list of maximum matches in each topic flow
     # a topic flow is a dictionary, where each key is match with the list of its values
-    # thus, we retrieve the number of elements in each list; then we calculate the maximum number of elements; this is the width of one topic flow
+    # thus, we retrieve the number of elements in each list; then we calculate the number of elements; this is the width of one topic flow
     dynamicTopicFlowWidths = [len([value for values in list(dynamicTopicFlow.values()) for value in values]) for dynamicTopicFlow in dynamicTopicFlows]
 
     minTopicFlowWidth = min(dynamicTopicFlowWidths)
@@ -174,18 +174,18 @@ def generateDynamicAndPlot(fedoraFile, datasetType, startTimeInterval, endTimeIn
     print('STARTED PLOTTING IMAGE FOR', outputFileName)
     plotAlluvial.generateSankeyJson(longestDynamicTopic, outputFileName)
 
-    print('STARTED GENERATING TOPIC PATHS')
-    topicPaths = plotAlluvial.getTopicPaths(longestDynamicTopic)
+    # print('STARTED GENERATING TOPIC PATHS')
+    # topicPaths = plotAlluvial.getTopicPaths(longestDynamicTopic)
 
-    for topicPath in topicPaths:
+    # for topicPath in topicPaths:
         
-        topicsString = ' -> '.join([topic[0] for topic in topicPath])
+    #     topicsString = ' -> '.join([topic[0] for topic in topicPath])
 
-        print(topicsString)
-        print()
+    #     print(topicsString)
+    #     print()
 
     print('STARTED GENERATING TOPIC COHERENCE')
-    evaluateCoherence.computeCoherence(longestDynamicTopic)
+    evaluateCoherence.computeCoherence(longestDynamicTopic, datasetType)
 
 
 parser = argparse.ArgumentParser()
@@ -207,17 +207,17 @@ intervalInSeconds = 60 * 60 * 12 # seconds (60) * minutes * hours
 startTimeInterval = round((startTimestamp - initialTimestamp) / intervalInSeconds)
 endTimeInterval = round((endTimestamp - initialTimestamp) / intervalInSeconds)
 
-# generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_50.json', 'TOPIC_EVOLUTION_50', startTimeInterval, endTimeInterval)
-# computeStats('OUTPUT_TOPIC_EVOLUTION_50.json', startTimeInterval, endTimeInterval)
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_50.json', 'TOPIC_EVOLUTION_50', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_50.json', startTimeInterval, endTimeInterval)
 
-# print()
-# print()
+print()
+print()
 
-# generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_70.json', 'TOPIC_EVOLUTION_70', startTimeInterval, endTimeInterval)
-# computeStats('OUTPUT_TOPIC_EVOLUTION_70.json', startTimeInterval, endTimeInterval)
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_70.json', 'TOPIC_EVOLUTION_70', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_70.json', startTimeInterval, endTimeInterval)
 
-# print()
-# print()
+print()
+print()
 
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_80.json', 'TOPIC_EVOLUTION_80', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_80.json', startTimeInterval, endTimeInterval)
@@ -228,14 +228,14 @@ print()
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_85.json', 'TOPIC_EVOLUTION_85', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_85.json', startTimeInterval, endTimeInterval)
 
-# print()
-# print()
+print()
+print()
 
-# generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_90.json', 'TOPIC_EVOLUTION_90', startTimeInterval, endTimeInterval)
-# computeStats('OUTPUT_TOPIC_EVOLUTION_90.json', startTimeInterval, endTimeInterval)
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_90.json', 'TOPIC_EVOLUTION_90', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_90.json', startTimeInterval, endTimeInterval)
 
-# print()
-# print()
+print()
+print()
 
-# generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_95.json', 'TOPIC_EVOLUTION_95', startTimeInterval, endTimeInterval)
-# computeStats('OUTPUT_TOPIC_EVOLUTION_95.json', startTimeInterval, endTimeInterval)
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_95.json', 'TOPIC_EVOLUTION_95', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_95.json', startTimeInterval, endTimeInterval)

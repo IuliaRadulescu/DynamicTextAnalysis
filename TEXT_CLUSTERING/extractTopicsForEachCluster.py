@@ -6,11 +6,11 @@ from sklearn.decomposition import LatentDirichletAllocation as LDA
 import numpy as np
 import re
 import string
-import spacy
+import contractions
+from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 from stop_words import get_stop_words
-
-nlp = spacy.load('en_core_web_sm')
 
 '''
 text preprocessing pipeline - for a single unit of text corpus (a single document)
@@ -54,19 +54,14 @@ class TextPreprocessor:
         # remove 'normal' punctuation
         textDocument = textDocument.strip(string.punctuation)
 
-        # remove special chars
-        specials = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '.',
-           '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', 
-           '`', '{', '|', '}', '~', '»', '«', '“', '”', '\n']
-        pattern = re.compile("[" + re.escape("".join(specials)) + "]")
-        return re.sub(pattern, '', textDocument)
+        # remove all non-alphanumeric
+        return re.sub('[^a-zA-Z0-9 \']', '', textDocument)
 
     @staticmethod
     def stopWordRemoval(tokenizedDocument):
         finalStop = list(get_stop_words('english')) # About 900 stopwords
         nltkWords = stopwords.words('english') # About 150 stopwords
         finalStop.extend(nltkWords)
-        finalStop.extend(['the', 'this'])
         finalStop = list(set(finalStop))
 
         # filter stop words and one letter words/chars except i
@@ -74,26 +69,39 @@ class TextPreprocessor:
 
     @staticmethod
     def doProcessing(textDocument):
+        # make lower
+        textDocument = textDocument.lower()
         # reddit specific preprocessing
         textDocument = TextPreprocessor.removeLinks(textDocument)
         textDocument = TextPreprocessor.removeEmojis(textDocument)
         textDocument = TextPreprocessor.removeRedditReferences(textDocument)
+        # remove wierd chars
         textDocument = TextPreprocessor.removePunctuation(textDocument)
+        # decontract
+        textDocument = contractions.fix(textDocument)
+        # remove remaining '
+        textDocument = re.sub('[^a-zA-Z0-9 ]', '', textDocument)
 
-        # tokenize and lemmatize
-        processedDocument = nlp(textDocument)
-        tokenizedLemmatized = [token.lemma_ for token in processedDocument]
+        # tokenize
+        tokenized = word_tokenize(textDocument)
 
-        # generic preprocessing
-        tokenizedLemmatized = TextPreprocessor.stopWordRemoval(tokenizedLemmatized)
+        # remove stop words
+        tokenizedNoStop = TextPreprocessor.stopWordRemoval(tokenized)
+
+        # lemmatize
+        lemmatizer = WordNetLemmatizer()
+        tokenizedLemmatized = [lemmatizer.lemmatize(token) for token in tokenizedNoStop]
 
         # too few words or no words, allow stop words
         if (len(tokenizedLemmatized) < 2):
-            tokenizedLemmatized = [token.lemma_ for token in processedDocument]
+            tokenizedLemmatized = [lemmatizer.lemmatize(token) for token in tokenized]
 
         # still few or no words? maybe there are just links or emojis
         if (len(tokenizedLemmatized) < 2):
             tokenizedLemmatized = ['link', 'emoji']
+
+        # filter empty
+        tokenizedLemmatized = list(filter(lambda x: x != ' ', tokenizedLemmatized))
 
         return tokenizedLemmatized
 
@@ -127,7 +135,7 @@ class TopicExtractor:
 
         vectorizer, X = self.prepareForLDA()
 
-        lda = LDA(n_components = noTopics, n_jobs = -1)
+        lda = LDA(n_components = noTopics, solver = 'eigen', n_jobs = -1)
         lda.fit(X) # Print the topics found by the LDA model
         
         print("Topics found via LDA:")
@@ -176,10 +184,12 @@ for collectionName in allCollections:
     collectionRecords = jsonFilesDriver.readJson(collectionName)
 
     for collectionRecord in collectionRecords:
+        # ignore deleted comments
+        if collectionRecord['body'] == '[deleted]':
+            continue
+
         if collectionRecord['clusterIdSpectral'] not in clusters2Comments:
-            # remove [deleted] comments
-            if (collectionRecord['body'] != '[deleted]'):
-                clusters2Comments[collectionRecord['clusterIdSpectral']] = [collectionRecord['body']]
+            clusters2Comments[collectionRecord['clusterIdSpectral']] = [collectionRecord['body']]
         else:
             clusters2Comments[collectionRecord['clusterIdSpectral']].append(collectionRecord['body'])
 

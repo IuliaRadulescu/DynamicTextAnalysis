@@ -1,0 +1,144 @@
+COMMAND:
+
+python interpretAlluvial.py -s '2021-01-01' -e '2021-12-31'
+
+
+RESULTS:
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 1130 TOPIC FLOWS
+Longest dynamic has length 3262
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_50.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 6093 Mean width 8.308849557522123
+--> depth
+Min depth 2 Max depth 625 Mean depth 3.6805309734513276
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 978 TOPIC FLOWS
+Longest dynamic has length 1363
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_70.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 1617 Mean width 4.491820040899795
+--> depth
+Min depth 2 Max depth 606 Mean depth 4.157464212678937
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 659 TOPIC FLOWS
+Longest dynamic has length 230
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_80.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 242 Mean width 3.6661608497723823
+--> depth
+Min depth 2 Max depth 189 Mean depth 4.414264036418817
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 464 TOPIC FLOWS
+Longest dynamic has length 175
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_85.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 175 Mean width 3.8125
+--> depth
+Min depth 2 Max depth 163 Mean depth 4.756465517241379
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 253 TOPIC FLOWS
+Longest dynamic has length 134
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_90.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 134 Mean width 3.822134387351779
+--> depth
+Min depth 2 Max depth 135 Mean depth 4.818181818181818
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 56 TOPIC FLOWS
+Longest dynamic has length 130
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_95.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 130 Mean width 4.678571428571429
+--> depth
+Min depth 2 Max depth 131 Mean depth 5.678571428571429
+
+=============================================================================================
+
+COMMAND:
+ 
+python interpretAlluvial.py -s '2021-11-02' -e '2021-11-12'
+
+RESULTS:
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 37 TOPIC FLOWS
+Longest dynamic has length 118
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_50.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 254 Mean width 11.432432432432432
+--> depth
+Min depth 2 Max depth 24 Mean depth 3.108108108108108
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 42 TOPIC FLOWS
+Longest dynamic has length 47
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_70.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 54 Mean width 3.1904761904761907
+--> depth
+Min depth 2 Max depth 22 Mean depth 3.2142857142857144
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 24 TOPIC FLOWS
+Longest dynamic has length 20
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_80.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 20 Mean width 3.0
+--> depth
+Min depth 2 Max depth 18 Mean depth 3.6666666666666665
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 18 TOPIC FLOWS
+Longest dynamic has length 11
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_85.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 11 Mean width 2.5555555555555554
+--> depth
+Min depth 2 Max depth 12 Mean depth 3.5555555555555554
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 10 TOPIC FLOWS
+Longest dynamic has length 10
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_90.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 10 Mean width 3.2
+--> depth
+Min depth 2 Max depth 11 Mean depth 4.2
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 6 TOPIC FLOWS
+Longest dynamic has length 7
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_95.json
+GENERATING STATS...
+--> width
+Min width 1 Max width 7 Mean width 2.5
+--> depth
+Min depth 2 Max depth 8 Mean depth 3.5

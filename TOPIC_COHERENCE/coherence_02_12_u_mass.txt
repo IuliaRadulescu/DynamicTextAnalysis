@@ -1,0 +1,64 @@
+(softwareEngineering) [iulia@bd-server2 DynamicTextAnalysis]$ python interpretAlluvial.py -s '2021-11-02' -e '2021-11-12'
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 37 TOPIC FLOWS
+Longest dynamic has length 118
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_50.json
+STARTED GENERATING TOPIC COHERENCE
+Coherence =  -4.23
+GENERATING STATS...
+--> width
+Min width 1 Max width 254 Mean width 11.432432432432432
+--> depth
+Min depth 2 Max depth 24 Mean depth 3.108108108108108
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 42 TOPIC FLOWS
+Longest dynamic has length 47
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_70.json
+STARTED GENERATING TOPIC COHERENCE
+Coherence =  -2.97
+GENERATING STATS...
+--> width
+Min width 1 Max width 54 Mean width 3.1904761904761907
+--> depth
+Min depth 2 Max depth 22 Mean depth 3.2142857142857144
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 24 TOPIC FLOWS
+Longest dynamic has length 20
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_80.json
+STARTED GENERATING TOPIC COHERENCE
+Coherence =  -2.62
+GENERATING STATS...
+--> width
+Min width 1 Max width 20 Mean width 3.0
+--> depth
+Min depth 2 Max depth 18 Mean depth 3.6666666666666665
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 18 TOPIC FLOWS
+Longest dynamic has length 11
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_85.json
+STARTED GENERATING TOPIC COHERENCE
+Coherence =  -2.81
+GENERATING STATS...
+--> width
+Min width 1 Max width 11 Mean width 2.5555555555555554
+--> depth
+Min depth 2 Max depth 12 Mean depth 3.5555555555555554
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 10 TOPIC FLOWS
+Longest dynamic has length 10
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_90.json
+STARTED GENERATING TOPIC COHERENCE
+Coherence =  -2.87
+GENERATING STATS...
+--> width
+Min width 1 Max width 10 Mean width 3.2
+--> depth
+Min depth 2 Max depth 11 Mean depth 4.2

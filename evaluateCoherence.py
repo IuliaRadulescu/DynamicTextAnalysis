@@ -4,13 +4,14 @@ from os import walk
 import numpy as np
 import re
 import string
-import spacy
+import json
+import contractions
+from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 from stop_words import get_stop_words
 import gensim.corpora as corpora
 from gensim.models.coherencemodel import CoherenceModel
-
-nlp = spacy.load('en_core_web_sm')
 
 class JsonFilesDriver:
 
@@ -78,19 +79,14 @@ class TextPreprocessor:
         # remove 'normal' punctuation
         textDocument = textDocument.strip(string.punctuation)
 
-        # remove special chars
-        specials = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '.',
-           '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', 
-           '`', '{', '|', '}', '~', '»', '«', '“', '”', '\n']
-        pattern = re.compile("[" + re.escape("".join(specials)) + "]")
-        return re.sub(pattern, '', textDocument)
+        # remove all non-alphanumeric
+        return re.sub('[^a-zA-Z0-9 \']', '', textDocument)
 
     @staticmethod
     def stopWordRemoval(tokenizedDocument):
         finalStop = list(get_stop_words('english')) # About 900 stopwords
         nltkWords = stopwords.words('english') # About 150 stopwords
         finalStop.extend(nltkWords)
-        finalStop.extend(['the', 'this'])
         finalStop = list(set(finalStop))
 
         # filter stop words and one letter words/chars except i
@@ -98,63 +94,81 @@ class TextPreprocessor:
 
     @staticmethod
     def doProcessing(textDocument):
+        # make lower
+        textDocument = textDocument.lower()
         # reddit specific preprocessing
         textDocument = TextPreprocessor.removeLinks(textDocument)
         textDocument = TextPreprocessor.removeEmojis(textDocument)
         textDocument = TextPreprocessor.removeRedditReferences(textDocument)
+        # remove wierd chars
         textDocument = TextPreprocessor.removePunctuation(textDocument)
+        # decontract
+        textDocument = contractions.fix(textDocument)
+        # remove remaining '
+        textDocument = re.sub('[^a-zA-Z0-9 ]', '', textDocument)
 
-        # tokenize and lemmatize
-        processedDocument = nlp(textDocument)
-        tokenizedLemmatized = [token.lemma_ for token in processedDocument]
+        # tokenize
+        tokenized = word_tokenize(textDocument)
 
-        # generic preprocessing
-        tokenizedLemmatized = TextPreprocessor.stopWordRemoval(tokenizedLemmatized)
+        # remove stop words
+        tokenizedNoStop = TextPreprocessor.stopWordRemoval(tokenized)
+
+        # lemmatize
+        lemmatizer = WordNetLemmatizer()
+        tokenizedLemmatized = [lemmatizer.lemmatize(token) for token in tokenizedNoStop]
 
         # too few words or no words, allow stop words
         if (len(tokenizedLemmatized) < 2):
-            tokenizedLemmatized = [token.lemma_ for token in processedDocument]
+            tokenizedLemmatized = [lemmatizer.lemmatize(token) for token in tokenized]
 
         # still few or no words? maybe there are just links or emojis
         if (len(tokenizedLemmatized) < 2):
-            tokenizedLemmatized = ['link', 'emoji']
+            return []
+
+        # filter empty
+        tokenizedLemmatized = list(filter(lambda x: x != ' ', tokenizedLemmatized))
 
         return tokenizedLemmatized
 
 def getTopicsForIds(topicIds, allCollectionsSorted, jsonFilesDriver):
 
-  topics = []
+    topics = []
 
-  for topicId in topicIds:
-    labelParts = topicId.split('_')
-    clusterIdSpectral = int(labelParts[0])
-    timeStep = int(labelParts[1])
+    for topicId in topicIds:
+        labelParts = topicId.split('_')
+        clusterIdSpectral = int(labelParts[0])
+        timeStep = int(labelParts[1])
 
-    collectionName = allCollectionsSorted[timeStep]
+        collectionName = allCollectionsSorted[timeStep]
 
-    jsonData = jsonFilesDriver.readJson(collectionName)
+        jsonData = jsonFilesDriver.readJson(collectionName)
 
-    for elem in jsonData:
-      if (elem['clusterIdSpectral'] == clusterIdSpectral):
-        if ('topicWords' in elem):
-          topics.append(elem['topicWords'])
-        else:
-          topics.append(['missing'])
-        break
+        # if a cluster from one time interval contains more elements, skip them - all the elements of a cluster share the same topics
+        alreadyParsedClusterIds = []
 
-  aggregatedTopics = []
+        for elem in jsonData:
+            if (elem['clusterIdSpectral'] in alreadyParsedClusterIds or 'topicWords' not in elem):
+                continue
 
-  for topic in topics:
-      aggregatedTopics.append(topic[0].split(' '))
+            if (elem['clusterIdSpectral'] != clusterIdSpectral):
+                continue
 
-  return aggregatedTopics
+            alreadyParsedClusterIds.append(elem['clusterIdSpectral'])
+
+            topics.append(elem['topicWords'])
+          
+
+    wholeDtfTopics = []
+
+    for topic in topics:
+        wholeDtfTopics.append(topic[0].split(' '))
+
+    return wholeDtfTopics
 
 def getLemmatizedCorpus(topicIds, allCollectionsSorted, jsonFilesDriver):
 
     allCorpus = []
-
-    # fetch only comments from existing clusters (in the alluvial diagram) with assigned topics
-    existingClusters = [int(topicId.split('_')[0]) for topicId in topicIds]
+    dictionary = []
 
     for topicId in topicIds:
         labelParts = topicId.split('_')
@@ -164,11 +178,11 @@ def getLemmatizedCorpus(topicIds, allCollectionsSorted, jsonFilesDriver):
         collectionName = allCollectionsSorted[timeStep]
         jsonData = jsonFilesDriver.readJson(collectionName)
 
-        allCorpus += [TextPreprocessor.doProcessing(elem['body']) for elem in jsonData if (elem['clusterIdSpectral'] in existingClusters and 'topicWords' in elem)]
+        allCorpus += [TextPreprocessor.doProcessing(elem['body']) for elem in jsonData if (elem['clusterIdSpectral'] == clusterIdSpectral and 'topicWords' in elem)]
         
     return allCorpus
 
-def computeCoherence(alluvialData):
+def getTopicsAndLemmatizedCorpus(alluvialData, datasetType):
 
     allTopicIds = getAllTopicIds(alluvialData)
 
@@ -177,12 +191,57 @@ def computeCoherence(alluvialData):
 
     allTopics = getTopicsForIds(allTopicIds, allCollectionsSorted, jsonFilesDriver)
 
+    # filter noisy values (less that 4 words long)
+    allTopics = list(filter(lambda x: len(x) == 4, allTopics))
+
+    if (len(allTopics) == 0):
+        print('No topics found')
+        return
+
     lemmatizedCorpus = getLemmatizedCorpus(allTopicIds, allCollectionsSorted, jsonFilesDriver)
-    word2id = corpora.Dictionary(lemmatizedCorpus)
-    corpusBow = [word2id.doc2bow(text) for text in lemmatizedCorpus]
 
-    cm = CoherenceModel(topics=allTopics, texts=lemmatizedCorpus, dictionary=word2id, coherence='c_v')
+    return (allTopics, lemmatizedCorpus)
 
-    print('Coherence = ', cm.get_coherence())
+'''
+Generate the files for building the Palmetto index
+'''
+def generateTopicsAndCorpusFiles(alluvialData, datasetType):
 
-    print('Coherence for each topic = ', cm.get_coherence_per_topic())
+    if (getTopicsAndLemmatizedCorpus(alluvialData, datasetType) == None):
+        return
+
+    corpusFolderName = 'CORPUS_' + datasetType
+
+    if not os.path.exists(corpusFolderName):
+        os.makedirs(corpusFolderName)
+
+    allTopics, lemmatizedCorpus = getTopicsAndLemmatizedCorpus(alluvialData, datasetType)
+
+    topicsOutput = [' '.join(words) for words in allTopics]
+    f = open(corpusFolderName + '/topics', 'w')
+    f.write('\n'.join(topicsOutput))
+    f.close()
+
+    lemmatizedCorpusOutput = [' '.join(words) for words in lemmatizedCorpus]
+    f = open(corpusFolderName + '/lemmatizedCorpus', 'w')
+    f.write('\n'.join(lemmatizedCorpusOutput))
+    f.close()
+
+'''
+Compute topics coherence with gensim
+'''
+def computeCoherence(alluvialData, datasetType):
+
+    if (getTopicsAndLemmatizedCorpus(alluvialData, datasetType) == None):
+        return
+
+    allTopics, lemmatizedCorpus = getTopicsAndLemmatizedCorpus(alluvialData, datasetType)
+
+    # filter noisy values (empty word lists)
+    lemmatizedCorpus = list(filter(lambda x: len(x) > 0, lemmatizedCorpus))
+
+    dictionary = corpora.Dictionary(lemmatizedCorpus)
+    corpus = [dictionary.doc2bow(comment) for comment in lemmatizedCorpus]
+
+    cm = CoherenceModel(topics=allTopics, texts=lemmatizedCorpus, corpus=corpus, dictionary=dictionary, coherence='u_mass')
+    print('Coherence = ', format(cm.get_coherence(), '.2f'))

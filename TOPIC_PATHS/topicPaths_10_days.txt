@@ -1,0 +1,396 @@
+(softwareEngineering) [iulia@bd-server2 DynamicTextAnalysis]$ python interpretAlluvial.py -s '2021-11-02' -e '2021-11-12'
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 42 TOPIC FLOWS
+Longest dynamic has length 47
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_70.json
+STARTED GENERATING TOPIC PATHS
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora kde wayland firefox -> wayland work firefox get -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+video nvidia decoding working -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> fedora slow low update -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+dnf gnome video package -> kernel nvidia laptop installing -> using xorg use device -> gnome install installed wayland -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 34 live -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+power tlp mode performance -> fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> ubuntu work 2110 disaster -> ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+package flatpak fedora distribution -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora 35 boot work -> fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora service new ago -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora service new ago -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora service new ago -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora service new ago -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora service new ago -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora service new ago -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+laptop though work kernel -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+laptop though work kernel -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+laptop though work kernel -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+laptop though work kernel -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+laptop though work kernel -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+laptop though work kernel -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+updating rpm flatpaks update -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+updating rpm flatpaks update -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+updating rpm flatpaks update -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+updating rpm flatpaks update -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+updating rpm flatpaks update -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+updating rpm flatpaks update -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+problem package report full -> fedora software rpm package -> fedora linux really tempt -> fedora xorg work coreos -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+problem package report full -> fedora software rpm package -> fedora linux really tempt -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+problem package report full -> fedora software rpm package -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+problem package report full -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+problem package report full -> fedora software rpm package -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+problem package report full -> fedora software rpm package -> snap install fedora package -> fedora install get patch -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+feature specific gnome see -> gnome fedora used use -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+feature specific gnome see -> gnome fedora used use -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+feature specific gnome see -> gnome fedora used use -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+electron wayland app parameter -> desktop fedora file update -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+monitor igpu computer one -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+nvidia problem support driver -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux want kde available -> kde wayland keyboard xfce -> work linux good install -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux want kde available -> kde wayland keyboard xfce -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora window user taught -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+window machine linux fedora -> fedora laptop also distro -> fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+GENERATING STATS...
+--> width
+Min width 1 Max width 54 Mean width 3.1904761904761907
+--> depth
+Min depth 2 Max depth 22 Mean depth 3.2142857142857144
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 24 TOPIC FLOWS
+Longest dynamic has length 20
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_80.json
+STARTED GENERATING TOPIC PATHS
+fedora kde wayland firefox -> wayland work firefox get -> gnome install installed wayland -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora gnome nvidia user -> fedora gnome user linux
+
+using xorg use device -> gnome install installed wayland -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora gnome nvidia user -> fedora gnome user linux
+
+kernel nvidia laptop installing -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora 35 upgrade update -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora gnome nvidia user -> fedora gnome user linux
+
+ubuntu lts linux version -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> snap install fedora package -> fedora gnome nvidia user -> fedora gnome user linux
+
+linux macos system well -> fedora software rpm package -> snap install fedora package -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora slow low update -> fedora software rpm package -> snap install fedora package -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+GENERATING STATS...
+--> width
+Min width 1 Max width 20 Mean width 3.0
+--> depth
+Min depth 2 Max depth 18 Mean depth 3.6666666666666665
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 18 TOPIC FLOWS
+Longest dynamic has length 11
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_85.json
+STARTED GENERATING TOPIC PATHS
+fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora work distro year -> fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+GENERATING STATS...
+--> width
+Min width 1 Max width 11 Mean width 2.5555555555555554
+--> depth
+Min depth 2 Max depth 12 Mean depth 3.5555555555555554
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 10 TOPIC FLOWS
+Longest dynamic has length 10
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_90.json
+STARTED GENERATING TOPIC PATHS
+fedora power tlp gnome -> gnome fedora use linux -> fedora battery gnome hour -> fedora linux arch nvidia -> fedora arch work x11 -> fedora use like get -> fedora gnome use beginner -> fedora software rpm package -> fedora gnome nvidia user -> fedora gnome user linux
+
+fedora gnome kde distro -> fedora gnome nvidia user -> fedora gnome user linux
+
+GENERATING STATS...
+--> width
+Min width 1 Max width 10 Mean width 3.2
+--> depth
+Min depth 2 Max depth 11 Mean depth 4.2
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 6 TOPIC FLOWS
+Longest dynamic has length 7
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_95.json
+STARTED GENERATING TOPIC PATHS
+link emoji -> link emoji -> link emoji -> link emoji -> link emoji -> link emoji -> link emoji -> link emoji
+
+GENERATING STATS...
+--> width
+Min width 1 Max width 7 Mean width 2.5
+--> depth
+Min depth 2 Max depth 8 Mean depth 3.5
+
