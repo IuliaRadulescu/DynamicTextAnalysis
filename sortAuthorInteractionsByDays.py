@@ -1,7 +1,5 @@
 import pymongo
-import math
 from datetime import date, timedelta, datetime
-from random_object_id import generate
 
 def createTimeIntervals(startTimestamp, endTimestamp, intervalInSeconds):
 
@@ -91,7 +89,7 @@ for comment in allComments:
     if ('parentRedditId' in comment):
         parentRedditId = comment['parentRedditId'].split('_')[1]
 
-        if (parentRedditId not in timestamps2RedditIds[createdTimestamp]):
+        if (parentRedditId not in timestamps2RedditIds[createdTimestamp] and parentRedditId in redditIds2Comments):
             timestamps2Comments[createdTimestamp].append(redditIds2Comments[parentRedditId])
             timestamps2RedditIds[createdTimestamp].append(parentRedditId)
 

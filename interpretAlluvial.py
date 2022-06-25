@@ -186,6 +186,7 @@ def generateDynamicAndPlot(fedoraFile, datasetType, startTimeInterval, endTimeIn
 
     print('STARTED GENERATING TOPIC COHERENCE')
     evaluateCoherence.computeCoherence(longestDynamicTopic, datasetType)
+    evaluateCoherence.generateTopicsAndCorpusFiles(longestDynamicTopic, datasetType)
 
 
 parser = argparse.ArgumentParser()
@@ -202,7 +203,7 @@ startTimestamp = int(datetime.strptime(start, "%Y-%m-%d").replace(tzinfo=timezon
 endTimestamp = int(datetime.strptime(end, "%Y-%m-%d").replace(tzinfo=timezone.utc).timestamp())
 initialTimestamp = (date(2021, 1, 1).toordinal() - date(1970, 1, 1).toordinal()) * 24*60*60
 
-intervalInSeconds = 60 * 60 * 12 # seconds (60) * minutes * hours
+intervalInSeconds = 60 * 60 * 24 * 7 # seconds (60) * minutes * hours * days
 
 startTimeInterval = round((startTimestamp - initialTimestamp) / intervalInSeconds)
 endTimeInterval = round((endTimestamp - initialTimestamp) / intervalInSeconds)

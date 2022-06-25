@@ -1,8 +1,7 @@
 import json
 from os import walk
 import numpy as np
-from numpy import dot
-from numpy.linalg import norm
+from scipy.spatial import distance
 import argparse
 
 class JsonFilesDriver:
@@ -28,7 +27,7 @@ def doComputation(optimalSim, outputFileName):
     '''
     def getAllCollections():
 
-        jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
+        jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES_CLEAN')
 
         return jsonFilesDriver.getAllJsonFileNames()
 
@@ -37,7 +36,7 @@ def doComputation(optimalSim, outputFileName):
     '''
     def getDiscussionClustersForSnapshot(collectionName, timeStep):
 
-        jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES')
+        jsonFilesDriver = JsonFilesDriver('./TEXT_CLUSTERING/UTILS/FEDORA_FILES_CLEAN')
         allComments = jsonFilesDriver.readJson(collectionName)
 
         print('Finished reading comments for time step!', collectionName)
@@ -115,8 +114,8 @@ def doComputation(optimalSim, outputFileName):
             for frontKey in fronts:
 
                 centroidFront = fronts[frontKey]
-                
-                centroidSimilarity = dot(clusterCentroidSnapshot, centroidFront)/(norm(clusterCentroidSnapshot)*norm(centroidFront))
+
+                centroidSimilarity = 1 - distance.euclidean(clusterCentroidSnapshot, centroidFront)
                 
                 if (centroidSimilarity > optimalSim):
                     bestFrontKeys.append(frontKey)
@@ -149,8 +148,8 @@ def doComputation(optimalSim, outputFileName):
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('-sim', '--sim', type=float, help='The minimum similarity to match communities')
-parser.add_argument('-o', '--o', type=str, help='The json output file')
+parser.add_argument('-sim', '--sim', type=float, help='The minimum similarity to match communities') # for example, 0.7
+parser.add_argument('-o', '--o', type=str, help='The json output file') # for example OUTPUT_TOPIC_EVOLUTION_70.json
 
 args = parser.parse_args()
 
