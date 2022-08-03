@@ -21,6 +21,14 @@ class JsonFilesDriver:
         fileNames = next(walk(self.jsonFolderName), (None, None, []))[2]
         return sorted(fileNames)
 
+class Utils:
+    def get_adjlist_with_names(graph):
+        names = graph.vs["name"]
+        result = {}
+        for index, neighbors in enumerate(graph.get_adjlist()):
+            result[names[index]] = [names[nei] for nei in neighbors]
+        return result
+
 def doComputation(optimalSim, outputFileName):
 
     '''
@@ -82,7 +90,6 @@ def doComputation(optimalSim, outputFileName):
         g.add_vertices(nrVertices)
         g.vs['name'] = nodeNames
         g.vs['centroid'] = nodeCentroids
-        g.vs['timeStep'] = [timeStep] * len(g.vs)
         g.add_edges(edgesList)
         g.es['weight'] = edgesWeightsList
 
@@ -131,12 +138,23 @@ def doComputation(optimalSim, outputFileName):
 
     print('Finished building snapshot graphs')
 
-    gResult = mergeGraphs(snapshotClusterGraphs[0], snapshotClusterGraphs[1], optimalSim)
+    gResult = None
 
-    for snapshodId in range(2, len(snapshotClusterGraphs)):
-        gResult = mergeGraphs(gResult, snapshotClusterGraphs[snapshodId], optimalSim)
+    for snapshotId1 in range(0, len(snapshotClusterGraphs)):
+        gResultInner = snapshotClusterGraphs[snapshotId1]
+        for snapshotId2 in range(0, len(snapshotClusterGraphs)):
+            if (snapshotId1 >= snapshotId2):
+                continue
+            gResultInner = mergeGraphs(gResultInner, snapshotClusterGraphs[snapshotId2], optimalSim)
+        if (gResult == None):
+            gResult = gResultInner
+        else:
+            gResult = mergeGraphs(gResult, gResultInner, optimalSim)
 
-    plot(gResult, layout=gResult.layout('kk'))
+    resultAdjList = Utils.get_adjlist_with_names(gResult)
+
+    with open(outputFileName, 'w') as outfile:
+        json.dump(resultAdjList, outfile)
 
     print('Finished building DTF graph')
         
