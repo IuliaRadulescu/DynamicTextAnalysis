@@ -114,7 +114,7 @@ def doComputation(optimalSim, outputFileName):
         gResult.add_edges(edgesList)
         gResult.es['weight'] += edgesWeightsList
 
-        plot(gResult, layout=gResult.layout('kk'))
+        return gResult
 
     allCollections = getAllCollections()
     snapshotClusterGraphs = []
@@ -129,9 +129,16 @@ def doComputation(optimalSim, outputFileName):
 
         snapshotClusterGraphs.append(buildSnapshotClusterGraph(collectionComments, timeStep))
 
-    print(len(snapshotClusterGraphs))
+    print('Finished building snapshot graphs')
 
-    mergeGraphs(snapshotClusterGraphs[0], snapshotClusterGraphs[1], optimalSim)
+    gResult = mergeGraphs(snapshotClusterGraphs[0], snapshotClusterGraphs[1], optimalSim)
+
+    for snapshodId in range(2, len(snapshotClusterGraphs)):
+        gResult = mergeGraphs(gResult, snapshotClusterGraphs[snapshodId], optimalSim)
+
+    plot(gResult, layout=gResult.layout('kk'))
+
+    print('Finished building DTF graph')
         
 parser = argparse.ArgumentParser()
 
