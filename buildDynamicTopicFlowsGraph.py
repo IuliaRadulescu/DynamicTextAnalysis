@@ -3,6 +3,7 @@ from os import walk
 import numpy as np
 from scipy.spatial import distance
 import argparse
+import random
 from igraph import Graph, plot
 
 class JsonFilesDriver:
@@ -46,7 +47,7 @@ def doComputation(optimalSim, outputFileName):
     def similarity(centroid1, centroid2):
         return 1 - distance.euclidean(centroid1, centroid2)
 
-    def getEdgesList(nodeIds2Centroids1, nodeIds2Centroids2, sameGraph = False, optimalSim = None, nodeNames = []):
+    def getEdgesList(nodeIds2Centroids1, nodeIds2Centroids2, sameGraph = True, optimalSim = None, nodeNames = []):
         edgesList = []
         edgesWeightsList = []
 
@@ -62,7 +63,7 @@ def doComputation(optimalSim, outputFileName):
                 if (sameGraph == True and nodeId1 >= nodeId2):
                     continue
 
-                if (len(nodeNames) > 0 and int(nodeNames[nodeId1].split('_')[1]) <= int(nodeNames[nodeId2].split('_')[1])):
+                if (len(nodeNames) > 0 and int(nodeNames[nodeId1].split('_')[1]) >= int(nodeNames[nodeId2].split('_')[1])):
                     continue
                 
                 clusterSim = similarity(nodeIds2Centroids1[nodeId1], nodeIds2Centroids2[nodeId2])
@@ -81,20 +82,16 @@ def doComputation(optimalSim, outputFileName):
     @returns: the snapshot represented as an igraph object
     '''
     def buildSnapshotClusterGraph(comments, timeStep, optimalSim):
-        
-        nrVertices = max([comment['clusterIdSpectral'] for comment in comments]) + 1
-        nodeNames = [str(nodeId) + '_' + str(timeStep) for nodeId in range(nrVertices)]
-        nodeCentroids = [comment['centroid'] for comment in comments]
 
         clusterIdsToCentroids = dict(zip([int(comment['clusterIdSpectral']) for comment in comments], [comment['centroid'] for comment in comments]))
-        edgesList, edgesWeightsList = getEdgesList(clusterIdsToCentroids, clusterIdsToCentroids, True, optimalSim)
+        nrVertices = max(list(clusterIdsToCentroids.keys())) + 1
+        nodeNames = [str(nodeId) + '_' + str(timeStep) for nodeId in list(clusterIdsToCentroids.keys())]
+        nodeCentroids = list(clusterIdsToCentroids.values())
 
-        g = Graph()
+        g = Graph(directed=True)
         g.add_vertices(nrVertices)
         g.vs['name'] = nodeNames
         g.vs['centroid'] = nodeCentroids
-        g.add_edges(edgesList)
-        g.es['weight'] = edgesWeightsList
 
         return g
 
@@ -124,7 +121,6 @@ def doComputation(optimalSim, outputFileName):
         existingEdges = gResult.get_edgelist()
 
         gResult.add_edges(list(set(edgesList) - set(existingEdges)))
-        gResult.es['weight'] += edgesWeightsList
 
         return gResult
 
@@ -148,9 +144,15 @@ def doComputation(optimalSim, outputFileName):
     for snapshotId in range(2, len(snapshotClusterGraphs)):
         gResult = mergeGraphs(gResult, snapshotClusterGraphs[snapshotId], optimalSim)
                 
-    plot(gResult)
+    # remove nodes without edges
+    gResult.vs.select(_degree=0).delete()
+
+    plot(gResult, layout=gResult.layout('kk'))
 
     resultAdjList = Utils.get_adjlist_with_names(gResult)
+
+    # remove empty values
+    resultAdjList = {k: v for k, v in resultAdjList.items() if v}
 
     with open(outputFileName, 'w') as outfile:
         json.dump(resultAdjList, outfile)
