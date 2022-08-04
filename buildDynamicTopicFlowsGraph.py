@@ -46,7 +46,7 @@ def doComputation(optimalSim, outputFileName):
     def similarity(centroid1, centroid2):
         return 1 - distance.euclidean(centroid1, centroid2)
 
-    def getEdgesList(nodeIds2Centroids1, nodeIds2Centroids2, optimalSim = None):
+    def getEdgesList(nodeIds2Centroids1, nodeIds2Centroids2, sameGraph = False, optimalSim = None, nodeNames = []):
         edgesList = []
         edgesWeightsList = []
 
@@ -59,7 +59,10 @@ def doComputation(optimalSim, outputFileName):
         for nodeId1 in nodeIds1:
             for nodeId2 in nodeIds2:
 
-                if (nodeId1 >= nodeId2):
+                if (sameGraph == True and nodeId1 >= nodeId2):
+                    continue
+
+                if (len(nodeNames) > 0 and int(nodeNames[nodeId1].split('_')[1]) <= int(nodeNames[nodeId2].split('_')[1])):
                     continue
                 
                 clusterSim = similarity(nodeIds2Centroids1[nodeId1], nodeIds2Centroids2[nodeId2])
@@ -84,7 +87,7 @@ def doComputation(optimalSim, outputFileName):
         nodeCentroids = [comment['centroid'] for comment in comments]
 
         clusterIdsToCentroids = dict(zip([int(comment['clusterIdSpectral']) for comment in comments], [comment['centroid'] for comment in comments]))
-        edgesList, edgesWeightsList = getEdgesList(clusterIdsToCentroids, clusterIdsToCentroids, optimalSim)
+        edgesList, edgesWeightsList = getEdgesList(clusterIdsToCentroids, clusterIdsToCentroids, True, optimalSim)
 
         g = Graph()
         g.add_vertices(nrVertices)
@@ -116,7 +119,7 @@ def doComputation(optimalSim, outputFileName):
             nodesToCentroidsG2[nodeId] = gResult.vs[nodeId]['centroid']
 
         # interconnect graphs by edges
-        edgesList, edgesWeightsList = getEdgesList(nodesToCentroidsG1, nodesToCentroidsG2, optimalSim)
+        edgesList, edgesWeightsList = getEdgesList(nodesToCentroidsG1, nodesToCentroidsG2, False, optimalSim, gResult.vs['name'])
 
         existingEdges = gResult.get_edgelist()
 
