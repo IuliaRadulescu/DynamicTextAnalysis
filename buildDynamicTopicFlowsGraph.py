@@ -48,8 +48,8 @@ def doComputation(optimalSim, outputFileName):
         return 1 - distance.euclidean(centroid1, centroid2)
 
     def getEdgesList(nodeIds2Centroids1, nodeIds2Centroids2, sameGraph = True, optimalSim = None, nodeNames = []):
+        
         edgesList = []
-        edgesWeightsList = []
 
         nodeIds1 = list(nodeIds2Centroids1.keys())
         nodeIds1.sort()
@@ -63,7 +63,7 @@ def doComputation(optimalSim, outputFileName):
                 if (sameGraph == True and nodeId1 >= nodeId2):
                     continue
 
-                if (len(nodeNames) > 0 and int(nodeNames[nodeId1].split('_')[1]) >= int(nodeNames[nodeId2].split('_')[1])):
+                if (sameGraph == False and len(nodeNames) > 0 and int(nodeNames[nodeId1].split('_')[1]) >= int(nodeNames[nodeId2].split('_')[1])):
                     continue
                 
                 clusterSim = similarity(nodeIds2Centroids1[nodeId1], nodeIds2Centroids2[nodeId2])
@@ -72,9 +72,8 @@ def doComputation(optimalSim, outputFileName):
                     continue
 
                 edgesList.append((nodeId1, nodeId2))
-                edgesWeightsList.append(clusterSim)
 
-        return (edgesList, edgesWeightsList)
+        return edgesList
 
     '''
     @input: 
@@ -92,6 +91,11 @@ def doComputation(optimalSim, outputFileName):
         g.add_vertices(nrVertices)
         g.vs['name'] = nodeNames
         g.vs['centroid'] = nodeCentroids
+
+        # interconnect graphs by edges
+        edgesList = getEdgesList(nodeIdsToCentroids, nodeIdsToCentroids, True, optimalSim, g.vs['name'])
+        
+        g.add_edges(edgesList)
 
         return g
 
@@ -130,7 +134,7 @@ def doComputation(optimalSim, outputFileName):
         gResult.vs['centroid'] = nodeCentroids
 
         # interconnect graphs by edges
-        edgesList, edgesWeightsList = getEdgesList(nodesToCentroidsG1, nodesToCentroidsG2, False, optimalSim, gResult.vs['name'])
+        edgesList = getEdgesList(nodesToCentroidsG1, nodesToCentroidsG2, False, optimalSim, gResult.vs['name'])
 
         existingEdges = gResult.get_edgelist()
 
@@ -149,7 +153,7 @@ def doComputation(optimalSim, outputFileName):
 
         print('Finished reading comments for time step!', collectionName)
 
-        snapshotClusterGraphs.append(buildSnapshotClusterGraph(collectionComments, timeStep, 1))
+        snapshotClusterGraphs.append(buildSnapshotClusterGraph(collectionComments, timeStep, optimalSim))
 
     print('Finished building snapshot graphs')
 
