@@ -83,10 +83,10 @@ def doComputation(optimalSim, outputFileName):
     '''
     def buildSnapshotClusterGraph(comments, timeStep, optimalSim):
 
-        clusterIdsToCentroids = dict(zip([int(comment['clusterIdSpectral']) for comment in comments], [comment['centroid'] for comment in comments]))
-        nrVertices = max(list(clusterIdsToCentroids.keys())) + 1
-        nodeNames = [str(nodeId) + '_' + str(timeStep) for nodeId in list(clusterIdsToCentroids.keys())]
-        nodeCentroids = list(clusterIdsToCentroids.values())
+        nodeIdsToCentroids = dict(zip([int(comment['clusterIdSpectral']) for comment in comments], [comment['centroid'] for comment in comments]))
+        nrVertices = max(list(nodeIdsToCentroids.keys())) + 1
+        nodeNames = [str(nodeId) + '_' + str(timeStep) for nodeId in list(nodeIdsToCentroids.keys())]
+        nodeCentroids = list(nodeIdsToCentroids.values())
 
         g = Graph(directed=True)
         g.add_vertices(nrVertices)
@@ -101,19 +101,33 @@ def doComputation(optimalSim, outputFileName):
     @returns: graph g,resulting by merging g1 and g2
     '''
     def mergeGraphs(g1, g2, optimalSim):
-
-        nrNodesG1 = len(g1.vs)
-        nrNodesG2 = len(g2.vs)
-
-        gResult = Graph.union(g1, g2)
-
+        
+        nodeIdsToCentroids = {}
         nodesToCentroidsG1 = {}
-        for nodeId in range(0, nrNodesG1):
-            nodesToCentroidsG1[nodeId] = gResult.vs[nodeId]['centroid']
-
         nodesToCentroidsG2 = {}
-        for nodeId in range(nrNodesG1, nrNodesG1 + nrNodesG2):
-            nodesToCentroidsG2[nodeId] = gResult.vs[nodeId]['centroid']
+        nodeNames = []
+
+        nodeId = 0
+
+        for v in g1.vs:
+            nodesToCentroidsG1[nodeId] = v['centroid']
+            nodeIdsToCentroids[nodeId] = v['centroid']
+            nodeNames.append(v['name'])
+            nodeId += 1
+
+        for v in g2.vs:
+            nodesToCentroidsG2[nodeId] = v['centroid']
+            nodeIdsToCentroids[nodeId] = v['centroid']
+            nodeNames.append(v['name'])
+            nodeId += 1
+
+        nrVertices = max(list(nodeIdsToCentroids.keys())) + 1
+        nodeCentroids = list(nodeIdsToCentroids.values())
+
+        gResult = Graph(directed=True)
+        gResult.add_vertices(nrVertices)
+        gResult.vs['name'] = nodeNames
+        gResult.vs['centroid'] = nodeCentroids
 
         # interconnect graphs by edges
         edgesList, edgesWeightsList = getEdgesList(nodesToCentroidsG1, nodesToCentroidsG2, False, optimalSim, gResult.vs['name'])
