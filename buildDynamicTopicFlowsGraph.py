@@ -58,13 +58,13 @@ def doComputation(optimalSim, outputFileName):
 
         for nodeId1 in nodeIds1:
             for nodeId2 in nodeIds2:
-                if (nodeId1 == nodeId2):
+
+                if (nodeId1 >= nodeId2):
                     continue
-                if (nodeId1 > nodeId2):
-                    return (edgesList, edgesWeightsList)
+                
                 clusterSim = similarity(nodeIds2Centroids1[nodeId1], nodeIds2Centroids2[nodeId2])
 
-                if (optimalSim != None and clusterSim < optimalSim):
+                if (optimalSim != None and clusterSim <= optimalSim):
                     continue
 
                 edgesList.append((nodeId1, nodeId2))
@@ -77,14 +77,14 @@ def doComputation(optimalSim, outputFileName):
         - comments: all comments at time t, marked with their clusterId and augmented with their centroids
     @returns: the snapshot represented as an igraph object
     '''
-    def buildSnapshotClusterGraph(comments, timeStep):
+    def buildSnapshotClusterGraph(comments, timeStep, optimalSim):
         
         nrVertices = max([comment['clusterIdSpectral'] for comment in comments]) + 1
         nodeNames = [str(nodeId) + '_' + str(timeStep) for nodeId in range(nrVertices)]
         nodeCentroids = [comment['centroid'] for comment in comments]
 
         clusterIdsToCentroids = dict(zip([int(comment['clusterIdSpectral']) for comment in comments], [comment['centroid'] for comment in comments]))
-        edgesList, edgesWeightsList = getEdgesList(clusterIdsToCentroids, clusterIdsToCentroids)
+        edgesList, edgesWeightsList = getEdgesList(clusterIdsToCentroids, clusterIdsToCentroids, optimalSim)
 
         g = Graph()
         g.add_vertices(nrVertices)
@@ -112,13 +112,15 @@ def doComputation(optimalSim, outputFileName):
             nodesToCentroidsG1[nodeId] = gResult.vs[nodeId]['centroid']
 
         nodesToCentroidsG2 = {}
-        for nodeId in range(nrNodesG1, nrNodesG2):
+        for nodeId in range(nrNodesG1, nrNodesG1 + nrNodesG2):
             nodesToCentroidsG2[nodeId] = gResult.vs[nodeId]['centroid']
 
         # interconnect graphs by edges
         edgesList, edgesWeightsList = getEdgesList(nodesToCentroidsG1, nodesToCentroidsG2, optimalSim)
 
-        gResult.add_edges(edgesList)
+        existingEdges = gResult.get_edgelist()
+
+        gResult.add_edges(list(set(edgesList) - set(existingEdges)))
         gResult.es['weight'] += edgesWeightsList
 
         return gResult
@@ -134,22 +136,16 @@ def doComputation(optimalSim, outputFileName):
 
         print('Finished reading comments for time step!', collectionName)
 
-        snapshotClusterGraphs.append(buildSnapshotClusterGraph(collectionComments, timeStep))
+        snapshotClusterGraphs.append(buildSnapshotClusterGraph(collectionComments, timeStep, 1))
 
     print('Finished building snapshot graphs')
 
-    gResult = None
+    gResult = mergeGraphs(snapshotClusterGraphs[0], snapshotClusterGraphs[1], optimalSim)
 
-    for snapshotId1 in range(0, len(snapshotClusterGraphs)):
-        gResultInner = snapshotClusterGraphs[snapshotId1]
-        for snapshotId2 in range(0, len(snapshotClusterGraphs)):
-            if (snapshotId1 >= snapshotId2):
-                continue
-            gResultInner = mergeGraphs(gResultInner, snapshotClusterGraphs[snapshotId2], optimalSim)
-        if (gResult == None):
-            gResult = gResultInner
-        else:
-            gResult = mergeGraphs(gResult, gResultInner, optimalSim)
+    for snapshotId in range(2, len(snapshotClusterGraphs)):
+        gResult = mergeGraphs(gResult, snapshotClusterGraphs[snapshotId], optimalSim)
+                
+    plot(gResult)
 
     resultAdjList = Utils.get_adjlist_with_names(gResult)
 
