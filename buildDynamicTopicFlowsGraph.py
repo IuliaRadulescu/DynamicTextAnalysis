@@ -135,7 +135,7 @@ def doComputation(optimalSim, outputFileName):
 
         # interconnect graphs by edges
         edgesList = getEdgesList(nodesToCentroidsG1, nodesToCentroidsG2, False, optimalSim, gResult.vs['name'])
-
+        edgesList += g1.get_edgelist() + g2.get_edgelist()
         existingEdges = gResult.get_edgelist()
 
         gResult.add_edges(list(set(edgesList) - set(existingEdges)))
@@ -153,7 +153,7 @@ def doComputation(optimalSim, outputFileName):
 
         print('Finished reading comments for time step!', collectionName)
 
-        snapshotClusterGraphs.append(buildSnapshotClusterGraph(collectionComments, timeStep, optimalSim))
+        snapshotClusterGraphs.append(buildSnapshotClusterGraph(collectionComments, timeStep, 0.9))
 
     print('Finished building snapshot graphs')
 
