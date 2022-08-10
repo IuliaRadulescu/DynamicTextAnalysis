@@ -1,82 +1,64 @@
+(softwareEngineering) [iuliamaria@localhost DynamicTextAnalysis]$ python interpretAlluvial.py -s '2021-11-01' -e '2021-12-31'
 STARTED DYNAMIC TOPIC FLOW GENERATION...
-FOUND 5 TOPIC FLOWS
-Longest dynamic has length 27
-STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_50.json
-STARTED GENERATING TOPIC COHERENCE
-Coherence =  -2.35
+FOUND 6 TOPIC FLOWS
+Longest dynamic has length 26
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_70.json
+Coherence =  -2.36
 Coherence =  0.61
 GENERATING STATS...
 --> width
-Min width 1 Max width 80 Mean width 18.2
+Min width 6 Max width 143 Mean width 32.166666666666664
 --> depth
-Min depth 2 Max depth 9 Mean depth 3.4
+Min depth 3 Max depth 9 Mean depth 4.5
 
 
 STARTED DYNAMIC TOPIC FLOW GENERATION...
-FOUND 8 TOPIC FLOWS
-Longest dynamic has length 25
-STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_70.json
-STARTED GENERATING TOPIC COHERENCE
-Coherence =  -2.40
+FOUND 7 TOPIC FLOWS
+Longest dynamic has length 22
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_75.json
+Coherence =  -2.33
+Coherence =  0.61
+GENERATING STATS...
+--> width
+Min width 2 Max width 91 Mean width 18.0
+--> depth
+Min depth 2 Max depth 9 Mean depth 4.0
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 10 TOPIC FLOWS
+Longest dynamic has length 20
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_80.json
+Coherence =  -2.27
 Coherence =  0.60
 GENERATING STATS...
 --> width
-Min width 1 Max width 46 Mean width 9.375
+Min width 2 Max width 54 Mean width 12.4
 --> depth
-Min depth 2 Max depth 9 Mean depth 3.125
+Min depth 2 Max depth 9 Mean depth 4.1
 
 
 STARTED DYNAMIC TOPIC FLOW GENERATION...
-FOUND 11 TOPIC FLOWS
-Longest dynamic has length 17
-STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_80.json
-STARTED GENERATING TOPIC COHERENCE
-Coherence =  -2.25
-Coherence =  0.59
-GENERATING STATS...
---> width
-Min width 1 Max width 21 Mean width 4.7272727272727275
---> depth
-Min depth 2 Max depth 9 Mean depth 3.090909090909091
-
-
-STARTED DYNAMIC TOPIC FLOW GENERATION...
-FOUND 8 TOPIC FLOWS
-Longest dynamic has length 8
+FOUND 7 TOPIC FLOWS
+Longest dynamic has length 9
 STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_85.json
-STARTED GENERATING TOPIC COHERENCE
-Coherence =  -2.01
-Coherence =  0.59
+Coherence =  -2.00
+Coherence =  0.60
 GENERATING STATS...
 --> width
-Min width 1 Max width 13 Mean width 4.75
+Min width 1 Max width 21 Mean width 8.428571428571429
 --> depth
-Min depth 2 Max depth 5 Mean depth 2.75
+Min depth 2 Max depth 5 Mean depth 3.857142857142857
 
 
 STARTED DYNAMIC TOPIC FLOW GENERATION...
 FOUND 10 TOPIC FLOWS
 Longest dynamic has length 5
 STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_90.json
-STARTED GENERATING TOPIC COHERENCE
 Coherence =  -1.83
 Coherence =  0.60
 GENERATING STATS...
 --> width
-Min width 1 Max width 5 Mean width 2.4
+Min width 1 Max width 8 Mean width 3.4
 --> depth
-Min depth 2 Max depth 3 Mean depth 2.2
-
-
-STARTED DYNAMIC TOPIC FLOW GENERATION...
-FOUND 4 TOPIC FLOWS
-Longest dynamic has length 2
-STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_95.json
-STARTED GENERATING TOPIC COHERENCE
-Coherence =  -1.71
-Coherence =  0.61
-GENERATING STATS...
---> width
-Min width 1 Max width 2 Mean width 1.25
---> depth
-Min depth 2 Max depth 3 Mean depth 2.25
+Min depth 2 Max depth 3 Mean depth 2.5

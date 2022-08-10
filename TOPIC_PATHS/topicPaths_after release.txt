@@ -1,0 +1,196 @@
+(softwareEngineering) [iuliamaria@localhost DynamicTextAnalysis]$ python interpretAlluvial.py -s '2021-11-01' -e '2021-12-31'
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 10 TOPIC FLOWS
+Longest dynamic has length 20
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_80.json
+fedora issue update 35 -> fedora work version use -> fedora gnome like install
+
+fedora issue update 35 -> fedora work version use -> fedora issue kde 35 -> fedora like use user
+
+fedora issue update 35 -> fedora work version use -> fedora linux user software -> fedora like use user
+
+fedora issue update 35 -> fedora work version use -> fedora ram using swap -> fedora like use user
+
+fedora issue update 35 -> fedora work version use -> fedora like use user
+
+fedora issue update 35 -> fedora 35 34 work -> fedora 35 swap ram -> fedora like use user
+
+fedora issue update 35 -> fedora 35 34 work -> fedora 35 swap ram -> fedora gnome issue work -> fedora install boot work -> fedora boot linux nvidia
+
+fedora issue update 35 -> fedora 35 34 work -> fedora 35 swap ram -> fedora gnome issue work -> fedora install boot work -> fedora 35 click middle
+
+fedora issue update 35 -> fedora 35 34 work -> fedora 35 swap ram -> fedora wayland 35 gnome -> fedora boot linux nvidia
+
+fedora issue update 35 -> fedora 35 34 work -> fedora issue kde 35 -> fedora like use user
+
+fedora issue update 35 -> fedora 35 34 work -> fedora linux user software -> fedora like use user
+
+fedora issue update 35 -> fedora 35 34 work -> fedora ram using swap -> fedora like use user
+
+fedora issue update 35 -> fedora 35 34 work -> fedora like use user
+
+fedora issue update 35 -> fedora issue kde 35 -> fedora linux user software -> fedora ram using swap -> fedora like use user
+
+fedora partition linux use -> fedora issue kde 35 -> fedora like use user
+
+fedora partition linux use -> fedora linux user software -> fedora like use user
+
+fedora partition linux use -> fedora like use user
+
+fedora partition linux use -> fedora gnome like install
+
+fedora kernel work wifi -> fedora issue kde 35 -> fedora like use user
+
+fedora kernel work wifi -> fedora like use user
+
+fedora kernel work wifi -> fedora gnome issue work -> fedora install boot work -> fedora boot linux nvidia
+
+fedora kernel work wifi -> fedora gnome issue work -> fedora install boot work -> fedora 35 click middle
+
+fedora work wayland use -> fedora issue kde 35 -> fedora like use user
+
+fedora work wayland use -> fedora linux user software -> fedora like use user
+
+fedora work wayland use -> fedora ram using swap -> fedora like use user
+
+fedora work wayland use -> fedora like use user
+
+fedora work wayland use -> fedora 35 swap ram -> fedora like use user
+
+fedora work wayland use -> fedora 35 swap ram -> fedora gnome issue work -> fedora install boot work -> fedora boot linux nvidia
+
+fedora work wayland use -> fedora 35 swap ram -> fedora gnome issue work -> fedora install boot work -> fedora 35 click middle
+
+fedora work wayland use -> fedora 35 swap ram -> fedora wayland 35 gnome -> fedora boot linux nvidia
+
+fedora use work window -> fedora linux user software -> fedora like use user
+
+fedora use work window -> fedora ram using swap -> fedora like use user
+
+fedora 35 update 34 -> fedora ram using swap -> fedora like use user
+
+fedora use work like -> fedora 35 swap ram -> fedora like use user
+
+fedora use work like -> fedora 35 swap ram -> fedora gnome issue work -> fedora install boot work -> fedora boot linux nvidia
+
+fedora use work like -> fedora 35 swap ram -> fedora gnome issue work -> fedora install boot work -> fedora 35 click middle
+
+fedora use work like -> fedora 35 swap ram -> fedora wayland 35 gnome -> fedora boot linux nvidia
+
+fedora use work like -> fedora wayland 35 gnome -> fedora install boot work -> fedora boot linux nvidia
+
+fedora user use know -> fedora gnome issue work -> fedora install boot work -> fedora boot linux nvidia
+
+fedora user use know -> fedora gnome issue work -> fedora install boot work -> fedora 35 click middle
+
+fedora user use know -> fedora install boot work -> fedora 35 click middle
+
+fedora linux kernel amazon -> fedora gnome issue work -> fedora install boot work -> fedora boot linux nvidia
+
+fedora linux kernel amazon -> fedora gnome issue work -> fedora install boot work -> fedora 35 click middle
+
+linux fedora gnome window -> fedora boot linux nvidia
+
+update fedora system use -> fedora boot linux nvidia
+
+update fedora system use -> fedora 35 click middle
+
+STARTED GENERATING TOPIC COHERENCE
+Coherence =  -2.27
+Coherence =  0.60
+GENERATING STATS...
+--> width
+Min width 2 Max width 54 Mean width 12.4
+--> depth
+Min depth 2 Max depth 9 Mean depth 4.1
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 7 TOPIC FLOWS
+Longest dynamic has length 9
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_85.json
+fedora issue update 35 -> fedora work version use -> fedora issue kde 35 -> fedora like use user
+
+fedora issue update 35 -> fedora work version use -> fedora linux user software -> fedora like use user
+
+fedora issue update 35 -> fedora work version use -> fedora ram using swap
+
+fedora issue update 35 -> fedora work version use -> fedora like use user
+
+fedora issue update 35 -> fedora 35 34 work -> fedora issue kde 35 -> fedora like use user
+
+fedora issue update 35 -> fedora 35 34 work -> fedora linux user software -> fedora like use user
+
+fedora issue update 35 -> fedora 35 34 work -> fedora ram using swap
+
+fedora issue update 35 -> fedora 35 34 work -> fedora like use user
+
+fedora issue update 35 -> fedora linux user software -> fedora ram using swap
+
+fedora work wayland use -> fedora linux user software -> fedora like use user
+
+fedora work wayland use -> fedora like use user
+
+fedora work wayland use -> fedora issue kde 35 -> fedora like use user
+
+fedora 35 update 34 -> fedora ram using swap
+
+fedora partition linux use -> fedora like use user
+
+fedora partition linux use -> fedora issue kde 35 -> fedora like use user
+
+fedora kernel work wifi -> fedora like use user
+
+
+
+STARTED GENERATING TOPIC COHERENCE
+Coherence =  -2.00
+Coherence =  0.60
+GENERATING STATS...
+--> width
+Min width 1 Max width 21 Mean width 8.428571428571429
+--> depth
+Min depth 2 Max depth 5 Mean depth 3.857142857142857
+
+
+STARTED DYNAMIC TOPIC FLOW GENERATION...
+FOUND 10 TOPIC FLOWS
+Longest dynamic has length 5
+STARTED PLOTTING IMAGE FOR TOPIC_EVOLUTION_90.json
+fedora partition linux use -> fedora issue kde 35 -> fedora like use user
+
+fedora 35 34 work -> fedora issue kde 35 -> fedora like use user
+
+fedora 35 34 work -> fedora like use user
+
+fedora work wayland use -> fedora issue kde 35 -> fedora like use user
+
+fedora work wayland use -> fedora like use user
+
+fedora work version use -> fedora issue kde 35 -> fedora like use user
+
+fedora work version use -> fedora like use user
+
+STARTED GENERATING TOPIC COHERENCE
+Coherence =  -1.83
+Coherence =  0.60
+GENERATING STATS...
+--> width
+Min width 1 Max width 8 Mean width 3.4
+--> depth
+Min depth 2 Max depth 3 Mean depth 2.5
+
+
+
+
+
+
+
+
+
+
+
+ls -l | nl
+
+>>> with open('twelveHours_10_08_03_00_10_15_03_00.json') as json_file:
+...     time43_cluster0 = json.load(json_file)

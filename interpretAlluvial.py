@@ -208,14 +208,14 @@ intervalInSeconds = 60 * 60 * 24 * 7 # seconds (60) * minutes * hours * days
 startTimeInterval = round((startTimestamp - initialTimestamp) / intervalInSeconds)
 endTimeInterval = round((endTimestamp - initialTimestamp) / intervalInSeconds)
 
-generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_50.json', 'TOPIC_EVOLUTION_50', startTimeInterval, endTimeInterval)
-computeStats('OUTPUT_TOPIC_EVOLUTION_50.json', startTimeInterval, endTimeInterval)
-
-print()
-print()
-
 generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_70.json', 'TOPIC_EVOLUTION_70', startTimeInterval, endTimeInterval)
 computeStats('OUTPUT_TOPIC_EVOLUTION_70.json', startTimeInterval, endTimeInterval)
+
+print()
+print()
+
+generateDynamicAndPlot('OUTPUT_TOPIC_EVOLUTION_75.json', 'TOPIC_EVOLUTION_50', startTimeInterval, endTimeInterval)
+computeStats('OUTPUT_TOPIC_EVOLUTION_75.json', startTimeInterval, endTimeInterval)
 
 print()
 print()
